@@ -1,0 +1,271 @@
+import { tw } from 'twind';
+import FeatureSvg from '@/constants/svg/features.svg';
+import Image from 'next/image';
+import { Jazzicon } from '@ukstv/jazzicon-react';
+
+const listItems = [
+  {
+    title: `Permissionless Bounties`,
+    description: `Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, the developer automatically is eligable to withdraw the escrow.`,
+  },
+];
+
+const StreamSection = () => (
+  <div className={tw(`bg-dark-mode`)}>
+    <section className={tw(`font-montserrat pt-16 mx-10 mx-auto`)}>
+      <div className={tw(`flex flex-col justify-center`)}>
+        <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
+          <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
+            <div
+              className={tw(
+                ` px-5 py-1 font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-300 truncate`,
+              )}
+            >
+              Coming Soon
+            </div>
+          </div>
+        </div>
+        <p
+          className={tw(
+            `text-4xl lg:text-7xl break-normal pt-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-pink-300 `,
+          )}
+        >
+          Token Streams
+        </p>
+      </div>
+      <div className={tw(`flex flex-row pt-5 space-x-3 items-center`)}>
+        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>$_</div>
+        <h2 className={tw(`text-md pl-2 text-gray-500`)}>create token stream</h2>
+      </div>
+      <div className={tw(`flex flex-row -ml-2 pt-3 items-center`)}>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            height="22"
+            width="28"
+            aria-hidden="true"
+            className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
+          >
+            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
+            <circle cx="14" cy="11" fill="#000000" r="5" stroke="#465061" strokeWidth="2" />
+          </svg>
+        </div>
+        <div className={tw(`pl-5`)}>
+          <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
+            <Image src="/eth-colour.png" alt="OpenQ Logo" width="20%" height="30%" />
+            <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>add new contributor</p>
+          </div>
+        </div>
+      </div>
+      <div className={tw(`border-l ml-1 pt-5 pl-8 border-gray-400 pb-8`)}>
+        <div className={tw(`pt-8`)}>
+          <div className={tw(`border border-white rounded-xl`)}>
+            <div className={tw(`px-5 text-center py-8`)}>
+              <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
+              <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-500`)}>
+                0x90F7...
+              </div>
+              <div className={tw(`pt-3 pb-1`)}>
+                <div className={tw(`border rounded-2xl font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}>
+                  Add socials
+                </div>
+              </div>
+              <div className={tw(`pt-3 pb-1`)}>
+                <div
+                  className={tw(
+                    `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
+                  )}
+                >
+                  Save
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={tw(`flex flex-row -ml-2 items-center`)}>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            height="22"
+            width="28"
+            aria-hidden="true"
+            className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
+          >
+            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
+            <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
+          </svg>
+        </div>
+        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
+          Add payrolls in any ERC-20/ Polygon native token
+        </p>
+      </div>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
+      <div className={tw(`flex flex-row -ml-2 items-center`)}>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            height="22"
+            width="28"
+            aria-hidden="true"
+            className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
+          >
+            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
+            <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
+          </svg>
+        </div>
+        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
+          Facilitate payment requests for your contributors or request your invoiced payment to DAOs{` `}
+        </p>
+      </div>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
+        <div className={tw(`pt-8 pl-8`)}>
+          <div className={tw(`border border-white rounded-xl`)}>
+            <div className={tw(`px-5 text-center py-8`)}>
+              <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursments</div>
+              <div className={tw(`flex flex-row justify-between text-white`)}>
+                <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div style={{ width: `25px`, height: `25px` }}>
+                    <Jazzicon address="0xBAc675C310721717Cd4A37F6cbeA1F081b1C2a07" />
+                  </div>
+                  <div>
+                    <p className={tw(``)}>Mike</p>
+                  </div>
+                </div>
+
+                <div className={tw(`flex flex-row items-center space-x-3`)}>
+                  <div>
+                    <Image src="/dai.png" alt="OpenQ Logo" width="30%" height="30%" />
+                  </div>
+                  <div className={tw(``)}>900 DAI</div>
+                </div>
+              </div>
+              <div className={tw(`flex flex-row justify-between text-white`)}>
+                <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div style={{ width: `25px`, height: `25px` }}>
+                    <Jazzicon address="0xHV2675C314221717Cd4A37F6cbeA1F081b1C2a07" />
+                  </div>
+                  <div>
+                    <p className={tw(``)}>Melany</p>
+                  </div>
+                </div>
+
+                <div className={tw(`flex flex-row items-center space-x-3`)}>
+                  <div>
+                    <Image src="/dai.png" alt="OpenQ Logo" width="30%" height="30%" />
+                  </div>
+                  <div className={tw(``)}>650 DAI</div>
+                </div>
+              </div>
+              <div className={tw(`flex flex-row justify-between text-white`)}>
+                <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div style={{ width: `25px`, height: `25px` }}>
+                    <Jazzicon address="0xCB1475C310721717Cd4A37F6cbeA1F081b1C2a07" />
+                  </div>
+                  <div>
+                    <p className={tw(``)}>Chris</p>
+                  </div>
+                </div>
+
+                <div className={tw(`flex flex-row items-center space-x-3`)}>
+                  <div>
+                    <Image src="/dai.png" alt="OpenQ Logo" width="30%" height="30%" />
+                  </div>
+                  <div className={tw(``)}>500 DAI</div>
+                </div>
+              </div>
+              <div className={tw(`flex flex-row justify-between text-white`)}>
+                <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div style={{ width: `25px`, height: `25px` }}>
+                    <Jazzicon address="0xFAc675C310721717Cd4A37F6cbeA1F081b1C2a07" />
+                  </div>
+                  <div>
+                    <p className={tw(``)}>Stephanie</p>
+                  </div>
+                </div>
+
+                <div className={tw(`flex flex-row items-center space-x-3`)}>
+                  <div>
+                    <Image src="/dai.png" alt="OpenQ Logo" width="30%" height="30%" />
+                  </div>
+                  <div className={tw(``)}>450 DAI</div>
+                </div>
+              </div>
+              <div className={tw(`flex flex-row justify-between text-white`)}>
+                <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div style={{ width: `25px`, height: `25px` }}>
+                    <Jazzicon address="0x90F79bf2BB2c4f873465E785982E1f101E93b906" />
+                  </div>
+                  <div>
+                    <p className={tw(``)}>Lisa</p>
+                  </div>
+                </div>
+
+                <div className={tw(`flex flex-row items-center space-x-3`)}>
+                  <div>
+                    <Image src="/dai.png" alt="OpenQ Logo" width="30%" height="30%" />
+                  </div>
+                  <div className={tw(``)}>400 DAI</div>
+                </div>
+              </div>
+
+              <div className={tw(`pt-3 pb-1`)}>
+                <div
+                  className={tw(
+                    `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
+                  )}
+                >
+                  Add
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {` `}
+      <div className={tw(`flex flex-row -ml-2 items-center`)}>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            height="22"
+            width="28"
+            aria-hidden="true"
+            className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
+          >
+            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
+            <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
+          </svg>
+        </div>
+        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
+          Manage your payouts in our accounting system.{` `}
+        </p>
+      </div>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
+      <div className={tw(`flex flex-row -ml-2 items-center`)}>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            height="22"
+            width="28"
+            aria-hidden="true"
+            className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
+          >
+            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
+            <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
+          </svg>
+        </div>
+        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
+          Automatically generate invoices for all your OpenQ activities as contributor.{` `}
+        </p>
+      </div>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
+    </section>
+  </div>
+);
+
+export default StreamSection;

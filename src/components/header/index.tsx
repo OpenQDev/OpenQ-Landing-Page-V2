@@ -4,41 +4,106 @@ import Netlify from '@/constants/svg/netlify.svg';
 import Nike from '@/constants/svg/nike.svg';
 import Figma from '@/constants/svg/figma.svg';
 import Aws from '@/constants/svg/aws.svg';
+import Particles from 'react-particles-js';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Wave from 'react-wavify';
 
 const headerStyle = css`
-  background-color: #ffffff;
   min-height: calc(100vh - 6rem);
 `;
 
-const Header = () => (
-  <header className={tw(headerStyle)}>
-    <div className={tw(`max-w-4xl mx-auto py-16 px-14 sm:px-6 lg:px-8`)}>
-      <h1 className={tw(`font-sans font-bold text-4xl md:text-5xl lg:text-8xl text-center leading-snug text-gray-800`)}>
-        Your website, beyond expectations
-      </h1>
-      <div className={tw(`max-w-xl mx-auto`)}>
-        <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
-          Make your website wonderful and build beyond your expectations.
-        </p>
-      </div>
-      <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto`)}>
-        <Button primary>Get started</Button>
-        <span className={tw(`mx-2`)}>or</span>
-        <Button>Contact us</Button>
-      </div>
-    </div>
-    <div className={tw(`flex justify-center w-full`)}>
-      <div className={tw(`mt-4 w-full`)}>
-        <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>These folks get it</p>
-        <div className={tw(`flex items-center justify-center mx-auto flex-wrap`)}>
-          <Aws className={tw(`m-12 mb-8`)} width={120} />
-          <Netlify className={tw(`m-12`)} width={140} />
-          <Nike className={tw(`m-12`)} width={140} />
-          <Figma className={tw(`m-12`)} width={140} />
-        </div>
-      </div>
-    </div>
-  </header>
+const ParticleBg = () => (
+  <Particles
+    params={{
+      particles: {
+        number: {
+          value: 150,
+          density: {
+            enable: true,
+            value_area: 8000,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          direction: `right`,
+          speed: 0.4,
+        },
+        size: {
+          value: 1,
+        },
+        opacity: {
+          anim: {
+            enable: true,
+            speed: 0.8,
+            opacity_min: 0.2,
+          },
+        },
+      },
+      interactivity: {
+        events: {
+          onclick: {
+            enable: false,
+          },
+        },
+      },
+      retina_detect: true,
+    }}
+  />
 );
+
+const Header = () => {
+  const [scrollY, setScrollY] = useState(0);
+  /*  console.log("scrollY: ", scrollY) */
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    handleScroll();
+
+    window.addEventListener(`scroll`, handleScroll);
+    return () => {
+      window.removeEventListener(`scroll`, handleScroll);
+    };
+  }, []);
+
+  return (
+    <header className={tw(`w-full font-montserrat min-h-screen bg-dark-mode relative`)}>
+      <ParallaxProvider>
+        <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
+          <ParticleBg />
+        </div>
+        <div className={tw(`py-16 px-14 sm:px-6 lg:px-8`)}>
+          <Parallax speed={-27}>
+            <div className={tw(`text-center my-64 ${scrollY > 600 ? `animate-fadeOut` : `animate-fadeIn`}`)}>
+              <h1 className={tw(`font-semibold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
+                Collaborate with <span className={tw(`font-light`)}>OpenQ</span>
+              </h1>
+              <p className={tw(`mt-10 max-w-5xl text-left md:text-center mx-auto text-gray-200 text-2xl lg:text-2xl`)}>
+                Web3 payroll, benefits, accounting, HR and more to manage your growing team, all in one place.
+              </p>
+              <div className={tw(`mt-10 flex flex-row items-center justify-left md:justify-center space-x-4`)}>
+                <div>
+                  <Image src="/discord.png" alt="D" width="35%" height="25%" />
+                </div>
+                <div>
+                  <Image src="/github.png" alt="D" width="30%" height="22%" />
+                </div>
+                <div className={tw(`w-10`)}>
+                  <Image src="/twitter.png" alt="D" width="30%" height="20%" />
+                </div>
+              </div>
+            </div>
+          </Parallax>
+        </div>
+      </ParallaxProvider>
+    </header>
+  );
+};
 
 export default Header;

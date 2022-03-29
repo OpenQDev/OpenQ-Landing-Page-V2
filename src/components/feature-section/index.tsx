@@ -1,12 +1,13 @@
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
+import Wave from 'react-wavify';
 
 const FeatureSection = () => (
   <section className={tw(`bg-white pb-6`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8`)}>
       <div className={tw(`container mx-auto px-6 p-6 bg-white`)}>
         <div className={tw(`mb-16 text-center`)}>
-          <h4 className={tw(`text-base text-indigo-600 font-semibold tracking-wide uppercase`)}>Features</h4>
+          <h4 className={tw(`text-base text-indigo-600 font-semibold tracking-wide uppercase`)}>Work 3.0</h4>
           <p className={tw(`mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900`)}>
             How we change the game
           </p>

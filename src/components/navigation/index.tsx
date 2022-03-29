@@ -1,6 +1,8 @@
 import { tw } from 'twind';
 import { useState } from 'react';
 import Button from '@/components/button';
+import Particles from 'react-particles-js';
+import Image from 'next/image';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -18,11 +20,11 @@ const links = [
     href: `/`,
   },
   {
-    label: `Testimonials`,
+    label: `Jobs`,
     href: `/`,
   },
   {
-    label: `Pricing`,
+    label: `Join Community`,
     href: `/`,
   },
   {
@@ -33,11 +35,11 @@ const links = [
 
 const secondaryLinks = [
   {
-    label: `Contact sales`,
+    label: `Contact Team`,
     href: `/`,
   },
   {
-    label: `Log in`,
+    label: `Docs`,
     href: `/`,
   },
   {
@@ -110,17 +112,61 @@ const MobileMenu = () => (
   </div>
 );
 
+const ParticleBg = () => (
+  <Particles
+    params={{
+      particles: {
+        number: {
+          value: 400,
+          density: {
+            enable: true,
+            value_area: 3000,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          direction: `right`,
+          speed: 0.3,
+        },
+        size: {
+          value: 1,
+        },
+        opacity: {
+          anim: {
+            enable: true,
+            speed: 0.5,
+            opacity_min: 0.1,
+          },
+        },
+      },
+      interactivity: {
+        events: {
+          onclick: {
+            enable: false,
+          },
+        },
+      },
+      retina_detect: true,
+    }}
+  />
+);
+
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav className={tw(`bg-white`)}>
+    <nav className={tw(`font-montserrat w-full bg-dark-mode relative`)}>
+      <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
+        <ParticleBg />
+      </div>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <img className={tw(`h-12 w-12`)} src="logo.svg" alt="logo" width={48} height={48} />
+              <Image src="/logo.png" alt="OpenQ Logo" width="45%" height="45%" />
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
@@ -128,7 +174,7 @@ const Navigation = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className={tw(`text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
+                    className={tw(`text-white hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
                   >
                     {link.label}
                   </a>
@@ -138,9 +184,11 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
-              <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Get started</Button>
+              {/*    <Button modifier="border-0 mr-2 bg-gray-900 text-white">Contact Team</Button>
+              <Button modifier="border-0 mr-2 bg-gray-900 text-white">Docs</Button> */}
+              <Button modifier="font-montserrat border border-purple-500 bg-purple-800 text-purple-100 font-bold">
+                Launch App
+              </Button>
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>
