@@ -47,7 +47,6 @@ const StreamSection = () => (
             aria-hidden="true"
             className="home-git-icon home-git-item flex-shrink-0 mr-3 position-relative z-1"
           >
-            <path d="m2.5 10a1 1 0 1 0 0 2zm23 2a1 1 0 1 0 0-2zm-23 0h23v-2h-23z" fill="#465061" />
             <circle cx="14" cy="11" fill="#000000" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
@@ -112,7 +111,7 @@ const StreamSection = () => (
           >
             Tokens Streams enable the integration of
             <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-              of decentralized payroll systems{` `}
+              decentralized payroll systems{' '}
             </span>
             into our accounting layer. Bounties are good for making initial connections and getting involved in
             projects. After that, you want to create stability.
@@ -164,7 +163,7 @@ const StreamSection = () => (
         >
           Our web3 mentality
           <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-            of onboarding and offboarding team members{` `}
+            of onboarding and offboarding team members{' '}
           </span>
           supported by permissionless payroll streams.
         </p>

@@ -35,7 +35,7 @@ export default function Home() {
         <ProductSection />
         {/*  <ListSection /> */}
         {/* <FeatureSection /> */}
-        {/* <CasesSection /> */}
+        <CasesSection />
         {/*  <SocialProof /> */}
       </main>
       <Footer />

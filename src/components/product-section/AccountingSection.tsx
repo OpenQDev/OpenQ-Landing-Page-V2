@@ -13,7 +13,7 @@ const listItems = [
 const AccountingSection = () => (
   <div className={tw(``)}>
     <div className={tw(`bg-dark-mode -mt-1 lg:mx-4 lg:rounded-b-2xl`)}>
-      <section className={tw(`font-montserrat pt-8 mx-10 mx-auto lg:mx-60`)}>
+      <section className={tw(`font-montserrat pt-24 mx-10 mx-auto lg:mx-60`)}>
         <div className={tw(`flex flex-col justify-center`)}>
           <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
             <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
