@@ -63,11 +63,11 @@ const articles = [
 
 const CasesSection = () => (
   <section>
-    <div className={tw(`w-full min-h-screen bg-white relative`)}>
+    <div className={tw(`w-full min-h-screen bg-dark-mode relative`)}>
       <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}></div>
-      <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-        <h1 className={tw(`text-black text-4xl lg:text-7xl font-bold text-center`)}>Read more about us</h1>
-        <p className={tw(`text-black text-gray-400 text-center text-xl mt-12`)}>
+      <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20`)}>
+        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>Read more about us</h1>
+        <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
           We are about to change the way people work together
         </p>
         <div className={tw(`mx-auto pt-24`)}>
@@ -98,7 +98,7 @@ const CasesSection = () => (
             <span
               className={tw(
                 `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                text-indigo-400 cursor-pointer z-30 hover:text-indigo-600`,
+                text-white cursor-pointer z-30 hover:text-purple-600`,
               )}
             >
               See all articles

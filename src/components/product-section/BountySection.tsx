@@ -20,7 +20,7 @@ const BountySection = () => (
         The Future of Work Stack.
       </p>
       <p className={tw(`text-4xl lg:text-7xl font-extrabold tracking-tight text-black`)}>
-        Incentivize your community via Atomic Contracting and get new pre-vetted contributors.
+        Grow your community with atomic contracts and permissionless bounties.
       </p>
     </div>
     <section className={tw(`font-montserrat mx-10 lg:mx-64 mx-auto`)}>
@@ -44,11 +44,11 @@ const BountySection = () => (
               `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4`,
             )}
           >
-            Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system
+            Open source has operated similarly to DAOs for decades.
             <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900 pt-2`)}>
-              integrates directly with GitHub
+              Pull requests are a tried and true mechanism{' '}
             </span>
-            . Once a PR is closed, the developer automatically is eligable to withdraw the escrow.
+            for proposing new code. Now you can leverage the same simple processes for bounties.
           </p>
           <div className={tw(`pt-3 pl-6 pb-10 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
@@ -139,7 +139,11 @@ const BountySection = () => (
               bounties that match your skill set
             </span>
             {` `}
-            and earn by getting your pull request merged.
+            and earn by getting your pull request merged.{' '}
+            <p>
+              Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, your contributor
+              can immediately claim the bounty.
+            </p>
           </p>
           <div className={tw(`pl-8 pt-8 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>

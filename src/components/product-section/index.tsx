@@ -3,6 +3,7 @@ import FeatureSvg from '@/constants/svg/features.svg';
 import BountySection from './BountySection';
 import StreamSection from './StreamSection';
 import AccountingSection from './AccountingSection';
+import ProductFooter from './ProductFooter';
 
 const listItems = [
   {
@@ -26,6 +27,7 @@ const ProductSection = () => (
         <BountySection />
         <StreamSection />
         <AccountingSection />
+        <ProductFooter />
       </div>
     </section>
   </div>

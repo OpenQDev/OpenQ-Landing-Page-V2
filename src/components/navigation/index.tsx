@@ -186,7 +186,7 @@ const Navigation = () => {
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               {/*    <Button modifier="border-0 mr-2 bg-gray-900 text-white">Contact Team</Button>
               <Button modifier="border-0 mr-2 bg-gray-900 text-white">Docs</Button> */}
-              <Button modifier="font-montserrat border border-purple-500 bg-purple-800 text-purple-100 font-bold">
+              <Button modifier="font-montserrat border rounded-full px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold">
                 Launch App
               </Button>
             </div>

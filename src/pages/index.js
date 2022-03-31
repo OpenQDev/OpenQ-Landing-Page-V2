@@ -33,10 +33,10 @@ export default function Home() {
           />
         </div>
         <ProductSection />
-        {/*  <ListSection /> */}
-        {/* <FeatureSection /> */}
-        <CasesSection />
-        {/*  <SocialProof /> */}
+        {/* <ListSection /> */}
+        {/*  <FeatureSection /> */}
+
+        <SocialProof />
       </main>
       <Footer />
     </Page>
