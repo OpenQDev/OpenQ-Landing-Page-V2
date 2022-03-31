@@ -51,6 +51,9 @@ const Footer = () => (
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
                   <a href="https://docs.openq.dev/welcome/master">Docs</a>
                 </li>
+                <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
+                  <a href="https://docs.openq.dev/welcome/master">App</a>
+                </li>
               </ul>
             </div>
           </li>

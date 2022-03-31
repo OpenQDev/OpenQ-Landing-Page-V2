@@ -48,7 +48,8 @@ const BountySection = () => (
             <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900 pt-2`)}>
               Pull requests are a tried and true mechanism{' '}
             </span>
-            for proposing new code. Now you can leverage the same simple processes for bounties.
+            for proposing new code. Now you can leverage the same simple processes for bounties. Once a PR is closed,
+            your contributor can immediately claim the bounty.
           </p>
           <div className={tw(`pt-3 pl-6 pb-10 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
@@ -140,10 +141,7 @@ const BountySection = () => (
             </span>
             {` `}
             and earn by getting your pull request merged.{' '}
-            <p>
-              Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, your contributor
-              can immediately claim the bounty.
-            </p>
+            <p>Our permissionless bounty system integrates directly with GitHub.</p>
           </p>
           <div className={tw(`pl-8 pt-8 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
