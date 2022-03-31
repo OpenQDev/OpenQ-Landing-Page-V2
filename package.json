@@ -18,14 +18,14 @@
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install"
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "dependencies": {
     "@fontsource/inter": "4.2.1",
     "@react-three/drei": "7.6.1",
     "@react-three/fiber": "7.0.6",
     "@svgr/webpack": "5.5.0",
+    "@types/tailwindcss": "3.0.10",
     "@ukstv/jazzicon-react": "1.0.0",
     "next": "10.0.7",
     "next-seo": "4.20.0",

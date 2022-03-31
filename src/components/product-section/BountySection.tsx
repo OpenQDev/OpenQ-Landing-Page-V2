@@ -11,12 +11,31 @@ const listItems = [
 
 const BountySection = () => (
   <div>
-    <section className={tw(`font-montserrat pt-8 mx-10 mx-auto`)}>
+    <div className={tw(`mb-8 mx-10 mx-auto`)}>
+      <p
+        className={tw(
+          `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500`,
+        )}
+      >
+        The Future of Work Stack.
+      </p>
+      <p className={tw(`text-4xl lg:text-7xl font-extrabold tracking-tight text-black`)}>
+        Incentivize your community via Atomic Contracting and get new pre-vetted contributors.
+      </p>
+    </div>
+    <section className={tw(`font-montserrat mx-10 mx-auto`)}>
+      <div className={tw(`flex flex-row space-x-3 items-center pb-3`)}>
+        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>$_</div>
+        <h2 className={tw(`text-md pl-2 text-gray-500`)}>Fund issue</h2>
+      </div>
       <div className={tw(`flex flex-row space-x-3 items-center`)}>
         <div className={tw(`w-3 h-3 border rounded-full border-gray-400`)} />
-        <h2 className={tw(`text-xl pl-3 lg:text-7xl font-extrabold tracking-tight text-gray-800`)}>
-          Permisionless Github Bounties
-        </h2>
+        <div className={tw(`pl-5`)}>
+          <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
+            <Image src="/eth-colour.png" alt="OpenQ Logo" width="15%" height="25%" />
+            <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>deposit erc-20</p>
+          </div>
+        </div>
       </div>
       <div className={tw(`pl-1 `)}>
         <div className={tw(`border-l px-3 border-gray-400`)}>

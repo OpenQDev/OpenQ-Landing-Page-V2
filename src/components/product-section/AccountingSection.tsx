@@ -98,7 +98,7 @@ const AccountingSection = () => (
               </svg>
             </div>
             <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Unified dashboards, no more block explorer</h2>
-            <p className={tw(`text-white pt-2`)}>
+            <div className={tw(`text-white pt-2`)}>
               Track every single transaction made with OpenQ in one place{` `}
               <p
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
@@ -106,7 +106,7 @@ const AccountingSection = () => (
                 or integrate other
               </p>
               solutions and extend your board.
-            </p>
+            </div>
           </div>
           <div className={tw(`pt-16`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
@@ -126,7 +126,7 @@ const AccountingSection = () => (
               </svg>
             </div>
             <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Financial Reports</h2>
-            <p className={tw(`text-white pt-2`)}>
+            <div className={tw(`text-white pt-2`)}>
               <p
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
               >
@@ -135,7 +135,7 @@ const AccountingSection = () => (
               {` `}
               and generate invoices as well as financial reports automatically for bounties or payroll streams.
               solutions and extend your board.
-            </p>
+            </div>
           </div>
           <div className={tw(`pt-16`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
@@ -157,7 +157,7 @@ const AccountingSection = () => (
             <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>
               Organize your transaction and put your money to work
             </h2>
-            <p className={tw(`text-white pt-2`)}>
+            <div className={tw(`text-white pt-2`)}>
               Track every single transaction made with OpenQ in one place{` `}
               <p
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
@@ -165,7 +165,7 @@ const AccountingSection = () => (
                 or integrate other
               </p>
               solutions and extend your board.
-            </p>
+            </div>
           </div>
         </div>
       </section>

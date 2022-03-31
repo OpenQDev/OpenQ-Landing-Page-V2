@@ -23,16 +23,6 @@ const ProductSection = () => (
   <div>
     <section className={tw(`font-montserrat pt-28`)}>
       <div className={tw(`bg-white`)}>
-        <div className={tw(`mb-16 mx-10 mx-auto`)}>
-          <h2 className={tw(`text-base pb-2 text-purple-700 font-semibold tracking-wide uppercase`)}>Products</h2>
-          <p
-            className={tw(
-              `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600`,
-            )}
-          >
-            The Future of Work Stack
-          </p>
-        </div>
         <BountySection />
         <StreamSection />
         <AccountingSection />

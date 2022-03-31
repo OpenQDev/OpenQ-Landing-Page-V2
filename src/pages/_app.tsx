@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { AppProps } from 'next/app';
 import '@/styles/global.css';
 import '@fontsource/inter';

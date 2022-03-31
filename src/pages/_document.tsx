@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as React from 'react';
 import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
 import { setup } from 'twind';
