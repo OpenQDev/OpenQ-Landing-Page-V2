@@ -56,7 +56,7 @@ const Footer = () => (
           </li>
           <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3`)}>
             <div>
-              <h4 className={tw(`text-gray-900 pt-5  text-base font-bold mb-1`)}>About Us</h4>
+              <h4 className={tw(`text-gray-900 pt-5 lg:-pt-1 text-base font-bold mb-1`)}>About Us</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
                   <a href="/">Terms of Service</a>

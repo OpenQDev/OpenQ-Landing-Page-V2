@@ -11,8 +11,8 @@ const listItems = [
 ];
 
 const StreamSection = () => (
-  <div className={tw(`bg-dark-mode`)}>
-    <section className={tw(`font-montserrat pt-16 mx-10 mx-auto`)}>
+  <div className={tw(`bg-dark-mode lg:mx-4 lg:rounded-t-2xl `)}>
+    <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-60`)}>
       <div className={tw(`flex flex-col justify-center`)}>
         <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
           <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
@@ -73,30 +73,50 @@ const StreamSection = () => (
           </div>
         </div>
       </div>
-      <div className={tw(`border-l ml-1 pt-5 pl-8 border-gray-400 pb-8`)}>
-        <div className={tw(`pt-8`)}>
-          <div className={tw(`border border-white rounded-xl`)}>
-            <div className={tw(`px-5 text-center py-8`)}>
-              <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
-              <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-500`)}>
-                0x90F7...
-              </div>
-              <div className={tw(`pt-3 pb-1`)}>
-                <div className={tw(`border rounded-2xl font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}>
-                  Add socials
+      <div className={tw(``)}>
+        <div
+          className={tw(
+            `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`,
+          )}
+        >
+          <div className={tw(`lg:col-span-2`)}>
+            <div className={tw(`border border-white rounded-xl`)}>
+              <div className={tw(`px-5 text-center py-8`)}>
+                <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
+                <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-500`)}>
+                  0x90F7...
                 </div>
-              </div>
-              <div className={tw(`pt-3 pb-1`)}>
-                <div
-                  className={tw(
-                    `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
-                  )}
-                >
-                  Save
+                <div className={tw(`pt-3 pb-1`)}>
+                  <div
+                    className={tw(`border rounded-2xl font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}
+                  >
+                    Add socials
+                  </div>
+                </div>
+                <div className={tw(`pt-3 pb-1`)}>
+                  <div
+                    className={tw(
+                      `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
+                    )}
+                  >
+                    Save
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <p
+            className={tw(
+              `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4`,
+            )}
+          >
+            Tokens Streams enable the integration of
+            <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
+              of decentralized payroll systems{` `}
+            </span>
+            into our accounting layer. Bounties are good for making initial connections and getting involved in
+            projects. After that, you want to create stability.
+          </p>
         </div>
       </div>
       <div className={tw(`flex flex-row -ml-2 items-center`)}>
@@ -136,8 +156,19 @@ const StreamSection = () => (
           Facilitate payment requests for your contributors or request your invoiced payment to DAOs{` `}
         </p>
       </div>
-      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
-        <div className={tw(`pt-8 pl-8`)}>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
+        <p
+          className={tw(
+            `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 lg:pt-12`,
+          )}
+        >
+          Our web3 mentality
+          <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
+            of onboarding and offboarding team members{` `}
+          </span>
+          supported by permissionless payroll streams.
+        </p>
+        <div className={tw(`pt-8 pl-8 lg:col-span-2`)}>
           <div className={tw(`border border-white rounded-xl`)}>
             <div className={tw(`px-5 text-center py-8`)}>
               <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursments</div>

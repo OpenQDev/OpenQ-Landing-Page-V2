@@ -11,7 +11,7 @@ const listItems = [
 
 const BountySection = () => (
   <div>
-    <div className={tw(`mb-8 mx-10 mx-auto`)}>
+    <div className={tw(`mb-8 mx-10 lg:mx-64 mx-auto lg:mb-16`)}>
       <p
         className={tw(
           `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500`,
@@ -23,7 +23,7 @@ const BountySection = () => (
         Incentivize your community via Atomic Contracting and get new pre-vetted contributors.
       </p>
     </div>
-    <section className={tw(`font-montserrat mx-10 mx-auto`)}>
+    <section className={tw(`font-montserrat mx-10 lg:mx-64 mx-auto`)}>
       <div className={tw(`flex flex-row space-x-3 items-center pb-3`)}>
         <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>$_</div>
         <h2 className={tw(`text-md pl-2 text-gray-500`)}>Fund issue</h2>
@@ -38,15 +38,19 @@ const BountySection = () => (
         </div>
       </div>
       <div className={tw(`pl-1 `)}>
-        <div className={tw(`border-l px-3 border-gray-400`)}>
-          <p className={tw(`pt-2 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2`)}>
+        <div className={tw(`border-l border-gray-400 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
+          <p
+            className={tw(
+              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4`,
+            )}
+          >
             Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system
-            <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg text-gray-700 pt-2`)}>
+            <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900 pt-2`)}>
               integrates directly with GitHub
             </span>
             . Once a PR is closed, the developer automatically is eligable to withdraw the escrow.
           </p>
-          <div className={tw(`pt-3 pl-6 pb-10`)}>
+          <div className={tw(`pt-3 pl-6 pb-10 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
               <div className={tw(``)}>
                 <h3 className={tw(`text-xl font-bold text-center text-gray-800 pt-5`)}>Mint Bounty</h3>
@@ -124,34 +128,48 @@ const BountySection = () => (
         <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Find devs with OpenQ talent pools</p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
-        <div className={tw(`pl-8 pt-8`)}>
-          <div className={tw(`border border-gray-900 rounded-xl`)}>
-            <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
-              <div className={tw(``)}>
-                <Image src="/logo.png" alt="OpenQ Logo" width="60%" height="60%" />
-                <div className={tw(`font-bold text-2xl`)}>OpenQ</div>
-                <div className={tw(`pt-2 font-semibold text-gray-500`)}>5 open bounties</div>
-              </div>
-            </div>
-          </div>
-          <div className={tw(`pt-5`)}>
+        <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
+          <p
+            className={tw(
+              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4`,
+            )}
+          >
+            Find
+            <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900 pt-2`)}>
+              bounties that match your skill set
+            </span>
+            {` `}
+            and earn by getting your pull request merged.
+          </p>
+          <div className={tw(`pl-8 pt-8 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
               <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
                 <div className={tw(``)}>
-                  <Image src="/sushi.png" alt="OpenQ Logo" width="65%" height="65%" />
-                  <div className={tw(`font-bold text-2xl`)}>Suhiswap</div>
-                  <div className={tw(`pt-2 font-semibold text-gray-500`)}>4 open bounties</div>
+                  <Image src="/logo.png" alt="OpenQ Logo" width="60%" height="60%" />
+                  <div className={tw(`font-bold text-2xl`)}>OpenQ</div>
+                  <div className={tw(`pt-2 font-semibold text-gray-500`)}>5 open bounties</div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className={tw(`pt-5`)}>
-            <div className={tw(`border border-gray-900 rounded-xl`)}>
-              <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
-                <div className={tw(``)}>
-                  <Image src="/uniswap-2.png" alt="OpenQ Logo" width="75%" height="75%" />
-                  <div className={tw(`font-bold text-2xl`)}>Uniswap</div>
-                  <div className={tw(`pt-2 font-semibold text-gray-500`)}>2 open bounties</div>
+            <div className={tw(`pt-5 lg:-mt-10 lg:ml-20 lg:bg-white`)}>
+              <div className={tw(`border border-gray-900 rounded-xl `)}>
+                <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
+                  <div className={tw(``)}>
+                    <Image src="/sushi.png" alt="OpenQ Logo" width="65%" height="65%" />
+                    <div className={tw(`font-bold text-2xl`)}>Suhiswap</div>
+                    <div className={tw(`pt-2 font-semibold text-gray-500`)}>4 open bounties</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={tw(`pt-5 lg:-mt-10 lg:ml-32 lg:bg-white`)}>
+              <div className={tw(`border border-gray-900 rounded-xl`)}>
+                <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
+                  <div className={tw(``)}>
+                    <Image src="/uniswap-2.png" alt="OpenQ Logo" width="75%" height="75%" />
+                    <div className={tw(`font-bold text-2xl`)}>Uniswap</div>
+                    <div className={tw(`pt-2 font-semibold text-gray-500`)}>2 open bounties</div>
+                  </div>
                 </div>
               </div>
             </div>

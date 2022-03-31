@@ -12,8 +12,8 @@ const listItems = [
 
 const AccountingSection = () => (
   <div className={tw(``)}>
-    <div className={tw(`bg-dark-mode -mt-1`)}>
-      <section className={tw(`font-montserrat pt-8 mx-10 mx-auto`)}>
+    <div className={tw(`bg-dark-mode -mt-1 lg:mx-4 lg:rounded-b-2xl`)}>
+      <section className={tw(`font-montserrat pt-8 mx-10 mx-auto lg:mx-60`)}>
         <div className={tw(`flex flex-col justify-center`)}>
           <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
             <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
@@ -79,8 +79,8 @@ const AccountingSection = () => (
           </div>
         </div>
         <div className={tw(`border-l ml-1 pt-5 pl-8 border-gray-400 pb-8`)} />
-        <div className={tw(`flex flex-col justify-center pl-1 pb-16 pt-3`)}>
-          <div className={tw(`pt-16`)}>
+        <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3`)}>
+          <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ const AccountingSection = () => (
               solutions and extend your board.
             </div>
           </div>
-          <div className={tw(`pt-16`)}>
+          <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ const AccountingSection = () => (
               solutions and extend your board.
             </div>
           </div>
-          <div className={tw(`pt-16`)}>
+          <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
