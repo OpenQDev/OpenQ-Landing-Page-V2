@@ -308,7 +308,23 @@ const StreamSection = () => (
           Automatically generate invoices for all your OpenQ activities as contributor.{` `}
         </p>
       </div>
-      <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
+      <div className={tw(`lg:px-4`)}>
+        <div
+          className={tw(
+            `border-l lg:border-b pl-9 lg:w-1/2 ml-1 lg:-ml-3 lg:rounded-bl-xl border-gray-400 pb-16 lg:pb-9`,
+          )}
+        />
+      </div>
+      <div className={tw(`pt-1`)}></div>
+      <div className={tw(`flex justify-between`)}>
+        <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:visible lg:border-dark-mode`)} />
+        <div
+          className={tw(
+            `border-l invisible ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:-ml-8 lg:-scale-x-100 lg:-mt-1 lg:rounded-t-xl lg:visible`,
+          )}
+        />
+        <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
+      </div>
     </section>
   </div>
 );

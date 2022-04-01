@@ -13,16 +13,18 @@ const listItems = [
 const AccountingSection = () => (
   <div className={tw(``)}>
     <div className={tw(`bg-dark-mode -mt-1 lg:mx-4`)}>
-      <section className={tw(`font-montserrat pt-24 mx-10 mx-auto lg:mx-60`)}>
-        <div className={tw(`flex flex-col justify-center`)}>
-          <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
-            <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
-              <div
-                className={tw(
-                  ` px-5 py-1 font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-300 truncate`,
-                )}
-              >
-                Coming Soon
+      <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>
+        <div className={tw(`lg:text-center`)}>
+          <div className={tw(`lg:flex lg:justify-center`)}>
+            <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
+              <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
+                <div
+                  className={tw(
+                    ` px-5 py-1 font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-300 truncate`,
+                  )}
+                >
+                  Coming Soon
+                </div>
               </div>
             </div>
           </div>
@@ -34,7 +36,7 @@ const AccountingSection = () => (
             Accounting Layer
           </p>
         </div>
-        <div className={tw(`flex flex-row pt-5 space-x-3 items-center`)}>
+        <div className={tw(`flex flex-row pt-5 space-x-3 lg:justify-center items-center`)}>
           <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>
             @_
           </div>
@@ -42,8 +44,8 @@ const AccountingSection = () => (
             Stop wasting time manually tracking your payments on spreadsheets
           </h2>
         </div>
-        <div className={tw(`flex flex-row -ml-2 pt-3 items-center`)}>
-          <div>
+        <div className={tw(`flex flex-row -ml-2 pt-3 items-center lg:justify-center `)}>
+          <div className={tw(`visible lg:invisible`)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -56,7 +58,7 @@ const AccountingSection = () => (
               <circle cx="14" cy="11" fill="#000000" r="5" stroke="#465061" strokeWidth="2" />
             </svg>
           </div>
-          <div className={tw(`pl-5`)}>
+          <div className={tw(`pl-5 lg:-ml-10`)}>
             <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
               <div>
                 <svg
@@ -78,7 +80,11 @@ const AccountingSection = () => (
             </div>
           </div>
         </div>
-        <div className={tw(`border-l ml-1 pt-5 pl-8 border-gray-400 pb-8`)} />
+        <div className={tw(`flex justify-between`)}>
+          <div className={tw(`border-l visible ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:border-dark-mode`)} />
+          <div className={tw(`border-l invisible ml-1 pt-5 pl-8 lg:pl-0 border-gray-400 pb-8 lg:visible`)} />
+          <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
+        </div>
         <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3`)}>
           <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
