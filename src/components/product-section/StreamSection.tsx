@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import Image from 'next/image';
@@ -10,7 +12,7 @@ const listItems = [
   },
 ];
 
-const StreamSection = () => (
+const StreamSection = ({scrollY}) => (
   <div className={tw(`bg-dark-mode lg:mx-4 lg:rounded-t-2xl `)}>
     <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-60`)}>
       <div className={tw(`flex flex-col justify-center`)}>
@@ -79,7 +81,7 @@ const StreamSection = () => (
           )}
         >
           <div className={tw(`lg:col-span-2`)}>
-            <div className={tw(`border border-white rounded-xl`)}>
+            <div className={tw(`border border-white rounded-xl ${scrollY > 2500 ? 'animate-fadeInRight' : 'invisible'}`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
                 <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-500`)}>
@@ -106,7 +108,7 @@ const StreamSection = () => (
           </div>
           <p
             className={tw(
-              `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4`,
+              `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4 ${scrollY > 2500 ? 'animate-fadeInLeft' : 'invisible'}`,
             )}
           >
             Tokens Streams enable the integration of
@@ -158,7 +160,7 @@ const StreamSection = () => (
       <div className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
         <p
           className={tw(
-            `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 lg:pt-12`,
+            `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 lg:pt-12 ${scrollY > 3100 ? 'animate-fadeInRight' : 'invisible'}`,
           )}
         >
           Our web3 mentality
@@ -167,7 +169,7 @@ const StreamSection = () => (
           </span>
           supported by permissionless payroll streams.
         </p>
-        <div className={tw(`pt-8 pl-8 lg:col-span-2`)}>
+        <div className={tw(`pt-8 pl-8 lg:col-span-2 ${scrollY > 3100 ? 'animate-fadeInLeft' : 'invisible'}`)}>
           <div className={tw(`border border-white rounded-xl`)}>
             <div className={tw(`px-5 text-center py-8`)}>
               <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursments</div>

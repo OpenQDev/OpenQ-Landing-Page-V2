@@ -1,9 +1,12 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import BountySection from './BountySection';
 import StreamSection from './StreamSection';
 import AccountingSection from './AccountingSection';
 import ProductFooter from './ProductFooter';
+import { useEffect, useState } from 'react';
 
 const listItems = [
   {
@@ -20,17 +23,35 @@ const listItems = [
   },
 ];
 
-const ProductSection = () => (
+const ProductSection = () => {
+
+  const [scrollY, setScrollY] = useState(0);
+  /*  console.log("scrollY: ", scrollY) */
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    handleScroll();
+
+    window.addEventListener(`scroll`, handleScroll);
+    return () => {
+      window.removeEventListener(`scroll`, handleScroll);
+    };
+  }, []);
+
+  return(
   <div>
     <section className={tw(`font-montserrat pt-28`)}>
       <div className={tw(`bg-white`)}>
-        <BountySection />
-        <StreamSection />
-        <AccountingSection />
-        <ProductFooter />
+        <BountySection scrollY={scrollY}/>
+        <StreamSection scrollY={scrollY}/>
+        <AccountingSection scrollY={scrollY}/>
+        <ProductFooter scrollY={scrollY}/>
       </div>
     </section>
   </div>
-);
+)};
 
 export default ProductSection;

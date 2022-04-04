@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import Image from 'next/image';
@@ -9,7 +11,10 @@ const listItems = [
   },
 ];
 
-const BountySection = () => (
+const BountySection = ({scrollY}) => { 
+  
+  console.log("scrollY, ", scrollY);
+  return(
   <div>
     <div className={tw(`mb-8 mx-10 lg:mx-64 mx-auto lg:mb-16`)}>
       <p
@@ -41,7 +46,7 @@ const BountySection = () => (
         <div className={tw(`border-l border-gray-400 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
           <p
             className={tw(
-              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4`,
+              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 ${scrollY > 900 ? 'animate-fadeInRight' : 'invisible'}`,
             )}
           >
             Open source has operated similarly to DAOs for decades.
@@ -52,7 +57,7 @@ const BountySection = () => (
             your contributor can immediately claim the bounty.
           </p>
           <div className={tw(`pt-3 pl-6 pb-10 lg:col-span-2`)}>
-            <div className={tw(`border border-gray-900 rounded-xl`)}>
+            <div className={tw(`border border-gray-900 rounded-xl ${scrollY > 900 ? 'animate-fadeInLeft' : 'invisible'}`)}>
               <div className={tw(``)}>
                 <h3 className={tw(`text-xl font-bold text-center text-gray-800 pt-5`)}>Mint Bounty</h3>
                 <p className={tw(`px-2 text-center text-base text-gray-600 pt-2`)}>
@@ -132,7 +137,7 @@ const BountySection = () => (
         <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
           <p
             className={tw(
-              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4`,
+              `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 ${scrollY > 1500 ? 'animate-fadeInRight' : 'invisible'}`,
             )}
           >
             Find
@@ -143,7 +148,7 @@ const BountySection = () => (
             and earn by getting your pull request merged.{' '}
             <p>Our permissionless bounty system integrates directly with GitHub.</p>
           </p>
-          <div className={tw(`pl-8 pt-8 lg:col-span-2`)}>
+          <div className={tw(`pl-8 pt-8 lg:col-span-2 ${scrollY > 1500 ? 'animate-fadeInLeft' : 'invisible'}`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
               <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
                 <div className={tw(``)}>
@@ -211,8 +216,8 @@ const BountySection = () => (
         </div>
         <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>mantainer merges pull request</p>
       </div>
-      <div className={tw(`border-l ml-1 border-gray-400 pb-16`)}>
-        <div className={tw(`pl-8 pt-8`)}>
+      <div className={tw(`border-l ml-1 border-gray-400 pb-16 ${scrollY > 2115 ? 'animate-fadeInTop' : 'invisible'}`)}>
+        <div className={tw(`pl-8 pt-8 hover:animate-wiggleY animate-wiggleYQuick`)}>
           <div className={tw(`border border-gray-900 rounded-xl`)}>
             <div className={tw(`px-5 text-center py-5`)}>
               <div className={tw(`flex flex-row justify-center items-center space-x-4`)}>
@@ -337,6 +342,6 @@ const BountySection = () => (
       </div>
     </section>
   </div>
-);
+)};
 
 export default BountySection;

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import Image from 'next/image';
@@ -80,12 +82,13 @@ const AccountingSection = () => (
             </div>
           </div>
         </div>
+        
         <div className={tw(`flex justify-between`)}>
           <div className={tw(`border-l visible ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:border-dark-mode`)} />
           <div className={tw(`border-l invisible ml-1 pt-5 pl-8 lg:pl-0 border-gray-400 pb-8 lg:visible`)} />
           <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
         </div>
-        <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3`)}>
+        <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 ${scrollY > 4100 ? 'animate-fadeInTop' : 'invisible'}`)}>
           <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
               <svg
