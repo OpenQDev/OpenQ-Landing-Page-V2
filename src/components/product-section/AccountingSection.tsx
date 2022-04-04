@@ -12,7 +12,7 @@ const listItems = [
   },
 ];
 
-const AccountingSection = () => (
+const AccountingSection = ({scrollY}) => (
   <div className={tw(``)}>
     <div className={tw(`bg-dark-mode -mt-1 lg:mx-4`)}>
       <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>

@@ -26,7 +26,7 @@ const listItems = [
 const ProductSection = () => {
 
   const [scrollY, setScrollY] = useState(0);
-  /*  console.log("scrollY: ", scrollY) */
+   console.log("scrollY: ", scrollY)
 
   useEffect(() => {
     const handleScroll = () => {

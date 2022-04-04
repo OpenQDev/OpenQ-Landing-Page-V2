@@ -56,7 +56,7 @@ const BountySection = ({scrollY}) => {
             for proposing new code. Now you can leverage the same simple processes for bounties. Once a PR is closed,
             your contributor can immediately claim the bounty.
           </p>
-          <div className={tw(`pt-3 pl-6 pb-10 lg:col-span-2`)}>
+          <div className={tw(`pt-6 pl-6 pb-10 lg:-mt-10 lg:col-span-2`)}>
             <div className={tw(`border border-gray-900 rounded-xl ${scrollY > 900 ? 'animate-fadeInLeft' : 'invisible'}`)}>
               <div className={tw(``)}>
                 <h3 className={tw(`text-xl font-bold text-center text-gray-800 pt-5`)}>Mint Bounty</h3>
@@ -148,7 +148,7 @@ const BountySection = ({scrollY}) => {
             and earn by getting your pull request merged.{' '}
             <p>Our permissionless bounty system integrates directly with GitHub.</p>
           </p>
-          <div className={tw(`pl-8 pt-8 lg:col-span-2 ${scrollY > 1500 ? 'animate-fadeInLeft' : 'invisible'}`)}>
+          <div className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2 ${scrollY > 1500 ? 'animate-fadeInLeft' : 'invisible'}`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
               <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
                 <div className={tw(``)}>
