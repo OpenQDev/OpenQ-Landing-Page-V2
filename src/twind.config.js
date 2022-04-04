@@ -9,6 +9,7 @@ export default {
             BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
             sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
         montserrat: `"Montserrat" `,
+        mono: `"Ubuntu Mono"`,
       },
       colors: {
         transparent: 'transparent',

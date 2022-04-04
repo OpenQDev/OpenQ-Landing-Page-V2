@@ -34,8 +34,8 @@ const StreamSection = () => (
         </p>
       </div>
       <div className={tw(`flex flex-row pt-5 space-x-3 items-center`)}>
-        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>$_</div>
-        <h2 className={tw(`text-md pl-2 text-gray-500`)}>create token stream</h2>
+        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 font-mono text-gray-500`)}>$_</div>
+        <h2 className={tw(`text-md pl-2 font-mono text-gray-500`)}>create token stream</h2>
       </div>
       <div className={tw(`flex flex-row -ml-2 pt-3 items-center`)}>
         <div>
@@ -68,7 +68,7 @@ const StreamSection = () => (
                 />
               </svg>
             </div>
-            <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>add new contributor</p>
+            <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>add new contributor</p>
           </div>
         </div>
       </div>
@@ -132,8 +132,8 @@ const StreamSection = () => (
             <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
-          Add payrolls in any ERC-20/ Polygon native token
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          add payrolls in any ERC-20/ Polygon native token
         </p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
@@ -151,8 +151,8 @@ const StreamSection = () => (
             <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
-          Facilitate payment requests for your contributors or request your invoiced payment to DAOs{` `}
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          facilitate payment requests for your contributors or request your invoiced payment to DAOs{` `}
         </p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
@@ -285,8 +285,8 @@ const StreamSection = () => (
             <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
-          Manage your payouts in our accounting system.{` `}
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          manage your payouts in our accounting system.{` `}
         </p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
@@ -304,8 +304,8 @@ const StreamSection = () => (
             <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>
-          Automatically generate invoices for all your OpenQ activities as contributor.{` `}
+        <p className={tw(`pl-2 text-md font-base font-mono   text-left text-gray-500`)}>
+          automatically generate invoices for all your OpenQ activities as contributor.{` `}
         </p>
       </div>
       <div className={tw(`lg:px-4`)}>

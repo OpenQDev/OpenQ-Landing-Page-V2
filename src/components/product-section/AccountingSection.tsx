@@ -37,11 +37,11 @@ const AccountingSection = () => (
           </p>
         </div>
         <div className={tw(`flex flex-row pt-5 space-x-3 lg:justify-center items-center`)}>
-          <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>
+          <div className={tw(`border border-2 -ml-2 rounded-lg font-mono py-1 px-2 text-sm border-gray-500 text-gray-500`)}>
             @_
           </div>
-          <h2 className={tw(`text-md pl-2 text-gray-500`)}>
-            Stop wasting time manually tracking your payments on spreadsheets
+          <h2 className={tw(`text-md pl-2 font-mono text-gray-500`)}>
+            stop wasting time manually tracking your payments on spreadsheets
           </h2>
         </div>
         <div className={tw(`flex flex-row -ml-2 pt-3 items-center lg:justify-center `)}>

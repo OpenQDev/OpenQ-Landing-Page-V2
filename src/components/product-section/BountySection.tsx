@@ -25,15 +25,15 @@ const BountySection = () => (
     </div>
     <section className={tw(`font-montserrat mx-10 lg:mx-64 mx-auto`)}>
       <div className={tw(`flex flex-row space-x-3 items-center pb-3`)}>
-        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 text-gray-500`)}>$_</div>
-        <h2 className={tw(`text-md pl-2 text-gray-500`)}>Fund issue</h2>
+        <div className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 font-mono text-gray-500`)}>$_</div>
+        <h2 className={tw(`text-md font-mono pl-2 text-gray-500`)}>fund issue</h2>
       </div>
       <div className={tw(`flex flex-row space-x-3 items-center`)}>
         <div className={tw(`w-3 h-3 border rounded-full border-gray-400`)} />
         <div className={tw(`pl-5`)}>
           <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
             <Image src="/eth-colour.png" alt="OpenQ Logo" width="15%" height="25%" />
-            <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>deposit erc-20</p>
+            <p className={tw(`pl-2 text-md font-mono font-base text-left text-gray-500`)}>deposit erc-20</p>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ const BountySection = () => (
             <circle cx="14" cy="11" fill="white" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Fund with any ERC-20 or MATIC</p>
+        <p className={tw(`pl-2 text-md font-mono font-base text-left text-gray-500`)}>fund with any ERC-20 or MATIC</p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
       <div className={tw(`flex flex-row -ml-2 items-center`)}>
@@ -126,7 +126,7 @@ const BountySection = () => (
             <circle cx="14" cy="11" fill="white" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Find devs with OpenQ talent pools</p>
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>find devs with OpenQ talent pools</p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
         <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
@@ -192,7 +192,7 @@ const BountySection = () => (
             <circle cx="14" cy="11" fill="white" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Dev creates pull request</p>
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>dev creates pull request</p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
       <div className={tw(`flex flex-row -ml-2 items-center`)}>
@@ -209,7 +209,7 @@ const BountySection = () => (
             <circle cx="14" cy="11" fill="white" r="5" stroke="#465061" strokeWidth="2" />
           </svg>
         </div>
-        <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Mantainer merges pull request</p>
+        <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>mantainer merges pull request</p>
       </div>
       <div className={tw(`border-l ml-1 border-gray-400 pb-16`)}>
         <div className={tw(`pl-8 pt-8`)}>
