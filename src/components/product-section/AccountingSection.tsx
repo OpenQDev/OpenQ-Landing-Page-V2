@@ -12,13 +12,15 @@ const listItems = [
   },
 ];
 
-const AccountingSection = ({scrollY}) => (
-  <div className={tw(``)}>  
+const AccountingSection = ({ scrollY }) => (
+  <div className={tw(``)}>
     <div className={tw(`bg-dark-mode -mt-1 lg:mx-4`)}>
       <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>
         <div className={tw(`lg:text-center`)}>
           <div className={tw(`lg:flex lg:justify-center`)}>
-            <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`)}>
+            <div
+              className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`)}
+            >
               <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
                 <div
                   className={tw(
@@ -39,7 +41,9 @@ const AccountingSection = ({scrollY}) => (
           </p>
         </div>
         <div className={tw(`flex flex-row pt-5 space-x-3 lg:justify-center items-center`)}>
-          <div className={tw(`border border-2 -ml-2 rounded-lg font-mono py-1 px-2 text-sm border-gray-500 text-gray-500`)}>
+          <div
+            className={tw(`border border-2 -ml-2 rounded-lg font-mono py-1 px-2 text-sm border-gray-500 text-gray-500`)}
+          >
             @_
           </div>
           <h2 className={tw(`text-md pl-2 font-mono text-gray-500`)}>
@@ -82,13 +86,19 @@ const AccountingSection = ({scrollY}) => (
             </div>
           </div>
         </div>
-        
+
         <div className={tw(`flex justify-between`)}>
           <div className={tw(`border-l visible ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:border-dark-mode`)} />
           <div className={tw(`border-l invisible ml-1 pt-5 pl-8 lg:pl-0 border-gray-400 pb-8 lg:visible`)} />
           <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
         </div>
-        <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 ${scrollY > 4100 ? 'animate-fadeInTop' : 'invisible'}`)}>
+        <div
+          className={tw(
+            `flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 ${
+              scrollY > 4100 ? 'animate-fadeInTop' : 'invisible'
+            }`,
+          )}
+        >
           <div className={tw(`pt-16 lg:w-5/12`)}>
             <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
               <svg
@@ -108,12 +118,12 @@ const AccountingSection = ({scrollY}) => (
             </div>
             <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Unified dashboards, no more block explorer</h2>
             <div className={tw(`text-white pt-2`)}>
-              Track every single transaction made with OpenQ in one place{` `}
-              <p
+              Track every single transaction made with OpenQ in one place{' '}
+              <span
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
               >
                 or integrate other
-              </p>
+              </span>{' '}
               solutions and extend your board.
             </div>
           </div>
@@ -136,12 +146,11 @@ const AccountingSection = ({scrollY}) => (
             </div>
             <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Financial Reports</h2>
             <div className={tw(`text-white pt-2`)}>
-              <p
+              <span
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
               >
                 Make your income taxable
-              </p>
-              {` `}
+              </span>{' '}
               and generate invoices as well as financial reports automatically for bounties or payroll streams.
               solutions and extend your board.
             </div>
@@ -163,16 +172,14 @@ const AccountingSection = ({scrollY}) => (
                 />
               </svg>
             </div>
-            <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>
-              Organize your transaction and put your money to work
-            </h2>
+            <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Organize your transactions</h2>
             <div className={tw(`text-white pt-2`)}>
-              Track every single transaction made with OpenQ in one place{` `}
-              <p
+              Track every single transaction made with OpenQ in one place{' '}
+              <span
                 className={tw(`font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`)}
               >
                 or integrate other
-              </p>
+              </span>{' '}
               solutions and extend your board.
             </div>
           </div>
