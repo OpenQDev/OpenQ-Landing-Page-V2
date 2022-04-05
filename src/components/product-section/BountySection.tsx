@@ -46,7 +46,7 @@ const BountySection = ({scrollY}) => {
         <div className={tw(`border-l border-gray-400 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
           <p
             className={tw(
-              `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-4 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${scrollY > 900 ? 'animate-fadeInRight' : 'invisible'}`,
+              `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-4 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${scrollY > 900 ? 'animate-fadeInRight' : 'invisible'}`,
             )}
           >
             Open source has operated similarly to DAOs for decades.
@@ -56,7 +56,7 @@ const BountySection = ({scrollY}) => {
             for proposing new code. Now you can leverage the same simple processes for bounties. Once a PR is closed,
             your contributor can immediately claim the bounty.
           </p>
-          <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-14`)}>
+          <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
             <div className={tw(`border border-gray-900 rounded-xl ${scrollY > 900 ? 'animate-fadeInLeft' : 'invisible'}`)}>
               <div className={tw(``)}>
                 <h3 className={tw(`text-xl font-bold text-center text-gray-800 pt-5`)}>Mint Bounty</h3>
