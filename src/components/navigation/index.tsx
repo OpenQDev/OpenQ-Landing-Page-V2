@@ -23,7 +23,7 @@ const links = [
     href: `/`,
   },
   {
-    label: `Join Community`,
+    label: `Community`,
     href: `/`,
   },
   {

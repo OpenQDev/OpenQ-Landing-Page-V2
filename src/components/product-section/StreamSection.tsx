@@ -14,7 +14,7 @@ const listItems = [
 
 const StreamSection = ({scrollY}) => (
   <div className={tw(`bg-dark-mode lg:mx-4 lg:rounded-t-2xl `)}>
-    <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-60`)}>
+    <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
       <div className={tw(`flex flex-col justify-center`)}>
         <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
           <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
@@ -80,7 +80,7 @@ const StreamSection = ({scrollY}) => (
             `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`,
           )}
         >
-          <div className={tw(`lg:col-span-2`)}>
+          <div className={tw(`lg:col-span-2 lg:pt-5`)}>
             <div className={tw(`border border-white rounded-xl ${scrollY > 2500 ? 'animate-fadeInRight' : 'invisible'}`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
