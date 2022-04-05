@@ -57,7 +57,6 @@ const ParticleBg = () => (
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
-  /*  console.log("scrollY: ", scrollY) */
 
   useEffect(() => {
     const handleScroll = () => {

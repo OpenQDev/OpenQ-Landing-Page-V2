@@ -10,6 +10,7 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
+import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Globe from '../components/globe/globe';
 
@@ -33,10 +34,10 @@ export default function Home() {
           />
         </div>
         <ProductSection />
+        <FAQ />
         {/* <ListSection /> */}
         {/*  <FeatureSection /> */}
-
-        <SocialProof />
+        {/*         <SocialProof /> */}
       </main>
       <Footer />
     </Page>

@@ -24,9 +24,7 @@ const listItems = [
 ];
 
 const ProductSection = () => {
-
   const [scrollY, setScrollY] = useState(0);
-   console.log("scrollY: ", scrollY)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,17 +39,18 @@ const ProductSection = () => {
     };
   }, []);
 
-  return(
-  <div>
-    <section className={tw(`font-montserrat pt-28`)}>
-      <div className={tw(`bg-white`)}>
-        <BountySection scrollY={scrollY}/>
-        <StreamSection scrollY={scrollY}/>
-        <AccountingSection scrollY={scrollY}/>
-        <ProductFooter scrollY={scrollY}/>
-      </div>
-    </section>
-  </div>
-)};
+  return (
+    <div>
+      <section className={tw(`font-montserrat pt-28`)}>
+        <div className={tw(`bg-white`)}>
+          <BountySection scrollY={scrollY} />
+          <StreamSection scrollY={scrollY} />
+          <AccountingSection scrollY={scrollY} />
+          <ProductFooter scrollY={scrollY} />
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default ProductSection;

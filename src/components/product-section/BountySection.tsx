@@ -12,8 +12,6 @@ const listItems = [
 ];
 
 const BountySection = ({ scrollY }) => {
-  console.log('scrollY, ', scrollY);
-
   return (
     <div>
       <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>

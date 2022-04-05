@@ -1,9 +1,8 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
-import Image from 'next/image'
+import Image from 'next/image';
 import Arrow from '@/constants/svg/arrow.svg';
-import Link from 'next/link'
-
+import Link from 'next/link';
 
 const ParticleBg = () => (
   <Particles
@@ -90,35 +89,37 @@ const CasesSection = () => (
                 )}
               >
                 <div className={tw(`h-64 z-20`)}>
-                <Link href={article.link} passHref>
-                  <a target="_blank">
-                  <Image
-                    src={article.image}
-                    alt={article.alt}
-                    className={tw(`h-full w-full object-cover overflow-hidden rounded`)}
-                    width={400}
-                    height={300}
-                  />
-                  </a>
+                  <Link href={article.link} passHref>
+                    <a target="_blank">
+                      <Image
+                        src={article.image}
+                        alt={article.alt}
+                        className={tw(`h-full w-full object-cover overflow-hidden rounded-2xl`)}
+                        width={400}
+                        height={300}
+                      />
+                    </a>
                   </Link>
                 </div>
-                <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-b z-30 relative`)}>
+                <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-2xl z-30 relative`)}>
                   <p className={tw(`uppercase text-sm font-bold text-gray-700 text-center pb-1`)}>{article.title}</p>
                   <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.desc}</p>
                 </div>
               </div>
             ))}
-           
-          <Link href=" https://medium.com/openqdev">
-              <a target="_blank" className={tw(
-                `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
+
+            <Link href=" https://medium.com/openqdev">
+              <a
+                target="_blank"
+                className={tw(
+                  `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
                 text-white cursor-pointer z-30 hover:text-purple-600`,
-              )}>
-            
-              See all articles
-              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
+                )}
+              >
+                See all articles
+                <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
               </a>
-          </Link>
+            </Link>
           </div>
         </div>
       </div>
