@@ -1,6 +1,9 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
+import Image from 'next/image'
 import Arrow from '@/constants/svg/arrow.svg';
+import Link from 'next/link'
+
 
 const ParticleBg = () => (
   <Particles
@@ -45,18 +48,24 @@ const ParticleBg = () => (
 
 const articles = [
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur ipsum esse.`,
-    image: `/images/case-1.webp`,
+    title: `The Legend of the Code Vending Machine`,
+    link: `https://medium.com/openqdev/the-legend-of-the-code-vending-machine-b30d3d573c4f`,
+    desc: `Why no code is still a no go`,
+    image: `/images/no-code.jpeg`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit ipsum esse.`,
-    image: `/images/case-2.webp`,
+    title: `Trust me bro`,
+    link: `https://medium.com/openqdev/trust-me-bro-8fd8cf0a0e11`,
+    desc: `How to get along with people you’ve never met`,
+    image: `/images/trust-me.jpeg`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur esse.`,
-    image: `/images/case-3.webp`,
+    title: `Web 2.0 DAO — Part I`,
+    link: `https://medium.com/openqdev/web-2-0-dao-part-i-4cec53dd0ec3`,
+    desc: `How I’d (Fail) To Build a DAO in 2010`,
+    image: `/images/no-dao.jpeg`,
     alt: `Proident pariatur est.`,
   },
 ];
@@ -81,29 +90,35 @@ const CasesSection = () => (
                 )}
               >
                 <div className={tw(`h-64 z-20`)}>
-                  <img
+                <Link href={article.link} passHref>
+                  <a target="_blank">
+                  <Image
                     src={article.image}
                     alt={article.alt}
                     className={tw(`h-full w-full object-cover overflow-hidden rounded`)}
                     width={400}
                     height={300}
                   />
+                  </a>
+                  </Link>
                 </div>
                 <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-b z-30 relative`)}>
-                  <p className={tw(`uppercase text-sm text-gray-700 text-center pb-1`)}>Case study</p>
-                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.title}</p>
+                  <p className={tw(`uppercase text-sm font-bold text-gray-700 text-center pb-1`)}>{article.title}</p>
+                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.desc}</p>
                 </div>
               </div>
             ))}
-            <span
-              className={tw(
+           
+          <Link href=" https://medium.com/openqdev">
+              <a target="_blank" className={tw(
                 `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
                 text-white cursor-pointer z-30 hover:text-purple-600`,
-              )}
-            >
+              )}>
+            
               See all articles
               <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
-            </span>
+              </a>
+          </Link>
           </div>
         </div>
       </div>

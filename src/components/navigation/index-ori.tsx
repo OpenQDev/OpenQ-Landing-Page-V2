@@ -1,7 +1,8 @@
 import { tw } from 'twind';
 import { useState } from 'react';
-import Image from 'next/image';
 import Button from '@/components/button';
+import Particles from 'react-particles-js';
+import Image from 'next/image';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -87,7 +88,7 @@ const MobileMenu = () => (
   <div className={tw(`md:hidden`)}>
     <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
       {links.map((link: Link) => (
-        <a href={link.href} className={tw(`text-gray-200 block px-3 py-2 text-base font-medium`)} key={link.label}>
+        <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
           {link.label}
         </a>
       ))}
@@ -98,7 +99,7 @@ const MobileMenu = () => (
           <a
             key={`mobile-${link.label}`}
             href={link.href}
-            className={tw(`block px-3 py-2 text-base font-medium text-gray-200`)}
+            className={tw(`block px-3 py-2 text-base font-medium text-gray-500`)}
           >
             {link.label}
           </a>
@@ -108,12 +109,56 @@ const MobileMenu = () => (
   </div>
 );
 
+const ParticleBg = () => (
+  <Particles
+    params={{
+      particles: {
+        number: {
+          value: 400,
+          density: {
+            enable: true,
+            value_area: 3000,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          direction: `right`,
+          speed: 0.3,
+        },
+        size: {
+          value: 1,
+        },
+        opacity: {
+          anim: {
+            enable: true,
+            speed: 0.5,
+            opacity_min: 0.1,
+          },
+        },
+      },
+      interactivity: {
+        events: {
+          onclick: {
+            enable: false,
+          },
+        },
+      },
+      retina_detect: true,
+    }}
+  />
+);
+
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav className={tw(`bg-dark-mode`)}>
+    <nav className={tw(`font-montserrat w-full bg-dark-mode relative`)}>
+      <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
+        <ParticleBg />
+      </div>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
@@ -126,7 +171,7 @@ const Navigation = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className={tw(`text-gray-200 hover:text-gray-100 hover:border hover:border-white hover:rounded-2xl px-3 py-2 rounded-md font-medium`)}
+                    className={tw(`text-white hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
                   >
                     {link.label}
                   </a>
@@ -136,9 +181,9 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              {/* <Button modifier="border-0 mr-2">Contact sales</Button> */}
-               <Button modifier="bg-dark-mode border-0 hover:border-1 hover:bg-dark-mode hover:rounded-2xl text-white mr-5">Docs</Button> 
-               <Button modifier="font-montserrat border rounded-full px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600">
+              {/*    <Button modifier="border-0 mr-2 bg-gray-900 text-white">Contact Team</Button>
+              <Button modifier="border-0 mr-2 bg-gray-900 text-white">Docs</Button> */}
+              <Button modifier="font-montserrat border rounded-full px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold">
                 Launch App
               </Button>
             </div>
