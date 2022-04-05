@@ -89,7 +89,7 @@ const FAQ = () => {
                   )}
                 </div>
                 {!clicked[index] ? null : (
-                  <p className={tw(`p-3 -pt-5 text-left text-gray-700 text-md`)}>{item.description}</p>
+                  <p className={tw(`p-3 -pt-5 pb-10 text-left text-gray-700 text-md`)}>{item.description}</p>
                 )}
               </div>
             </div>
