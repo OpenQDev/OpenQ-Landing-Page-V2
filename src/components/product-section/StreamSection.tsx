@@ -16,11 +16,11 @@ const StreamSection = ({scrollY}) => (
   <div className={tw(`bg-dark-mode lg:mx-4 lg:rounded-t-2xl `)}>
     <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
       <div className={tw(`flex flex-col justify-center`)}>
-        <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-pink-600 to-purple-500`)}>
+        <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`)}>
           <div className={tw(`ml-1 mr-1 rounded-2xl bg-dark-mode`)}>
             <div
               className={tw(
-                ` px-5 py-1 font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-300 truncate`,
+                ` px-5 py-1 font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 truncate`,
               )}
             >
               Coming Soon
