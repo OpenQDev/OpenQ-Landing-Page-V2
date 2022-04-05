@@ -88,10 +88,10 @@ const BountySection = ({scrollY}) => {
                   <div className={tw(`rounded-2xl`)}>
                     <button
                       className={tw(
-                        `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-20 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
+                        `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
                       )}
                     >
-                      Mint Bounty
+                      Mint now
                     </button>
                   </div>
                 </div>
