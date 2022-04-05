@@ -81,7 +81,14 @@ const Header = () => {
           <Parallax speed={-27}>
             <div className={tw(`text-center my-64 ${scrollY > 600 ? `animate-fadeOut` : `animate-fadeIn`}`)}>
               <h1 className={tw(`font-semibold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
-                Collaborate with <span className={tw(`font-light`)}>OpenQ</span>
+                <span
+                  className={tw(
+                    `text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
+                  )}
+                >
+                  Collaborate with
+                </span>{' '}
+                <span className={tw(`font-light`)}>OpenQ</span>
               </h1>
               <p className={tw(`mt-10 max-w-5xl text-left md:text-center mx-auto text-gray-200 text-2xl lg:text-2xl`)}>
                 Web3 payroll, benefits, accounting, HR and more to manage your growing team, all in one place.

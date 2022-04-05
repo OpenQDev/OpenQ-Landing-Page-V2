@@ -52,19 +52,19 @@ const FAQ = () => {
 
   return (
     <div>
-      <section className={tw(`font-montserrat pt-28 pb-28`)}>
+      <section className={tw(`font-montserrat pt-28 pb-16`)}>
         <h1 className={tw(`text-center font-bold text-2xl pb-24`)}>Frequently Asked Questions</h1>
         {listItems.map((item, index) => {
           return (
             <div key={index} className={tw(`-mt-14 pb-5 px-6 lg:px-64 pb-20`)}>
               <div className={tw(`border-b border-gray-800 px-20`)}>
-                <div className={tw(`flex flex-row justify-between items-center `)}>
+                <div className={tw(`flex flex-row justify-between items-center`)}>
                   <h2 className={tw(`p-3 text-left font-semibold text-gray-700 text-xl pb-8`)}>{item.title}</h2>
                   {clicked[index] ? (
                     <button onClick={() => changeItemStatus(index)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className={tw(`w-6 h-6`)}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -77,7 +77,7 @@ const FAQ = () => {
                     <button onClick={() => changeItemStatus(index)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className={tw(`w-6 h-6`)}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
