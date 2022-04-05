@@ -137,7 +137,7 @@ const Navigation = () => {
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               {/* <Button modifier="border-0 mr-2">Contact sales</Button> */}
-               <Button modifier="bg-dark-mode border-0 hover:border-1 hover:bg-dark-mode hover:rounded-2xl text-white mr-5">Docs</Button> 
+               <Button modifier="border-0 hover:border-1 bg-gray-900 bg-opacity-10 hover:bg-dark-mode hover:rounded-2xl text-white mr-5">Docs</Button> 
                <Button modifier="font-montserrat border rounded-full px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600">
                 Launch App
               </Button>

@@ -13,7 +13,7 @@ const listItems = [
 ];
 
 const AccountingSection = ({scrollY}) => (
-  <div className={tw(``)}>
+  <div className={tw(``)}>  
     <div className={tw(`bg-dark-mode -mt-1 lg:mx-4`)}>
       <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>
         <div className={tw(`lg:text-center`)}>
@@ -32,7 +32,7 @@ const AccountingSection = ({scrollY}) => (
           </div>
           <p
             className={tw(
-              `text-4xl lg:text-7xl break-normal pt-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-pink-300 `,
+              `text-4xl lg:text-7xl break-normal pt-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
             )}
           >
             Accounting Layer

@@ -1,4 +1,5 @@
 // @ts-nocheck
+const colors = require('tailwindcss/colors')
 
 export default {
   mode: 'jit',
@@ -17,6 +18,15 @@ export default {
         'button-pink': '#FF006A',
         'web-gray': '#585858',
         'custom-cyan': '#22d3ee',
+        fuchsia: colors.fuchsia,
+        emerald: colors.emerald,
+        lime: colors.lime,
+        violet: colors.violet,
+        amber: colors.amber,
+        teal: colors.teal,
+        cyan: colors.cyan,
+        sky: colors.sky,
+        indigo: colors.indigo,
       },
       // that is animation class
       animation: {

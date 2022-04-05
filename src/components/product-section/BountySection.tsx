@@ -19,7 +19,7 @@ const BountySection = ({scrollY}) => {
     <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
       <p
         className={tw(
-          `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500`,
+          `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-400`,
         )}
       >
         The Future of Work Stack.
