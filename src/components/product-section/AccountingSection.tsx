@@ -116,7 +116,7 @@ const AccountingSection = ({ scrollY }) => (
                 />
               </svg>
             </div>
-            <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Unified dashboards, no more block explorer</h2>
+            <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Unified dashboards</h2>
             <div className={tw(`text-white pt-2`)}>
               Track every single transaction made with OpenQ in one place{' '}
               <span
