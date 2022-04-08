@@ -2,6 +2,7 @@
 
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const listItems = [
@@ -12,6 +13,37 @@ const listItems = [
 ];
 
 const BountySection = ({ scrollY }) => {
+  const firstParagraph = useRef();
+  const secondParagraph = useRef();
+  const thirdParagraph = useRef();
+  const [firstIsVisible, setFirstIsVisible] = useState();
+  const [secondIsVisible, setSecondIsVisible] = useState();
+  const [thirdIsVisible, setThirdIsVisible] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setFirstIsVisible(entry.isIntersecting);
+    });
+    observer.observe(firstParagraph.current);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setSecondIsVisible(entry.isIntersecting);
+    });
+    observer.observe(secondParagraph.current);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setThirdIsVisible(entry.isIntersecting);
+    });
+    observer.observe(thirdParagraph.current);
+  }, []);
+
   return (
     <div>
       <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
@@ -47,9 +79,10 @@ const BountySection = ({ scrollY }) => {
         <div className={tw(`pl-1 `)}>
           <div className={tw(`border-l border-gray-400 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
             <div
+              ref={firstParagraph}
               className={tw(
                 `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-4 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${
-                  scrollY > 900 ? 'animate-fadeInRight' : 'invisible'
+                  firstIsVisible ? 'animate-fadeInRight' : 'invisible'
                 }`,
               )}
             >
@@ -67,7 +100,7 @@ const BountySection = ({ scrollY }) => {
             <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
               <div
                 className={tw(
-                  `border border-gray-900 rounded-xl ${scrollY > 900 ? 'animate-fadeInLeft' : 'invisible'}`,
+                  `border border-gray-900 rounded-xl ${firstIsVisible ? 'animate-fadeInLeft' : 'invisible'}`,
                 )}
               >
                 <div className={tw(``)}>
@@ -109,7 +142,7 @@ const BountySection = ({ scrollY }) => {
                       <button
                         className={tw(
                           `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 ${
-                            scrollY > 1400 ? 'bg-pink-300' : 'bg-pink-700'
+                            secondIsVisible ? 'bg-pink-300' : 'bg-pink-700'
                           } hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`,
                         )}
                       >
@@ -306,9 +339,10 @@ const BountySection = ({ scrollY }) => {
         <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
           <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
             <div
+              ref={secondParagraph}
               className={tw(
                 `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 ${
-                  scrollY > 1500 ? 'animate-fadeInRight' : 'invisible'
+                  secondIsVisible ? 'animate-fadeInRight' : 'invisible'
                 }`,
               )}
             >
@@ -321,7 +355,9 @@ const BountySection = ({ scrollY }) => {
               <p>Our permissionless bounty system integrates directly with GitHub.</p>
             </div>
             <div
-              className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2 ${scrollY > 1500 ? 'animate-fadeInLeft' : 'invisible'}`)}
+              className={tw(
+                `pl-8 pt-8 lg:-mt-10 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : 'invisible'}`,
+              )}
             >
               <div className={tw(`border border-gray-900 rounded-xl`)}>
                 <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
@@ -393,7 +429,8 @@ const BountySection = ({ scrollY }) => {
           </p>
         </div>
         <div
-          className={tw(`border-l ml-1 border-gray-400 pb-16 ${scrollY > 2115 ? 'animate-fadeInTop' : 'invisible'}`)}
+          ref={thirdParagraph}
+          className={tw(`border-l ml-1 border-gray-400 pb-16 ${thirdIsVisible ? 'animate-fadeInTop' : 'invisible'}`)}
         >
           <div className={tw(`pl-8 pt-8 hover:animate-wiggleY animate-wiggleYQuick`)}>
             <div className={tw(`border border-gray-900 rounded-xl`)}>
