@@ -72,41 +72,36 @@ const articles = [
 const CasesSection = () => (
   <section>
     <div className={tw(`bg-dark-mode pb-12`)}>
-      <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20`)}>
+      <div className={tw(`pt-20`)}>
         <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>Read more about us</h1>
         <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
           We are about to change the way people work together
         </p>
         <div className={tw(`mx-auto pt-24`)}>
-          <div className={tw(`w-full flex flex-wrap justify-around`)}>
+          <div className={tw(`flex flex-col 2xl:flex-row justify-center items-center space-x-4`)}>
             {articles.map((article) => (
-              <div
-                key={article.title}
-                className={tw(
-                  `xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20
-                      xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0 cursor-pointer hover:scale-105`,
-                )}
-              >
-                <div className={tw(`h-64 z-20`)}>
+              <div key={article.title} className={tw(`mb-8 cursor-pointer hover:scale-105`)}>
+                <div className={tw(`w-max text-center`)}>
                   <Link href={article.link} passHref>
                     <a target="_blank">
                       <Image
                         src={article.image}
                         alt={article.alt}
-                        className={tw(`h-full w-full object-cover overflow-hidden rounded-2xl`)}
-                        width={400}
+                        className={tw(`rounded-t-2xl`)}
+                        width={450}
                         height={300}
                       />
                     </a>
                   </Link>
-                </div>
-                <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-2xl z-30 relative`)}>
-                  <p className={tw(`uppercase text-sm font-bold text-gray-700 text-center pb-1`)}>{article.title}</p>
-                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.desc}</p>
+                  <div className={tw(`p-4 w-fit shadow-lg -mt-2 bg-white rounded-b-2xl`)}>
+                    <p className={tw(`uppercase text-sm font-bold text-gray-700 pb-1`)}>{article.title}</p>
+                    <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
-
+          </div>
+          <div className={tw(`flex justify-center`)}>
             <Link href=" https://medium.com/openqdev">
               <a
                 target="_blank"
