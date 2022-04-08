@@ -15,16 +15,16 @@ const BountySection = ({ scrollY }) => {
   return (
     <div>
       <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
-        <p
+        <div
           className={tw(
             `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-400`,
           )}
         >
           The Future of Work Stack.
-        </p>
-        <p className={tw(`text-4xl lg:text-7xl font-extrabold tracking-tight text-black`)}>
+        </div>
+        <div className={tw(`text-4xl lg:text-7xl font-extrabold tracking-tight text-black`)}>
           Grow your community with atomic contracts and permissionless bounties.
-        </p>
+        </div>
       </div>
       <section className={tw(`font-montserrat mx-10 lg:mx-32 xl:mx-54 2xl:mx-64  mx-auto`)}>
         <div className={tw(`flex flex-row space-x-3 items-center pb-3`)}>
@@ -46,7 +46,7 @@ const BountySection = ({ scrollY }) => {
         </div>
         <div className={tw(`pl-1 `)}>
           <div className={tw(`border-l border-gray-400 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
-            <p
+            <div
               className={tw(
                 `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-4 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${
                   scrollY > 900 ? 'animate-fadeInRight' : 'invisible'
@@ -63,7 +63,7 @@ const BountySection = ({ scrollY }) => {
               </span>
               for proposing new code. Now you can leverage the same simple processes for bounties. Once a PR is closed,
               your contributor can immediately claim the bounty.
-            </p>
+            </div>
             <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
               <div
                 className={tw(
@@ -187,19 +187,19 @@ const BountySection = ({ scrollY }) => {
                                   <polyline
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     points="50.6626,45.6395 50.8308,45.8076 28.9606,55.1086 7.0904,64.4096 16.3914,42.5394 25.6923,20.6692"
                                   />
                                   <polyline
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     points="25.801,20.7779 38.2616,33.2384 50.6626,45.6395"
                                   />
                                   <line
@@ -209,45 +209,45 @@ const BountySection = ({ scrollY }) => {
                                     y2="20.7779"
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                   />
                                   <path
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     d="M46.4905,7.3671c0.2347,0.4487,0.4027,0.943,0.4897,1.473c0.451,2.7473-1.447,5.4141-4.2392,5.9565"
                                   />
                                   <path
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     d="M42.9327,14.7763c-0.5049,0.0384-1.0133,0.1573-1.509,0.364c-2.5697,1.0713-3.828,4.093-2.8105,6.7492"
                                   />
                                   <path
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     d="M61.7928,26.7168c-0.0987,0.4967-0.2778,0.987-0.5425,1.4544c-1.372,2.4225-4.5229,3.309-7.0378,1.98"
                                   />
                                   <path
                                     fill="none"
                                     stroke="#000000"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-miterlimit="10"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="2"
                                     d="M54.3745,30.2558c-0.4173-0.2868-0.8878-0.513-1.4036-0.663c-2.6733-0.7775-5.5486,0.7867-6.4223,3.4936"
                                   />
                                 </g>
@@ -305,7 +305,7 @@ const BountySection = ({ scrollY }) => {
         </div>
         <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
           <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
-            <p
+            <div
               className={tw(
                 `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 ${
                   scrollY > 1500 ? 'animate-fadeInRight' : 'invisible'
@@ -319,7 +319,7 @@ const BountySection = ({ scrollY }) => {
               {` `}
               and earn by getting your pull request merged.{' '}
               <p>Our permissionless bounty system integrates directly with GitHub.</p>
-            </p>
+            </div>
             <div
               className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2 ${scrollY > 1500 ? 'animate-fadeInLeft' : 'invisible'}`)}
             >
@@ -444,19 +444,19 @@ const BountySection = ({ scrollY }) => {
                         <polyline
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           points="50.6626,45.6395 50.8308,45.8076 28.9606,55.1086 7.0904,64.4096 16.3914,42.5394 25.6923,20.6692"
                         />
                         <polyline
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           points="25.801,20.7779 38.2616,33.2384 50.6626,45.6395"
                         />
                         <line
@@ -466,45 +466,45 @@ const BountySection = ({ scrollY }) => {
                           y2="20.7779"
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                         />
                         <path
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           d="M46.4905,7.3671c0.2347,0.4487,0.4027,0.943,0.4897,1.473c0.451,2.7473-1.447,5.4141-4.2392,5.9565"
                         />
                         <path
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           d="M42.9327,14.7763c-0.5049,0.0384-1.0133,0.1573-1.509,0.364c-2.5697,1.0713-3.828,4.093-2.8105,6.7492"
                         />
                         <path
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           d="M61.7928,26.7168c-0.0987,0.4967-0.2778,0.987-0.5425,1.4544c-1.372,2.4225-4.5229,3.309-7.0378,1.98"
                         />
                         <path
                           fill="none"
                           stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit="10"
+                          strokeWidth="2"
                           d="M54.3745,30.2558c-0.4173-0.2868-0.8878-0.513-1.4036-0.663c-2.6733-0.7775-5.5486,0.7867-6.4223,3.4936"
                         />
                       </g>

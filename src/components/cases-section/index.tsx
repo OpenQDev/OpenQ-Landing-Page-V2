@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Arrow from '@/constants/svg/arrow.svg';
 import Link from 'next/link';
 
-const ParticleBg = () => (
+/* const ParticleBg = () => (
   <Particles
     params={{
       particles: {
@@ -43,7 +43,7 @@ const ParticleBg = () => (
       retina_detect: true,
     }}
   />
-);
+); */
 
 const articles = [
   {
@@ -102,7 +102,7 @@ const CasesSection = () => (
             ))}
           </div>
           <div className={tw(`flex justify-center`)}>
-            <Link href=" https://medium.com/openqdev">
+            <Link href="https://medium.com/openqdev">
               <a
                 target="_blank"
                 className={tw(
