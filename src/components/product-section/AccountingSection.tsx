@@ -57,12 +57,12 @@ const AccountingSection = ({ scrollY }) => {
           <div className={tw(`flex flex-row pt-5 space-x-3 lg:justify-center items-center`)}>
             <div
               className={tw(
-                `border border-2 -ml-2 rounded-lg font-mono py-1 px-2 text-sm border-gray-500 text-gray-500`,
+                `border border-2 -ml-2 rounded-lg font-mono py-1 px-2 text-sm border-gray-400 text-gray-400`,
               )}
             >
               @_
             </div>
-            <h2 className={tw(`text-md pl-2 font-mono text-gray-500`)}>
+            <h2 className={tw(`text-lg pl-2 font-mono text-gray-400`)}>
               stop wasting time manually tracking your payments on spreadsheets
             </h2>
           </div>
@@ -81,7 +81,7 @@ const AccountingSection = ({ scrollY }) => {
               </svg>
             </div>
             <div className={tw(`pl-5 lg:-ml-10`)}>
-              <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
+              <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-400 py-2 px-4 space-x-1`)}>
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ const AccountingSection = ({ scrollY }) => {
                     />
                   </svg>
                 </div>
-                <p className={tw(`pl-2 text-md font-base text-left text-gray-500`)}>Generate Invoice</p>
+                <p className={tw(`pl-2 text-lg font-base text-left text-gray-400`)}>Generate Invoice</p>
               </div>
             </div>
           </div>
@@ -133,17 +133,10 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Unified dashboards</h2>
-              <div className={tw(`text-white pt-2`)}>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Unified dashboards</h2>
+              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
                 Track every single transaction made with OpenQ in one place{' '}
-                <span
-                  className={tw(
-                    `font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`,
-                  )}
-                >
-                  or integrate other
-                </span>{' '}
-                solutions and extend your board.
+                <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
               </div>
             </div>
             <div className={tw(`pt-16 lg:w-5/12`)}>
@@ -163,17 +156,11 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Financial Reports</h2>
-              <div className={tw(`text-white pt-2`)}>
-                <span
-                  className={tw(
-                    `font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`,
-                  )}
-                >
-                  Make your income taxable
-                </span>{' '}
-                and generate invoices as well as financial reports automatically for bounties or payroll streams.
-                solutions and extend your board.
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Financial Reports</h2>
+              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
+                <span className={tw(`font-bold text-white`)}>Make your income taxable</span> and generate invoices as
+                well as financial reports automatically for bounties or payroll streams. solutions and extend your
+                board.
               </div>
             </div>
             <div className={tw(`pt-16 lg:w-5/12`)}>
@@ -193,17 +180,10 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-lg`)}>Organize your transactions</h2>
-              <div className={tw(`text-white pt-2`)}>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Organize your transactions</h2>
+              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
                 Track every single transaction made with OpenQ in one place{' '}
-                <span
-                  className={tw(
-                    `font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-purple-700`,
-                  )}
-                >
-                  or integrate other
-                </span>{' '}
-                solutions and extend your board.
+                <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
               </div>
             </div>
           </div>
