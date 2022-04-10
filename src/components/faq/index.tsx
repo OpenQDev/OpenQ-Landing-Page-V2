@@ -56,12 +56,12 @@ const FAQ = () => {
         <h1 className={tw(`text-center font-bold text-2xl pb-24`)}>Frequently Asked Questions</h1>
         {listItems.map((item, index) => {
           return (
-            <div key={index} className={tw(`-mt-14 pb-5 px-6 lg:px-64 pb-20`)}>
-              <div className={tw(`border-b border-gray-800 lg:px-20`)}>
+            <div key={index} className={tw(`-mt-14 pb-5 px-6 lg:px-32 xl:px-64 pb-20`)}>
+              <div onClick={() => changeItemStatus(index)} className={tw(`border-b border-gray-800 lg:px-20`)}>
                 <div className={tw(`flex flex-row justify-between items-center`)}>
                   <h2 className={tw(`p-3 text-left font-semibold text-gray-700 text-xl pb-8`)}>{item.title}</h2>
                   {clicked[index] ? (
-                    <button onClick={() => changeItemStatus(index)}>
+                    <button className={tw(`pb-5`)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className={tw(`w-6 h-6`)}
@@ -74,7 +74,7 @@ const FAQ = () => {
                       </svg>
                     </button>
                   ) : (
-                    <button onClick={() => changeItemStatus(index)}>
+                    <button className={tw(`pb-5`)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className={tw(`w-6 h-6`)}
