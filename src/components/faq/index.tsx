@@ -57,7 +57,7 @@ const FAQ = () => {
         {listItems.map((item, index) => {
           return (
             <div key={index} className={tw(`-mt-14 pb-5 px-6 lg:px-64 pb-20`)}>
-              <div className={tw(`border-b border-gray-800 px-20`)}>
+              <div className={tw(`border-b border-gray-800 lg:px-20`)}>
                 <div className={tw(`flex flex-row justify-between items-center`)}>
                   <h2 className={tw(`p-3 text-left font-semibold text-gray-700 text-xl pb-8`)}>{item.title}</h2>
                   {clicked[index] ? (
