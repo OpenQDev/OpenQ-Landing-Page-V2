@@ -36,7 +36,7 @@ const StreamSection = () => {
   }, []);
 
   return (
-    <div className={tw(`bg-dark-mode lg:mx-4 lg:rounded-t-2xl `)}>
+    <div className={tw(`bg-dark-mode lg:mx-20 lg:rounded-t-2xl `)}>
       <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
         <div className={tw(`flex flex-col justify-center`)}>
           <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`)}>

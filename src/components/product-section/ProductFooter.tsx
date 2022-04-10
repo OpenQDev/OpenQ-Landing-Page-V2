@@ -13,7 +13,7 @@ const listItems = [
 
 const ProductFooter = () => (
   <div className={tw(``)}>
-    <div className={tw(`bg-dark-mode -mt-1 lg:mx-4 lg:rounded-b-2xl`)}>
+    <div className={tw(`bg-dark-mode -mt-1 lg:mx-20 lg:rounded-b-2xl`)}>
       <section className={tw(`font-montserrat mx-10 mx-auto lg:mx-60`)}>
         <CasesSection />
       </section>

@@ -28,7 +28,7 @@ const AccountingSection = ({ scrollY }) => {
 
   return (
     <div className={tw(``)}>
-      <div className={tw(`bg-dark-mode -mt-1 lg:mx-4`)}>
+      <div className={tw(`bg-dark-mode -mt-1 lg:mx-20`)}>
         <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>
           <div className={tw(`lg:text-center`)}>
             <div className={tw(`lg:flex lg:justify-center`)}>
