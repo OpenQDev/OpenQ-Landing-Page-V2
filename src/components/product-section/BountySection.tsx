@@ -111,7 +111,7 @@ const BountySection = ({ scrollY }) => {
                 </div>
                 <div className={tw(`px-3 pt-5`)}>
                   <div className={tw(`border border-gray-400 rounded-2xl px-4 py-2`)}>
-                    <p className={tw(``)}>{scrollY < 1300 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</p>
+                    <p className={tw(`truncate`)}>{scrollY < 1300 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</p>
                   </div>
                 </div>
                 {scrollY > 1320 ? (
@@ -147,7 +147,7 @@ const BountySection = ({ scrollY }) => {
                         )}
                       >
                         <div className={tw(`flex flex-row space-x-3 items-center justify-center`)}>
-                          {scrollY > 1400 && scrollY < 1900 ? (
+                          {scrollY > 1400 && scrollY < 1700 ? (
                             <div>
                               {color == 'white' ? (
                                 <div>
@@ -174,7 +174,7 @@ const BountySection = ({ scrollY }) => {
                               )}
                             </div>
                           ) : null}
-                          {scrollY > 1900 ? (
+                          {scrollY > 1700 ? (
                             <div className={tw(`w-6 opacity-50`)}>
                               <svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
                                 <g id="color">
@@ -287,9 +287,9 @@ const BountySection = ({ scrollY }) => {
                               </svg>
                             </div>
                           ) : null}
-                          {scrollY > 1900 ? <p>Success</p> : null}
-                          {scrollY < 1900 && scrollY > 1400 ? <p>Minting</p> : null}
-                          {scrollY < 1400 ? <p>Success</p> : null}
+                          {scrollY > 1700 ? <p>Success</p> : null}
+                          {scrollY < 1700 && scrollY > 1400 ? <p>Minting</p> : null}
+                          {scrollY < 1400 ? <p>Mint now</p> : null}
                         </div>
                       </button>
                     </div>
