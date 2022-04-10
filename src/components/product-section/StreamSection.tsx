@@ -60,11 +60,11 @@ const StreamSection = () => {
         </div>
         <div className={tw(`flex flex-row pt-5 space-x-3 items-center`)}>
           <div
-            className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-500 font-mono text-gray-500`)}
+            className={tw(`border border-2 -ml-2 rounded-lg py-1 px-2 text-sm border-gray-400 font-mono text-gray-400`)}
           >
             $_
           </div>
-          <h2 className={tw(`text-md pl-2 font-mono text-gray-500`)}>create token stream</h2>
+          <h2 className={tw(`text-md pl-2 font-mono text-gray-400`)}>create token stream</h2>
         </div>
         <div className={tw(`flex flex-row -ml-2 pt-3 items-center`)}>
           <div>
@@ -80,7 +80,7 @@ const StreamSection = () => {
             </svg>
           </div>
           <div className={tw(`pl-5`)}>
-            <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-500 py-2 px-4 space-x-1`)}>
+            <div className={tw(`flex flex-row items-center border rounded-2xl border-gray-400 py-2 px-4 space-x-1`)}>
               <div>
                 <svg
                   aria-hidden="true"
@@ -97,7 +97,7 @@ const StreamSection = () => {
                   />
                 </svg>
               </div>
-              <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>add new contributor</p>
+              <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-400`)}>add new contributor</p>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ const StreamSection = () => {
               >
                 <div className={tw(`px-5 text-center py-8`)}>
                   <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
-                  <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-500`)}>
+                  <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-400`)}>
                     0x90F7...
                   </div>
                   <div className={tw(`pt-3 pb-1`)}>
@@ -166,7 +166,7 @@ const StreamSection = () => {
               <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
             </svg>
           </div>
-          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-400`)}>
             add payrolls in any ERC-20/ Polygon native token
           </p>
         </div>
@@ -185,7 +185,7 @@ const StreamSection = () => {
               <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
             </svg>
           </div>
-          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-400`)}>
             facilitate payment requests for your contributors or request your invoiced payment to DAOs{` `}
           </p>
         </div>
@@ -324,7 +324,7 @@ const StreamSection = () => {
               <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
             </svg>
           </div>
-          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
+          <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-400`)}>
             manage your payouts in our accounting system.{` `}
           </p>
         </div>
@@ -343,7 +343,7 @@ const StreamSection = () => {
               <circle cx="14" cy="11" fill="black" r="5" stroke="#465061" strokeWidth="2" />
             </svg>
           </div>
-          <p className={tw(`pl-2 text-md font-base font-mono   text-left text-gray-500`)}>
+          <p className={tw(`pl-2 text-md font-base font-mono   text-left text-gray-400`)}>
             automatically generate invoices for all your OpenQ activities as contributor.{` `}
           </p>
         </div>
