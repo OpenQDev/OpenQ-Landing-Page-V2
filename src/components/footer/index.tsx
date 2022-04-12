@@ -30,13 +30,19 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Socials</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://twitter.com/openqlabs">Twitter</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/openqlabs">
+                    Twitter
+                  </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://discord.gg/fMAjZN9cKy">Discord</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/fMAjZN9cKy">
+                    Discord
+                  </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://medium.com/openqdev">Medium</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://medium.com/openqdev">
+                    Medium
+                  </a>
                 </li>
               </ul>
             </div>
@@ -46,13 +52,19 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Resources</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://github.com/OpenQDev/">Github</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/OpenQDev/">
+                    Github
+                  </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://docs.openq.dev/welcome/master">Docs</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://docs.openq.dev/welcome/master">
+                    Docs
+                  </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="https://docs.openq.dev/welcome/master">App</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://app.openq.dev">
+                    App
+                  </a>
                 </li>
               </ul>
             </div>

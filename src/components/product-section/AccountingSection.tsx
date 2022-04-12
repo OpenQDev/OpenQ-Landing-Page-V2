@@ -48,7 +48,7 @@ const AccountingSection = ({ scrollY }) => {
             </div>
             <p
               className={tw(
-                `text-4xl lg:text-7xl break-normal pt-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
+                `text-4xl lg:text-7xl break-normal pt-3 h-24 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
               )}
             >
               Accounting Layer

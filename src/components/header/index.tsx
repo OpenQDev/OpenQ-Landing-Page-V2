@@ -63,17 +63,17 @@ const TypingAnimation = React.memo(
     return (
       <Typical
         className={tw(
-          `text-transparent h-64 w-80 md:h-16 md:w-full bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
+          `text-transparent h-36 w-80 md:h-28 md:w-full bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
         )}
         loop={Infinity}
         wrapper="p"
         steps={[
           'Contribute to earn money.',
-          2000,
-          'Find developers that solve your problems.',
-          2000,
+          1500,
+          'Explore atomic contracting.',
+          1500,
           'Grow your developer community.',
-          2000,
+          1500,
         ]}
       />
     );
@@ -112,8 +112,12 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <p className={tw(`mt-10 max-w-5xl text-left md:text-center mx-auto text-gray-400 text-2xl lg:text-2xl`)}>
-            Web3 payroll, benefits, accounting, HR and more to manage your growing team, all in one place.
+          <p
+            className={tw(
+              `mt-10 md:-mt-5 max-w-5xl text-left md:text-center mx-auto text-gray-400 text-2xl lg:text-2xl`,
+            )}
+          >
+            GitHub bounties, payroll streams and accounting for web3 contributors.
           </p>
           <div className={tw(`mt-10 flex flex-row items-center justify-left md:justify-center space-x-4`)}>
             <div className={tw(`hover:scale-125`)}>
