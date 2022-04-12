@@ -28,7 +28,7 @@ const AccountingSection = ({ scrollY }) => {
 
   return (
     <div className={tw(``)}>
-      <div className={tw(`bg-dark-mode -mt-1 lg:mx-20`)}>
+      <div className={tw(`bg-dark-mode -mt-1 pb-10 lg:mx-20 rounded-b-2xl`)}>
         <section className={tw(`font-montserrat pt-8 lg:pt-24 mx-10 mx-auto lg:mx-60`)}>
           <div className={tw(`lg:text-center`)}>
             <div className={tw(`lg:flex lg:justify-center`)}>
@@ -112,7 +112,7 @@ const AccountingSection = ({ scrollY }) => {
             ref={firstParagraph}
             className={tw(
               `flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 ${
-                firstIsVisible ? 'animate-fadeInTop' : 'invisible'
+                firstIsVisible ? 'animate-fadeInTop' : null
               }`,
             )}
           >
@@ -134,7 +134,7 @@ const AccountingSection = ({ scrollY }) => {
                 </svg>
               </div>
               <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Unified dashboards</h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
+              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
                 Track every single transaction made with OpenQ in one place{' '}
                 <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
               </div>
@@ -157,7 +157,7 @@ const AccountingSection = ({ scrollY }) => {
                 </svg>
               </div>
               <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Financial Reports</h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
+              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
                 <span className={tw(`font-bold text-white`)}>Make your income taxable</span> and generate invoices as
                 well as financial reports automatically for bounties or payroll streams. solutions and extend your
                 board.
@@ -180,8 +180,8 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Organize your transactions</h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl lg:text-2xl pt-2`)}>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Tracking</h2>
+              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
                 Track every single transaction made with OpenQ in one place{' '}
                 <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
               </div>

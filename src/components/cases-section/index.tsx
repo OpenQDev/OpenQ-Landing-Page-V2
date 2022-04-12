@@ -1,5 +1,7 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
-import Particles from 'react-particles-js';
+/* import Particles from 'react-particles-js'; */
 import Image from 'next/image';
 import Arrow from '@/constants/svg/arrow.svg';
 import Link from 'next/link';

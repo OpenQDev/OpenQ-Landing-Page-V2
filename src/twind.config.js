@@ -1,5 +1,5 @@
 // @ts-nocheck
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 export default {
   mode: 'jit',
@@ -58,34 +58,34 @@ export default {
           '50%': { transform: 'rotateY(20deg)' },
         },
         fadeInLeft: {
-          '0%' : {
+          '0%': {
             opacity: 0,
-            transform: 'translateX(40px)'
+            transform: 'translateX(40px)',
           },
-          '100%' : {
+          '100%': {
             opacity: 1,
-            transform: 'translateX(0px)'
-          }
+            transform: 'translateX(0px)',
+          },
         },
         fadeInRight: {
-          '0%' : {
+          '0%': {
             opacity: 0,
-            transform: 'translateX(-10px)'
+            transform: 'translateX(-10px)',
           },
-          '100%' : {
+          '100%': {
             opacity: 1,
-            transform: 'translateX(0px)'
-          }
+            transform: 'translateX(0px)',
+          },
         },
         fadeInTop: {
-          '0%' : {
+          '0%': {
             opacity: 0,
-            transform: 'translateY(-40px)'
+            transform: 'translateY(-40px)',
           },
-          '100%' : {
+          '100%': {
             opacity: 1,
-            transform: 'translateY(0px)'
-          }
+            transform: 'translateY(0px)',
+          },
         },
       },
     },

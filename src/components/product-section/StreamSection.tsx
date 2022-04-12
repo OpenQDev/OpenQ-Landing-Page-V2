@@ -36,7 +36,7 @@ const StreamSection = () => {
   }, []);
 
   return (
-    <div className={tw(`bg-dark-mode lg:mx-20 lg:rounded-t-2xl `)}>
+    <div className={tw(`bg-dark-mode pt-10 lg:mx-20 rounded-t-2xl `)}>
       <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
         <div className={tw(`flex flex-col justify-center`)}>
           <div className={tw(`rounded-2xl text-xs w-min bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`)}>
@@ -109,9 +109,7 @@ const StreamSection = () => {
             )}
           >
             <div className={tw(`lg:col-span-2 lg:pt-5`)}>
-              <div
-                className={tw(`border border-white rounded-xl ${firstIsVisible ? 'animate-fadeInRight' : 'invisible'}`)}
-              >
+              <div className={tw(`border border-white rounded-xl ${firstIsVisible ? 'animate-fadeInRight' : null}`)}>
                 <div className={tw(`px-5 text-center py-8`)}>
                   <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
                   <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-400`)}>
@@ -139,7 +137,7 @@ const StreamSection = () => {
             <p
               className={tw(
                 `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4 ${
-                  firstIsVisible ? 'animate-fadeInLeft' : 'invisible'
+                  firstIsVisible ? 'animate-fadeInLeft' : null
                 }`,
               )}
             >
@@ -196,7 +194,7 @@ const StreamSection = () => {
             ref={secondParagraph}
             className={tw(
               `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 lg:pt-12 ${
-                secondIsVisible ? 'animate-fadeInRight' : 'invisible'
+                secondIsVisible ? 'animate-fadeInRight' : null
               }`,
             )}
           >
@@ -206,7 +204,7 @@ const StreamSection = () => {
             </span>
             supported by permissionless payroll streams.
           </div>
-          <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : 'invisible'}`)}>
+          <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : null}`)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursments</div>

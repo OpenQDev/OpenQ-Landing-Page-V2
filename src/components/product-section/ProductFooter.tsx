@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import Image from 'next/image';

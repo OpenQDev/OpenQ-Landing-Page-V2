@@ -1,3 +1,5 @@
+// @ts-nocheck
+import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { tw } from 'twind';
 import Page from '@/components/page';
@@ -13,13 +15,18 @@ import Footer from '@/components/footer';
 import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Globe from '../components/globe/globe';
+import Navigation from '@/components/navigation';
 
 export default function Home() {
   return (
-    <Page>
+    <div>
+      <Head>
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <NextSeo title="OpenQ" description="" />
 
       <main>
+        <Navigation />
         <Header />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
@@ -33,13 +40,15 @@ export default function Home() {
             }}
           />
         </div>
+
         <ProductSection />
+
         <FAQ />
         {/* <ListSection /> */}
         {/*  <FeatureSection /> */}
         {/*         <SocialProof /> */}
       </main>
       <Footer />
-    </Page>
+    </div>
   );
 }

@@ -1,12 +1,14 @@
+// @ts-nocheck
+
 import { tw, css } from 'twind/css';
 import Button from '@/components/button';
 import Netlify from '@/constants/svg/netlify.svg';
 import Nike from '@/constants/svg/nike.svg';
 import Figma from '@/constants/svg/figma.svg';
 import Aws from '@/constants/svg/aws.svg';
-/* import Particles from 'react-particles-js'; */
-/* import { ParallaxProvider, Parallax } from 'react-scroll-parallax'; */
+import Typical from 'react-typical';
 import Image from 'next/image';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Wave from 'react-wavify';
 import Link from 'next/link';
@@ -56,6 +58,29 @@ const headerStyle = css`
   />
 ); */
 
+const TypingAnimation = React.memo(
+  () => {
+    return (
+      <Typical
+        className={tw(
+          `text-transparent h-64 w-80 md:h-16 md:w-full bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
+        )}
+        loop={Infinity}
+        wrapper="p"
+        steps={[
+          'Contribute to earn money.',
+          2000,
+          'Find developers that solve your problems.',
+          2000,
+          'Grow your developer community.',
+          2000,
+        ]}
+      />
+    );
+  },
+  (props, prevProp) => true,
+); // this line prevent re rendering
+
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -74,19 +99,19 @@ const Header = () => {
 
   return (
     <header className={tw(`w-full font-montserrat bg-dark-mode`)}>
-      <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>{/*  <ParticleBg /> */}</div>
+      <div className={tw(``)}>{/*  <ParticleBg /> */}</div>
       <div className={tw(`py-16 px-14 sm:px-6 lg:px-8`)}>
         <div className={tw(`text-center my-8 2xl:my-64 ${scrollY > 600 ? `animate-fadeOut` : `animate-fadeIn`}`)}>
-          <h1 className={tw(`font-bold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
-            <span
-              className={tw(
-                `text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
-              )}
-            >
-              Collaborate with
-            </span>{' '}
-            <span className={tw(`font-bold`)}>OpenQ</span>
-          </h1>
+          <div className={tw(``)}>
+            <div className={tw(`font-bold text-white text-left md:text-center text-4xl md:text-5xl lg:text-7xl`)}>
+              Welcome to OpenQ.
+            </div>
+            <div className={tw(`font-bold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
+              <div className={tw(`pt-5`)}>
+                <TypingAnimation />
+              </div>
+            </div>
+          </div>
           <p className={tw(`mt-10 max-w-5xl text-left md:text-center mx-auto text-gray-400 text-2xl lg:text-2xl`)}>
             Web3 payroll, benefits, accounting, HR and more to manage your growing team, all in one place.
           </p>

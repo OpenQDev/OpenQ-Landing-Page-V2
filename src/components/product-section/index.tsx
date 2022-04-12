@@ -46,7 +46,7 @@ const ProductSection = () => {
           <BountySection scrollY={scrollY} />
           <StreamSection scrollY={scrollY} />
           <AccountingSection scrollY={scrollY} />
-          <ProductFooter scrollY={scrollY} />
+          {/* <ProductFooter scrollY={scrollY} /> */}
         </div>
       </section>
     </div>
