@@ -94,8 +94,7 @@ const BountySection = ({ scrollY }) => {
               >
                 Pull requests are a tried and true mechanism{' '}
               </span>
-              for proposing new code. Now you can leverage the same simple processes for bounties. Once a PR is closed,
-              your contributor can immediately claim the bounty.
+              for proposing new code. Now you can leverage the same simple processes for bounties.
             </div>
             <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
               <div className={tw(`border border-gray-900 rounded-xl ${firstIsVisible ? 'animate-fadeInLeft' : null}`)}>

@@ -133,10 +133,11 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Unified dashboards</h2>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Simple Dashboard</h2>
               <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
                 Track every single transaction made with OpenQ in one place{' '}
-                <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
+                <span className={tw(`font-bold text-white`)}>or integrate other</span> streams to get an overview of
+                your earnings.
               </div>
             </div>
             <div className={tw(`pt-16 lg:w-5/12`)}>
@@ -159,8 +160,7 @@ const AccountingSection = ({ scrollY }) => {
               <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Financial Reports</h2>
               <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
                 <span className={tw(`font-bold text-white`)}>Make your income taxable</span> and generate invoices as
-                well as financial reports automatically for bounties or payroll streams. solutions and extend your
-                board.
+                well as financial reports automatically for bounties or payroll streams.
               </div>
             </div>
             <div className={tw(`pt-16 lg:w-5/12`)}>
@@ -180,10 +180,11 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Tracking</h2>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>What should we put in here</h2>
               <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                Track every single transaction made with OpenQ in one place{' '}
-                <span className={tw(`font-bold text-white`)}>or integrate other</span> solutions and extend your board.
+                Our goal is to help developers in every country to figure out how to tax their income.{' '}
+                <span className={tw(`font-bold text-white`)}>Learn in our community</span> how to earn money in web3
+                without problems.
               </div>
             </div>
           </div>

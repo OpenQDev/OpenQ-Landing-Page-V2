@@ -141,12 +141,12 @@ const StreamSection = () => {
                 }`,
               )}
             >
-              Tokens Streams enable the integration of
+              Bounties are good for making initial connections and getting involved in projects. The next steps are
+              tokens streams enable the integration of
               <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
                 decentralized payroll systems{' '}
               </span>
-              into our accounting layer. Bounties are good for making initial connections and getting involved in
-              projects. After that, you want to create stability.
+              into our accounting layer.
             </p>
           </div>
         </div>
@@ -198,11 +198,11 @@ const StreamSection = () => {
               }`,
             )}
           >
-            Our web3 mentality
+            Onboarding and offboarding of team members reduced to the essentials a web3 leader needs. Monthly payments,
             <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-              of onboarding and offboarding team members{' '}
+              automatically posted and taxable{' '}
             </span>
-            supported by permissionless payroll streams.
+            through our invoice system for the developer
           </div>
           <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : null}`)}>
             <div className={tw(`border border-white rounded-xl`)}>
