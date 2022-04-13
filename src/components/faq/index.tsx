@@ -14,7 +14,7 @@ const listItems = [
     description: `Head to https://app.openq.dev/ and click on the "Mint Bounty" button. Paste in any GitHub Issue URL of an open repo (we are planning to support private repos later as well), then click on "Mint Bounty". Make sure your on Polygon. Thats it! If you have any problems contact us on Discord.`,
   },
   {
-    title: `How can I withdraw a bounty?`,
+    title: `How do I withdraw a bounty?`,
     description: `To withdraw a bounty head to the dedicated bounty page which you can find by searching the issue. Go to the withdraw page and connect your GitHub account. Next click on claim if your PR got merged and the issue got automatically closed, you should successfully be able to claim it. `,
   },
   {
