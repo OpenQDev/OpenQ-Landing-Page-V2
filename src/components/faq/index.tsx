@@ -10,32 +10,32 @@ import { useState } from 'react';
 
 const listItems = [
   {
-    title: `How can I mint a bounty?`,
-    description: `Head to https://app.openq.dev/ and click on the "Mint Bounty" button. Paste in any GitHub Issue URL of an open repo (we are planning to support private repos later as well), then click on "Mint Bounty". Make sure your on Polygon. Thats it! If you have any problems contact us on Discord.`,
+    title: `How do I mint a bounty?`,
+    description: `Head to https://app.openq.dev/ and click on "Mint Bounty." Paste in any GitHub Issue URL of an open repo (we plan to support private repos later on), then click on "Mint Bounty." That's it! Just make sure you're using the Polygon network. `,
   },
   {
-    title: `How can I withdraw a bounty?`,
-    description: `To withdraw a bounty head to the dedicated bounty page which you can find by searching the issue. Go to the withdraw page and connect your GitHub account. Next click on claim if your PR got merged and the issue got automatically closed, you should successfully be able to claim it. `,
+    title: `How do I withdraw a bounty?`,
+    description: `To withdraw a bounty, head to the dedicated bounty page, which you can find by searching the issue. Go to the withdraw page and connect your GitHub account. Next, click on the claim. If your PR got merged and the issue got automatically closed, you should successfully be able to claim it. `,
   },
   {
-    title: `How can I refund a bounty?`,
-    description: `Head to the dedicated bounty page which you can find by searching the issue. Go to the refund page and connect your wallet. You should be able to get your money back if the deposit period has exceeded 30 days.`,
+    title: `How do I refund a bounty?`,
+    description: `Head to the dedicated bounty page, which you can find by searching the issue. Go to the refund page and connect your wallet. You should be able to get your money back if the deposit period has exceeded 30 days.`,
   },
   {
     title: `How many days is a bounty that I funded locked?`,
-    description: `At the moment all bounties are locked for 30 days. We are planning to offer customizable lock up timers soon.`,
+    description: `At the moment, all bounties are locked for 30 days. We are planning to offer a more customizable lock-up time soon.`,
   },
   {
-    title: `What if the mantainer steals my code and claims back his own bounty?`,
-    description: `So far it has not happened that a mantainer collects the code without paying it. We plan to be transparent about this and report organizations that do not treat their contributors fairly. However, we are already working on a plagiarism algorithm that detects such cases and reports them to the smart contract so that the contributor gets the money anyway.`,
+    title: `What if the maintainer steals my code and claims back his bounty?`,
+    description: `So far, we've never experienced an instance when a maintainer collects the code without paying it. However, we are working on a plagiarism algorithm that detects such cases and reports them to the smart contract, so the contributor receives payment. We plan to be transparent about this and report organizations that do not treat their contributors fairly.`,
   },
   {
-    title: `What if the mantainer doesn't accept my code or wants me to change it even though it wasnt discussed?`,
-    description: `We know that cooperation can sometimes be difficult, especially for small tasks, and that sometimes work is required that is not justified. We are working on an evaluation system to deal with this in a transparent way. Please let us know if this should be the case, so that we can draw attention to it in the community. In the future we are planning a decentralized dispute resolution system via kleros courts to activate independent mediators.`,
+    title: `What if the maintainer doesn't accept my code or wants to change it?`,
+    description: `We know that cooperation can sometimes be difficult, especially for small tasks, and that sometimes that is required is not justified. We are working on an evaluation system to deal with this transparently. Please let us know if this should be the case so that we can draw attention to it in the community. In the future, we are planning a decentralized dispute resolution system via kleros courts to activate independent mediators.`,
   },
   {
-    title: `Do you support as well bounties for something else than contributing code?`,
-    description: `Currently we only support bounty creation from GitHub issues. Of course, copywriter tasks, or design concepts can also be laid out very well via Github issues, but we don't want to complicate this unnecessarily and offer teams solutions that are unopinioated. Let us know which project management software you would like to have connected to an escrow system and we will work on it next!`,
+    title: `Do you support other types of bounties as well?`,
+    description: `Currently, we only support bounty creation from GitHub issues. Of course, you can also layout copywriting or design tasks via Github issues. Still, we don't want to complicate this unnecessarily and offer teams unopinionated solutions. We are open to adding additional platforms if we see enough demand. Let us know which software you would like to have connected to our escrow system, and we will work on it next!`,
   },
 ];
 
