@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/button';
 import React from 'react';
+import Link from 'next/link';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -119,7 +120,9 @@ const Navigation = () => {
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <Image src="/logo.png" alt="OpenQ Logo" width="45%" height="45%" />
+              <Link href="/">
+                <Image src="/logo.png" alt="OpenQ Logo" width="45%" height="45%" />
+              </Link>
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>

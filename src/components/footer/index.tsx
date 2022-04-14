@@ -74,10 +74,10 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 pt-5 lg:-pt-1 text-base font-bold mb-1`)}>About Us</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="/">Terms of Service</a>
+                  <a href="/terms-of-service">Terms of Service</a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="/">Privacy Policy</a>
+                  <a href="/privacy">Privacy Policy</a>
                 </li>
               </ul>
             </div>
