@@ -180,11 +180,10 @@ const AccountingSection = ({ scrollY }) => {
                   />
                 </svg>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>What should we put in here</h2>
+              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Analyze at a Glance </h2>
               <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                Our goal is to help developers in every country to figure out how to tax their income.{' '}
-                <span className={tw(`font-bold text-white`)}>Learn in our community</span> how to earn money in web3
-                without problems.
+                Evaluate the progress of your financial operations{' '}
+                <span className={tw(`font-bold text-white`)}> to identify issues and strategize solutions.</span>
               </div>
             </div>
           </div>
