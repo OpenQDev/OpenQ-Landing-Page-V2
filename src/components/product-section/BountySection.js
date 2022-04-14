@@ -1,16 +1,8 @@
 // @ts-nocheck
 
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
-
-const listItems = [
-  {
-    title: `Permissionless Bounties`,
-    description: `Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, the developer automatically is eligable to withdraw the escrow.`,
-  },
-];
 
 const BountySection = ({ scrollY }) => {
   const firstParagraph = useRef();
@@ -144,7 +136,7 @@ const BountySection = ({ scrollY }) => {
                         <div className={tw(`flex flex-row space-x-3 items-center justify-center`)}>
                           {scrollY > 1400 && scrollY < 1700 ? (
                             <div>
-                              {color == 'white' ? (
+                              {color === 'white' ? (
                                 <div>
                                   <svg
                                     className={tw(`h-5 w-5 mr-3 animate-spin

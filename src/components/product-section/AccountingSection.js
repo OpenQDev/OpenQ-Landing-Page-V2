@@ -1,17 +1,7 @@
 // @ts-nocheck
 
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
-import Image from 'next/image';
-import { Jazzicon } from '@ukstv/jazzicon-react';
 import { useRef, useEffect, useState } from 'react';
-
-const listItems = [
-  {
-    title: `Permissionless Bounties`,
-    description: `Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, the developer automatically is eligable to withdraw the escrow.`,
-  },
-];
 
 const AccountingSection = ({ scrollY }) => {
   const firstParagraph = useRef();

@@ -1,12 +1,10 @@
 // @ts-nocheck
 
+import { useEffect, useState } from 'react';
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
 import BountySection from './BountySection';
 import StreamSection from './StreamSection';
 import AccountingSection from './AccountingSection';
-import ProductFooter from './ProductFooter';
-import { useEffect, useState } from 'react';
 
 const listItems = [
   {

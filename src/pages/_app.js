@@ -1,21 +1,18 @@
-// @ts-nocheck
-
-import { AppProps } from 'next/app';
 import '@/styles/global.css';
 import '@fontsource/inter';
 import Script from 'next/script';
 
 import { setup } from 'twind';
-import twindConfig from '../twind.config';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import twindConfig from '../twind.config';
 import * as ga from '../lib/analytics';
 
 if (typeof window !== `undefined`) {
   setup(twindConfig);
 }
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {

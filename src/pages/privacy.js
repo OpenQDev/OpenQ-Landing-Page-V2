@@ -1,20 +1,9 @@
 // @ts-nocheck
-import Head from 'next/head';
-import { NextSeo } from 'next-seo';
+
 import { tw } from 'twind';
-import Page from '@/components/page';
-import Header from '@/components/header';
-import VideoSection from '@/components/video-section';
-import ListSection from '@/components/list-section';
-import ProductSection from '@/components/product-section';
-import FeatureSection from '@/components/feature-section';
-import CasesSection from '@/components/cases-section';
-import SocialProof from '@/components/social-proof';
-import PricingTable from '@/components/pricing-table';
+
 import Footer from '@/components/footer';
-import FAQ from '@/components/faq';
-import Wave from 'react-wavify';
-import Globe from '../components/globe/globe';
+
 import Navigation from '@/components/navigation';
 
 export default function Terms() {
@@ -76,25 +65,25 @@ export default function Terms() {
 
         <p className={tw(`text-lg pb-5`)}>
           OpenQ follows a standard procedure of using log files. These files log visitors when they visit websites. All
-          hosting companies do this and a part of hosting services' analytics. The information collected by log files
+          hosting companies do this and a part of hosting services analytics. The information collected by log files
           include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp,
           referring/exit pages, and possibly the number of clicks. These are not linked to any information that is
           personally identifiable. The purpose of the information is for analyzing trends, administering the site,
-          tracking users' movement on the website, and gathering demographic information.
+          tracking users movement on the website, and gathering demographic information.
         </p>
 
         <h2 className={tw(`font-bold text-xl`)}>Cookies and Web Beacons</h2>
 
         <p className={tw(`text-lg pb-5`)}>
-          Like any other website, OpenQ uses 'cookies'. These cookies are used to store information including visitors'
+          Like any other website, OpenQ uses cookies. These cookies are used to store information including visitors
           preferences, and the pages on the website that the visitor accessed or visited. The information is used to
-          optimize the users' experience by customizing our web page content based on visitors' browser type and/or
-          other information.
+          optimize the users experience by customizing our web page content based on visitors browser type and/or other
+          information.
         </p>
 
         <p className={tw(`text-lg pb-5`)}>
           For more general information on cookies, please read the{' '}
-          <a href="https://www.generateprivacypolicy.com/#cookies">"Cookies" article here.</a>.
+          <a href="https://www.generateprivacypolicy.com/#cookies">Cookies article here.</a>.
         </p>
 
         <h2 className={tw(`font-bold text-xl`)}>Privacy Policies</h2>
@@ -105,7 +94,7 @@ export default function Terms() {
 
         <p className={tw(`text-lg pb-5`)}>
           Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used
-          in their respective advertisements and links that appear on OpenQ , which are sent directly to users' browser.
+          in their respective advertisements and links that appear on OpenQ , which are sent directly to users browser.
           They automatically receive your IP address when this occurs. These technologies are used to measure the
           effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on
           websites that you visit.
@@ -118,17 +107,17 @@ export default function Terms() {
         <h2 className={tw(`font-bold text-xl`)}>Third Party Privacy Policies</h2>
 
         <p className={tw(`text-lg pb-5`)}>
-          OpenQ 's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
+          OpenQs Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
           the respective Privacy Policies of these third-party ad servers for more detailed information. It may include
           their practices and instructions about how to opt-out of certain options.{' '}
         </p>
 
         <p className={tw(`text-lg pb-5`)}>
           You can choose to disable cookies through your individual browser options. To know more detailed information
-          about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+          about cookie management with specific web browsers, it can be found at the browsers respective websites.
         </p>
 
-        <h2 className={tw(`font-bold text-xl`)}>Children's Information</h2>
+        <h2 className={tw(`font-bold text-xl`)}>Childrens Information</h2>
 
         <p className={tw(`text-lg pb-5`)}>
           Another part of our priority is adding protection for children while using the internet. We encourage parents

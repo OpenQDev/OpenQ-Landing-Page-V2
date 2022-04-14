@@ -1,11 +1,6 @@
 // @ts-nocheck
 
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
-import BountySection from './BountySection';
-import StreamSection from './StreamSection';
-import AccountingSection from './AccountingSection';
-import ProductFooter from './ProductFooter';
 import { useState } from 'react';
 
 const listItems = [
@@ -31,7 +26,7 @@ const listItems = [
   },
   {
     title: `What if the maintainer doesn't accept my code or wants to change it?`,
-    description: `We know that cooperation can sometimes be difficult, especially for small tasks, and that sometimes that is required is not justified. We are working on an evaluation system to deal with this transparently. Please let us know if this should be the case so that we can draw attention to it in the community. In the future, we are planning a decentralized dispute resolution system via kleros courts to activate independent mediators.`,
+    description: `We know that cooperation can sometimes be difficult, especially for small tasks, and that sometimes what is required is not justified. We are working on an evaluation system to deal with this transparently. Please let us know if this should be the case so that we can draw attention to it in the community. In the future, we are planning a decentralized dispute resolution system via kleros courts to activate independent mediators.`,
   },
   {
     title: `Do you support other types of bounties as well?`,
@@ -44,11 +39,11 @@ const FAQ = () => {
 
   const changeItemStatus = (index) => {
     if (clicked[index]) {
-      let old = clicked;
+      const old = clicked;
       old[index] = false;
       setClicked([...old]);
     } else {
-      let old = clicked;
+      const old = clicked;
       old[index] = true;
       setClicked([...old]);
     }

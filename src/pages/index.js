@@ -2,19 +2,11 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { tw } from 'twind';
-import Page from '@/components/page';
 import Header from '@/components/header';
-import VideoSection from '@/components/video-section';
-import ListSection from '@/components/list-section';
 import ProductSection from '@/components/product-section';
-import FeatureSection from '@/components/feature-section';
-import CasesSection from '@/components/cases-section';
-import SocialProof from '@/components/social-proof';
-import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
 import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
-import Globe from '../components/globe/globe';
 import Navigation from '@/components/navigation';
 
 export default function Home() {

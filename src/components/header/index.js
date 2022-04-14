@@ -1,21 +1,11 @@
 // @ts-nocheck
 
 import { tw, css } from 'twind/css';
-import Button from '@/components/button';
-import Netlify from '@/constants/svg/netlify.svg';
-import Nike from '@/constants/svg/nike.svg';
-import Figma from '@/constants/svg/figma.svg';
-import Aws from '@/constants/svg/aws.svg';
 import Typical from 'react-typical';
 import Image from 'next/image';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Wave from 'react-wavify';
 import Link from 'next/link';
-
-const headerStyle = css`
-  min-height: calc(100vh - 6rem);
-`;
 
 /* const ParticleBg = () => (
   <Particles
@@ -78,7 +68,7 @@ const TypingAnimation = React.memo(
       />
     );
   },
-  (props, prevProp) => true,
+  () => true,
 ); // this line prevent re rendering
 
 const Header = () => {

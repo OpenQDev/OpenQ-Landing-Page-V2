@@ -1,17 +1,9 @@
 // @ts-nocheck
 
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
 import Image from 'next/image';
 import { Jazzicon } from '@ukstv/jazzicon-react';
 import { useRef, useEffect, useState } from 'react';
-
-const listItems = [
-  {
-    title: `Permissionless Bounties`,
-    description: `Pull requests are a much better mental model for decentralized communities. Our permissionless bounty system integrates directly with GitHub. Once a PR is closed, the developer automatically is eligable to withdraw the escrow.`,
-  },
-];
 
 const StreamSection = () => {
   const firstParagraph = useRef();
@@ -165,7 +157,7 @@ const StreamSection = () => {
             </svg>
           </div>
           <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-400`)}>
-            add payrolls in any ERC-20/ Polygon native token
+            add payrolls in any ERC-20 or Polygon native token
           </p>
         </div>
         <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />

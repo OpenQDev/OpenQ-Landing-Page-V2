@@ -2,7 +2,6 @@
 
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
-import Wave from 'react-wavify';
 
 const FeatureSection = () => (
   <section className={tw(`bg-white pb-6`)}>
