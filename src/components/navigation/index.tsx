@@ -36,8 +36,8 @@ const secondaryLinks = [
     href: `https://docs.openq.dev/`,
   },
   {
-    label: `Launch App`,
-    href: `https://app.openq.dev/`,
+    label: `Coming Soon`,
+    href: `/`,
   },
 ];
 
