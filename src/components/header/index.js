@@ -53,7 +53,7 @@ const TypingAnimation = React.memo(
     return (
       <Typical
         className={tw(
-          `text-transparent h-36 w-80 md:h-28 md:w-full bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
+          `text-transparent h-36 w-80 md:h-28 lg:h-44 xl:h-28 md:w-full bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`,
         )}
         loop={Infinity}
         wrapper="p"
