@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,9 +19,42 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./*"
+      ]
+    },
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/button/index.tsj", "src/pages/terms-of-service.js", "src/pages/privacy.js", "src/pages/index.js", "src/pages/_document.js", "src/pages/_app.js", "src/lib/analytics/index.js", "src/components/video-section/index.js", "src/components/social-proof/index.js", "src/components/product-section/StreamSection.js", "src/components/product-section/ProductFooter.js", "src/components/product-section/index.js", "src/components/product-section/BountySection.js", "src/components/product-section/AccountingSection.js", "src/components/pricing-table/index.js", "src/components/page/index.js", "src/components/navigation/index.js", "src/components/list-section/index.js", "src/components/header/index.js", "src/components/footer/index.js", "src/components/feature-section/index.js", "src/components/faq/index.js", "src/components/cases-section/index.js", "src/components/button/index.js"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/button/index.tsj",
+    "src/pages/terms-of-service.js",
+    "src/pages/privacy.js",
+    "src/pages/index.js",
+    "src/pages/_document.js",
+    "src/pages/_app.js",
+    "src/lib/analytics/index.js",
+    "src/components/video-section/index.js",
+    "src/components/social-proof/index.js",
+    "src/components/product-section/StreamSection.js",
+    "src/components/product-section/ProductFooter.js",
+    "src/components/product-section/index.js",
+    "src/components/product-section/BountySection.js",
+    "src/components/product-section/AccountingSection.js",
+    "src/components/pricing-table/index.js",
+    "src/components/page/index.js",
+    "src/components/navigation/index.js",
+    "src/components/list-section/index.js",
+    "src/components/header/index.js",
+    "src/components/footer/index.js",
+    "src/components/feature-section/index.js",
+    "src/components/faq/index.js",
+    "src/components/cases-section/index.js",
+    "src/components/button/index.js"
+  ]
 }
