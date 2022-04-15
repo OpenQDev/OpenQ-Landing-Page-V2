@@ -274,9 +274,9 @@ const BountySection = ({ scrollY }) => {
                               </svg>
                             </div>
                           ) : null}
-                          {scrollY > 1699 ? <p>Success</p> : null}
-                          {scrollY < 1700 && scrollY > 1400 ? <p>Minting</p> : null}
                           {scrollY < 1400 ? <p>Mint now</p> : null}
+                          {scrollY < 1700 && scrollY > 1399 ? <p>Minting</p> : null}
+                          {scrollY > 1699 ? <p>Success</p> : null}
                         </div>
                       </button>
                     </div>

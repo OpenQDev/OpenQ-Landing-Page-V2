@@ -30,14 +30,14 @@ export default {
       },
       // that is animation class
       animation: {
-        fadeIn: 'fadeIn 1s ease-in forwards',
-        fadeOut: 'fadeOut 1s ease-out forwards',
-        fadeInRotation: 'rotateY 3s ease-in-out forwards',
+        fadeIn: 'fadeIn 1s ease-in once',
+        fadeOut: 'fadeOut 1s ease-out once',
+        fadeInRotation: 'rotateY 3s ease-in-out once',
         wiggleY: 'wiggleY 1s ease-in-out infinite',
-        wiggleYQuick: 'wiggleY 1s ease-in-out forwards',
-        fadeInLeft: 'fadeInLeft 1s ease-in forwards',
-        fadeInRight: 'fadeInRight 1s ease-in forwards',
-        fadeInTop: 'fadeInTop 1s ease-in forwards',
+        wiggleYQuick: 'wiggleY 1s ease-in-out once',
+        fadeInLeft: 'fadeInLeft 1s ease-in once',
+        fadeInRight: 'fadeInRight 1s ease-in once',
+        fadeInTop: 'fadeInTop 1s ease-in once',
       },
 
       keyframes: {
