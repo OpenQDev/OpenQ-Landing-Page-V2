@@ -356,7 +356,7 @@ const BountySection = ({ scrollY }) => {
                   <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
                     <div className={tw(``)}>
                       <Image src="/sushi.png" alt="OpenQ Logo" width="65%" height="65%" />
-                      <div className={tw(`font-bold text-2xl`)}>Suhiswap</div>
+                      <div className={tw(`font-bold text-2xl`)}>Sushiswap</div>
                       <div className={tw(`pt-2 font-semibold text-gray-500`)}>4 open bounties</div>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ const BountySection = ({ scrollY }) => {
             </svg>
           </div>
           <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>
-            mantainer merges pull request
+            maintainer merges pull request
           </p>
         </div>
         <div

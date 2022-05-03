@@ -53,7 +53,7 @@ const AccountingSection = ({ scrollY }) => {
               @_
             </div>
             <h2 className={tw(`text-lg pl-2 font-mono text-gray-400`)}>
-              stop wasting time manually tracking your payments on spreadsheets
+              stop wasting time tracking your payments on spreadsheets manually
             </h2>
           </div>
           <div className={tw(`flex flex-row -ml-2 pt-3 items-center lg:justify-center `)}>
@@ -125,7 +125,7 @@ const AccountingSection = ({ scrollY }) => {
               </div>
               <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Simple Dashboard</h2>
               <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                Track every single transaction made with OpenQ in one place{' '}
+                Track every transaction made with OpenQ in one place{' '}
                 <span className={tw(`font-bold text-white`)}>or integrate other</span> streams to get an overview of
                 your earnings.
               </div>

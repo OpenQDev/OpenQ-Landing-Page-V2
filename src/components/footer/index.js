@@ -47,8 +47,8 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://app.openq.dev">
-                    App
+                  <a target="_blank" rel="noopener noreferrer" href="https://app.openq.dev/">
+                    Launch App
                   </a>
                 </li>
               </ul>

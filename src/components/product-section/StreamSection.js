@@ -133,12 +133,11 @@ const StreamSection = () => {
                 }`,
               )}
             >
-              Bounties are good for making initial connections and getting involved in projects. The next steps are
-              tokens streams enable the integration of
+              Bounties are good for making initial connections and getting involved in projects. Next step: token
+              streams -
               <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-                decentralized payroll systems{' '}
+                integrating decentralized payroll with automated accounting.{' '}
               </span>
-              into our accounting layer.
             </p>
           </div>
         </div>
@@ -190,16 +189,17 @@ const StreamSection = () => {
               }`,
             )}
           >
-            Onboarding and offboarding of team members reduced to the essentials a web3 leader needs. Monthly payments,
+            We reduce the work of web3 leaders and simplify the on- and offboarding of team members significantly. In
+            addition, monthly payments are
             <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
               automatically posted and taxable{' '}
             </span>
-            through our invoice system for the developer
+            through our invoice system.
           </div>
           <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : null}`)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
-                <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursments</div>
+                <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
                 <div className={tw(`flex flex-row justify-between text-white`)}>
                   <div className={tw(`flex flex-row space-x-3 items-center`)}>
                     <div style={{ width: `25px`, height: `25px` }}>
@@ -334,7 +334,7 @@ const StreamSection = () => {
             </svg>
           </div>
           <p className={tw(`pl-2 text-md font-base font-mono   text-left text-gray-400`)}>
-            automatically generate invoices for all your OpenQ activities as contributor.{` `}
+            automatically generate invoices for all your OpenQ activities as a contributor.{` `}
           </p>
         </div>
         <div className={tw(`lg:px-4`)}>
