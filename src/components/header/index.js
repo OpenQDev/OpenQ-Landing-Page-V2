@@ -111,7 +111,7 @@ const Header = () => {
           </p>
           <div className={tw(`mt-10 flex flex-row items-center justify-left md:justify-center space-x-4`)}>
             <div className={tw(`hover:scale-125`)}>
-              <Link href="https://discord.gg/fMAjZN9cKy" passHref>
+              <Link href="https://discord.gg/5HFZj6pUhf" passHref>
                 <a target="_blank">
                   <Image className={tw(``)} src="/discord.png" alt="D" width="40%" height="30%" />
                 </a>

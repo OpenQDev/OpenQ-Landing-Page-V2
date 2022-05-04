@@ -20,7 +20,7 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/fMAjZN9cKy">
+                  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/5HFZj6pUhf">
                     Discord
                   </a>
                 </li>
