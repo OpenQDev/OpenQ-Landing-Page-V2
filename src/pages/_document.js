@@ -25,18 +25,13 @@ class MyDocument extends Document {
 
     return {
       ...initialProps,
-      styles: [
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        ...initialProps.styles,
-        React.createElement(`style`, styleProps),
-      ],
+      styles: [...initialProps.styles, React.createElement(`style`, styleProps)],
     };
   }
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head />
         <body>
           <Main />

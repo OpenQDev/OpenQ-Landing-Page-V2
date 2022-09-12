@@ -22,7 +22,7 @@ export default function Terms() {
         <p className={tw(`text-lg pb-5`)}>
           If you have additional questions or require more information about our Privacy Policy, do not hesitate to
           contact us. Our Privacy Policy was generated with the help of{' '}
-          <a href="https://www.gdprprivacypolicy.net/">GDPR Privacy Policy Generator from GDPRPrivacyPolicy.net</a>
+          <a href='https://www.gdprprivacypolicy.net/'>GDPR Privacy Policy Generator from GDPRPrivacyPolicy.net</a>
         </p>
 
         <h2 className={tw(`font-bold text-xl`)}>General Data Protection Regulation (GDPR)</h2>
@@ -83,7 +83,7 @@ export default function Terms() {
 
         <p className={tw(`text-lg pb-5`)}>
           For more general information on cookies, please read the{' '}
-          <a href="https://www.generateprivacypolicy.com/#cookies">Cookies article here.</a>.
+          <a href='https://www.generateprivacypolicy.com/#cookies'>Cookies article here.</a>.
         </p>
 
         <h2 className={tw(`font-bold text-xl`)}>Privacy Policies</h2>

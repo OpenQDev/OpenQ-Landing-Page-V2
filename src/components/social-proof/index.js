@@ -69,34 +69,34 @@ const SocialProof = () => {
                   </div>
                   <div className={tw(`cursor-pointer flex pb-12`)}>
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns='http://www.w3.org/2000/svg'
                       width={44}
                       height={44}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="#CBD5E0"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      viewBox='0 0 24 24'
+                      strokeWidth='1.5'
+                      stroke='#CBD5E0'
+                      fill='none'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
                       onClick={previous}
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="15 6 9 12 15 18" />
+                      <path stroke='none' d='M0 0h24v24H0z' />
+                      <polyline points='15 6 9 12 15 18' />
                     </svg>
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns='http://www.w3.org/2000/svg'
                       width={44}
                       height={44}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="#CBD5E0"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      viewBox='0 0 24 24'
+                      strokeWidth='1.5'
+                      stroke='#CBD5E0'
+                      fill='none'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
                       onClick={next}
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="9 6 15 12 9 18" />
+                      <path stroke='none' d='M0 0h24v24H0z' />
+                      <polyline points='9 6 15 12 9 18' />
                     </svg>
                   </div>
                 </div>
