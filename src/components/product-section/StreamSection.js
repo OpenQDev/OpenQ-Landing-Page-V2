@@ -109,7 +109,7 @@ const StreamSection = () => {
                   </div>
                   <div className={tw(`pt-3 pb-1`)}>
                     <div
-                      className={tw(`border rounded-2xl font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}
+                      className={tw(`border rounded-lg font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}
                     >
                       Add socials
                     </div>
