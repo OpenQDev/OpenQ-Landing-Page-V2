@@ -85,7 +85,7 @@ const CasesSection = () => (
               <div key={article.title} className={tw(`mb-8 cursor-pointer hover:scale-105`)}>
                 <div className={tw(`w-max text-center`)}>
                   <Link href={article.link} passHref>
-                    <a target="_blank">
+                    <a target='_blank'>
                       <Image
                         src={article.image}
                         alt={article.alt}
@@ -104,12 +104,12 @@ const CasesSection = () => (
             ))}
           </div>
           <div className={tw(`flex justify-center`)}>
-            <Link href="https://medium.com/openqdev">
+            <Link href='https://medium.com/openqdev'>
               <a
-                target="_blank"
+                target='_blank'
                 className={tw(
                   `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                text-white cursor-pointer z-30 hover:text-purple-600`,
+                text-white cursor-pointer z-30 hover:text-purple-600`
                 )}
               >
                 See all articles
