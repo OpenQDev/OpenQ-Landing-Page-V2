@@ -4,25 +4,37 @@ import { NextSeo } from 'next-seo';
 import { tw } from 'twind';
 import Header from '@/components/header';
 import ProductSection from '@/components/product-section';
+import CardGroup from '@/components/card-group';
 import Footer from '@/components/footer';
 import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Navigation from '@/components/navigation';
+import Add from '@/components/svg/add';
+import { useState } from 'react';
+//import StreamSection from '@/components/product-section/StreamSection';
+//import AccountingSection from '@/components/product-section/AccountingSection';
 
 export default function Home() {
+  const [internalMenu, setInternalMenu] = useState('org');
+  const cardSectionData = [
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+  ];
+
   return (
     <div>
       <Head>
-        <link rel="icon" href="/logo.png" />
+        <link rel='icon' href='/logo.png' />
       </Head>
-      <NextSeo title="OpenQ" description="" />
+      <NextSeo title='OpenQ' description='' />
 
       <main>
         <Navigation />
-        <Header />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
-            fill="#121212"
+            fill='#121212'
             paused={false}
             options={{
               height: 30,
@@ -32,12 +44,16 @@ export default function Home() {
             }}
           />
         </div>
-
-        <ProductSection />
+        <div className={tw(`xl:py-44 lg:py-52 md:py-8 py-44`)}></div>
+        <CardGroup data={cardSectionData} />
+        <ProductSection internalMenu={internalMenu} />
 
         <FAQ />
-        {/* <ListSection /> */}
-        {/*  <FeatureSection /> */}
+
+        {/* <StreamSection scrollY={scrollY} /> 
+         <AccountingSection scrollY={scrollY} />*/}
+        {/*<ListSection />*/}
+        {/*<FeatureSection /> */}
         {/*         <SocialProof /> */}
       </main>
       <Footer />
