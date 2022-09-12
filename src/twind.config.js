@@ -12,6 +12,9 @@ export default {
         montserrat: `"Montserrat" `,
         mono: `"Ubuntu Mono"`,
       },
+      maxWidth: {
+        "8xl": "1800px",
+      },
       colors: {
         transparent: 'transparent',
         'dark-mode': '#121212',

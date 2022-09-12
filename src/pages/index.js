@@ -45,10 +45,15 @@ export default function Home() {
           />
         </div>
         <div className={tw(`xl:py-44 lg:py-52 md:py-8 py-44`)}></div>
-        <CardGroup data={cardSectionData} />
-        <ProductSection internalMenu={internalMenu} />
 
-        <FAQ />
+        <div className={tw(`flex justify-center`)}>
+          <div className={tw(`max-w-8xl`)}>
+            <CardGroup data={cardSectionData} />
+            <ProductSection internalMenu={internalMenu} />
+
+            <FAQ />
+          </div>
+        </div>
 
         {/* <StreamSection scrollY={scrollY} /> 
          <AccountingSection scrollY={scrollY} />*/}
