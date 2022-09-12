@@ -15,10 +15,14 @@ export default {
       colors: {
         transparent: 'transparent',
         'dark-mode': '#121212',
+        'app-bg': '#161b22',
         'button-pink': '#FF006A',
         'web-gray': '#585858',
         'custom-cyan': '#22d3ee',
         fuchsia: colors.fuchsia,
+        'github-primary': '#2da44e',
+        'github-prime-hov':'#2c974b',
+        'link-colour':'#39a6ff',
         emerald: colors.emerald,
         lime: colors.lime,
         violet: colors.violet,
@@ -27,6 +31,10 @@ export default {
         cyan: colors.cyan,
         sky: colors.sky,
         indigo: colors.indigo,
+				primary: 'rgb(201, 209, 217)',
+				muted: 'rgb(139, 148, 158)',
+        githubMessageColor: '#161b22'
+
       },
       // that is animation class
       animation: {
