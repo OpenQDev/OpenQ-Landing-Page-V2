@@ -15,6 +15,10 @@ export default {
       maxWidth: {
         "8xl": "1800px",
       },
+      
+    minHeight: {
+      '20': '80px',
+    },
       colors: {
         transparent: 'transparent',
         'dark-mode': '#121212',
@@ -41,14 +45,14 @@ export default {
       },
       // that is animation class
       animation: {
-        fadeIn: 'fadeIn 1s ease-in once',
-        fadeOut: 'fadeOut 1s ease-out once',
-        fadeInRotation: 'rotateY 3s ease-in-out once',
-        wiggleY: 'wiggleY 1s ease-in-out infinite',
-        wiggleYQuick: 'wiggleY 1s ease-in-out once',
-        fadeInLeft: 'fadeInLeft 1s ease-in once',
-        fadeInRight: 'fadeInRight 1s ease-in once',
-        fadeInTop: 'fadeInTop 1s ease-in once',
+        fadeIn: 'fadeIn 1s ease-in forwards',
+        fadeOut: 'fadeOut 1s ease-out forwards',
+        fadeInRotation: 'rotateY 3s ease-in-out forwards',
+        wiggleY: 'wiggleY 1s ease-in-out forwards',
+        wiggleYQuick: 'wiggleY 1s ease-in-out forwards',
+        fadeInLeft: 'fadeInLeft 1s ease-in forwards',
+        fadeInRight: 'fadeInRight 1s ease-in forwards',
+        fadeInTop: 'fadeInTop 1s ease-in forwards',
       },
 
       keyframes: {
@@ -71,7 +75,17 @@ export default {
         fadeInLeft: {
           '0%': {
             opacity: 0,
-            transform: 'translateX(40px)',
+            transform: 'translateX(10px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0px)',
+          },
+        },
+        fadeInLeftFast: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(30px)',
           },
           '100%': {
             opacity: 1,

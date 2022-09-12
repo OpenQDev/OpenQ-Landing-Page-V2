@@ -1,12 +1,14 @@
 import Card from './Card';
 import { tw } from 'twind';
 
-const CardGroup = ({ data }) => {
+const CardGroup = ({ data, fadeIn }) => {
   return (
     <div className={tw(`flex justify-center`)}>
       <div
         className={tw(
-          `flex flex-col lg:flex-row lg:space-x-10 justify-center mx-16 mx-auto lg:mx-80 text-left max-w-7xl animate-fadeInTop`
+          `flex flex-col lg:flex-row lg:space-x-10 justify-center mx-16 mx-auto lg:mx-80 text-left max-w-7xl invisible ${
+            fadeIn && 'animate-fadeIn visible'
+          }`
         )}
       >
         {data.map((cardData, index) => {

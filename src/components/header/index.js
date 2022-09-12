@@ -51,10 +51,11 @@ import Link from 'next/link';
 
 const Header = ({ pageVersionHookInstance }) => {
   const [scrollY, setScrollY] = useState(0);
+  const [bountiesVisible, setBountiesVisible] = useState();
   const [internalMenu, setInternalMenu] = pageVersionHookInstance;
   const devData = {
     title: 'Join a striving community of developers.',
-    typedText: ['And get practical experience', 'While earning money'],
+    typedText: ['And get practical experience', 'And get practical experience'],
     subTitle: 'Look for new atomic contracts, create PR, get paid after merge',
   };
   const orgData = {
@@ -74,6 +75,9 @@ const Header = ({ pageVersionHookInstance }) => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      if (!bountiesVisible && window.scrollY > 50) {
+        setBountiesVisible(true);
+      }
     };
 
     handleScroll();
@@ -88,14 +92,14 @@ const Header = ({ pageVersionHookInstance }) => {
     <header className={tw(`w-full font-montserrat bg-dark-mode relative`)}>
       <div className={tw(``)}>
         <div className={tw(`text-white flex justify-center`)}>
-          <div className={tw(`bg-gray-900 gap-2 border border-gray-700 rounded-full p-0.5 xl:my-32 my-8`)}>
+          <div className={tw(`bg-gray-900 gap-2 border border-gray-700 rounded-full p-0.5 xl:my-32 my-8 `)}>
             <button
               onClick={() => setInternalMenu('dev')}
               className={tw(
                 `px-2 md:px-4 py-2 rounded-full focus:outline-none ${internalMenu === 'dev' && 'bg-gray-700'}`
               )}
             >
-              <span className={tw(`hidden md:inline`)}>I'm a </span>Developer
+              <span className={tw(`hidden md:inline `)}>I'm a </span>Developer
             </button>
             <button
               onClick={() => setInternalMenu('org')}
@@ -117,7 +121,12 @@ const Header = ({ pageVersionHookInstance }) => {
             <div className={tw(`font-bold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
               <div className={tw(`pt-5`)}>
                 {internalMenu === 'org' ? (
-                  <TypingAnimation text={orgData.typedText} />
+                  <>
+                    <> {/*DO NOT REMOVE DIV, DIV IS REQUIRED for react to dif and UNMOUNT TYPING ANIM */}</>
+                    <div className={tw(`min-h-8`)}>
+                      <TypingAnimation text={orgData.typedText} />
+                    </div>
+                  </>
                 ) : (
                   <TypingAnimation text={devData.typedText} />
                 )}
@@ -131,7 +140,7 @@ const Header = ({ pageVersionHookInstance }) => {
           >
             {headerData.subTitle}{' '}
           </p>
-          <div className={tw(`mt-10 flex flex-row items-center justify-left md:justify-center space-x-4`)}>
+          <div className={tw(`mt-10 flex flex-row items-center justify-left md:justify-center space-x-4 `)}>
             <div className={tw(`hover:scale-125`)}>
               <Link href='https://discord.gg/5HFZj6pUhf' passHref>
                 <a target='_blank'>
@@ -159,7 +168,11 @@ const Header = ({ pageVersionHookInstance }) => {
       </div>
 
       <div className={tw(`relative md:-top-56 top-4 lg:-top-64 xl:-top-60 z-10 w-full flex justify-center`)}>
-        <div className={tw(` sm:px-4 pt-6 bg-app-bg rounded-md absolute`)}>
+        <div
+          className={tw(
+            ` sm:px-4 pt-6 bg-app-bg rounded-md absolute invisible ${bountiesVisible && 'animate-fadeIn visible'}`
+          )}
+        >
           <div className={tw(`flex gap-1 sm:p-0 pl-4`)}>
             <div className={tw(`bg-red-500 h-4 w-4 rounded-full`)}></div>
             <div className={tw(`bg-yellow-500 h-4 w-4 rounded-full`)}></div>

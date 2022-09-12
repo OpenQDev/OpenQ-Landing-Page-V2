@@ -64,8 +64,8 @@ const FundBountyMock = ({ scrollY }) => {
             }`
           )}
         >
-          <div>Fund{scrollY < 3300 && scrollY > 2640 ? 'ing' : scrollY >= 3300 && 'ed'}</div>
-          {scrollY < 3300 && scrollY > 2640 ? (
+          <div>Fund{scrollY < 2900 && scrollY > 2640 ? 'ing' : scrollY >= 2900 && 'ed'}</div>
+          {scrollY < 2900 && scrollY > 2640 ? (
             <div>
               <div>
                 <svg

@@ -1,9 +1,21 @@
+import { useRef, useEffect, useState } from 'react';
 import { tw } from 'twind';
 import styles from './GithubMessage.module.css';
 
 const GithubPr = () => {
+  const firstParagraph = useRef();
+
+  const [firstIsVisible, setFirstIsVisible] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setFirstIsVisible(entry.isIntersecting);
+    });
+    observer.observe(firstParagraph.current);
+  }, []);
   return (
-    <div className={tw(`w-full flex relative`)}>
+    <div ref={firstParagraph} className={tw(`w-full flex relative`)}>
       <div className='w-9 h-9 flex-none'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'>
           <path
@@ -24,7 +36,11 @@ const GithubPr = () => {
           styles.light +
           ' ' +
           ' ' +
-          tw(`w-full rounded-lg  ml-4 border-github-primary border  relative border`)
+          tw(
+            `w-full rounded-lg  ml-4 border-github-primary border  relative border ${
+              firstIsVisible && 'animate-fadeInLeft'
+            }`
+          )
         }
       >
         <div className={tw(`w-full pl-3 text-left  py-2 pl-4 text-sm`)}>

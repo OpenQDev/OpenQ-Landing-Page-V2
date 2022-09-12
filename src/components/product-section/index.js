@@ -57,13 +57,20 @@ const ProductSection = ({ internalMenu }) => {
               {internalMenu === 'org' && 'help you to engage with your existing developer community.'}
             </h2>
 
-            <div className={tw(`w-5/6 md:w-2/3  border border-gray-700 rounded-2xl overflow-hidden `)}>
+            <div
+              className={tw(
+                `w-5/6 md:w-2/3  rounded-2xl overflow-hidden opacity-0  ${
+                  scrollY > 3000 && 'animate-fadeIn opacity-1'
+                } `
+              )}
+            >
               <MockContest
                 repo={'honey-labs/honey-frontend'}
                 title={'staking public goods as a service'}
                 budget={'$7000'}
                 avatarUrl={'https://avatars.githubusercontent.com/u/92924948?s=60&v=4'}
                 days={10}
+                scrollY={scrollY}
               />
               <MockContest
                 repo={'openqdev/openq-frontend'}
@@ -72,6 +79,7 @@ const ProductSection = ({ internalMenu }) => {
                 url={'https://github.com/openqdev/openq-frontend'}
                 avatarUrl={'https://avatars.githubusercontent.com/u/77402538?s=200&v=4'}
                 days={4}
+                scrollY={scrollY}
               />
               <MockContest
                 repo={'snapshot-labs/snapshot'}
@@ -80,6 +88,7 @@ const ProductSection = ({ internalMenu }) => {
                 url={'https://github.com/snapshot-labs/snapshot'}
                 avatarUrl={'https://avatars.githubusercontent.com/u/72904068?s=200&v=4'}
                 days={17}
+                scrollY={scrollY}
               />
             </div>
           </div>
@@ -90,27 +99,39 @@ const ProductSection = ({ internalMenu }) => {
                 <span className={tw(`text-gray-900`)}>See it for yourself</span> with PRs our community completed.
               </h2>
 
-              <div className={tw(`w-5/6 border border-gray-700 rounded-2xl`)}>
+              <div
+                className={tw(
+                  `w-5/6 border border-gray-700 rounded-2xl opacity-0 ${scrollY > 3500 && 'animate-fadeIn opacity-1'} `
+                )}
+              >
                 <MockPr
                   url={'https://github.com/OpenQDev/OpenQ-Frontend/pull/454'}
                   title={'Super fluid #454'}
                   description={'FlacoJones merged 20 commits in from Johnny-V:master'}
+                  scrollY={scrollY}
+                  fade={''}
                 />
                 <MockPr
                   url={'https://github.com/snapshot-labs/stamp/pull/12'}
                   title={'Fetches ENS Avatar URL from on-chain using ethers.js ENS methods #12'}
                   description={'bonustrack merged 7 commits into snapshot-labs:master from FlacoJones:master'}
+                  scrollY={scrollY}
+                  fade={'animate-fadeIn'}
                 />
                 <MockPr
                   url={'https://github.com/snapshot-labs/stamp/pull/20'}
                   title={'feat: add Jazzicon resolver #20'}
                   description={'bonustrack merged 5 commits into master from sekhmet/jazzicon'}
+                  scrollY={scrollY}
+                  fade={'animate-fadeIn'}
                 />
                 <MockPr
                   url={'https://github.com/snapshot-labs/stamp/pull/18'}
                   title={'feat: add SelfID resolver #18'}
                   description={'bonustrack merged 3 commits into master from sekhmet/selfid'}
                   styles={'border-none'}
+                  scrollY={scrollY}
+                  fade={'animate-fadeIn'}
                 />
               </div>
             </div>
@@ -120,7 +141,7 @@ const ProductSection = ({ internalMenu }) => {
               "Under the hood"
             </h2>
 
-            <CardGroup data={cardSectionData} />
+            <CardGroup data={cardSectionData} fadeIn={scrollY > 4000} />
           </div>
           {/* <ProductFooter scrollY={scrollY} /> */}
         </div>

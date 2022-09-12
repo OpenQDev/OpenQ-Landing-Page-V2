@@ -27,7 +27,7 @@ const MockClaimUi = () => {
                 <p>Don't forget to add a closer comment for this bounty on your pull request :-{')'}.</p>
                 <div>
                   <div className={tw(`relative undefined`)}>
-                    <div className={tw(`flex flex-row items-center space-x-4 md:space-x-1 cursor-pointer w-fit`)}>
+                    <div className={tw(`flex flex-row items-center space-x-4 md:space-x-1 w-fit`)}>
                       <div className={tw(`relative flex flex-col items-center group`)}>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -50,9 +50,7 @@ const MockClaimUi = () => {
                 </div>
               </div>
               <div className={tw(`flex flex-col space-y-5`)}>
-                <div className={tw(`bg-github-primary text-white py-1 rounded-lg cursor-pointer text-center w-full`)}>
-                  Claim
-                </div>
+                <div className={tw(`bg-github-primary text-white py-1 rounded-lg text-center w-full`)}>Claim</div>
               </div>
               <div className={tw(`flex items-center col-span-3`)}>
                 <div className={tw(`w-full justify-center`)}></div>

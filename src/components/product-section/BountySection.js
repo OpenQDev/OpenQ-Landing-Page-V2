@@ -17,7 +17,6 @@ const BountySection = ({ scrollY, internalMenu }) => {
   const thirdParagraph = useRef();
   const [firstIsVisible, setFirstIsVisible] = useState();
   const [secondIsVisible, setSecondIsVisible] = useState();
-  const [thirdIsVisible, setThirdIsVisible] = useState();
   const isDev = internalMenu === 'dev';
   const isOrg = internalMenu === 'org';
 
@@ -36,15 +35,6 @@ const BountySection = ({ scrollY, internalMenu }) => {
     });
     observer.observe(secondParagraph.current);
   }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setThirdIsVisible(entry.isIntersecting);
-    });
-    observer.observe(thirdParagraph.current);
-  }, []);
-
   return (
     <div className={tw(`flex justify-center`)}>
       <div className={tw(`max-w-8xl`)}>
@@ -199,10 +189,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
               </p>
             </div>
           )}
-          <div
-            ref={thirdParagraph}
-            className={tw(` ml-1 pt-8 border-l border-gray-400 ${thirdIsVisible ? 'animate-fadeInTop' : null}`)}
-          >
+          <div ref={thirdParagraph} className={tw(` ml-1 pt-8 border-l border-gray-400`)}>
             <div className={tw(`flex flex-row bg-white -ml-2 justify-center items-center space-x-4`)}>
               {isOrg ? <GithubPr /> : <MockClaimUi />}
             </div>

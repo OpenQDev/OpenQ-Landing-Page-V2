@@ -115,13 +115,7 @@ const StreamSection = () => {
                     </div>
                   </div>
                   <div className={tw(`pt-3 pb-1`)}>
-                    <div
-                      className={tw(
-                        `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`
-                      )}
-                    >
-                      Save
-                    </div>
+                    <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Create</div>
                   </div>
                 </div>
               </div>
@@ -129,7 +123,7 @@ const StreamSection = () => {
             <p
               className={tw(
                 `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4 ${
-                  firstIsVisible ? 'animate-fadeInLeft' : null
+                  firstIsVisible ? 'animate-fadeInLeftFast' : null
                 }`
               )}
             >
@@ -196,7 +190,7 @@ const StreamSection = () => {
             </span>
             through our invoice system.
           </div>
-          <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeft' : null}`)}>
+          <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeftFast' : null}`)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
@@ -287,12 +281,8 @@ const StreamSection = () => {
                 </div>
 
                 <div className={tw(`pt-3 pb-1`)}>
-                  <div
-                    className={tw(
-                      `rounded-2xl w-full py-2 font-bold cursor-pointer text-white border border-pink-300 bg-pink-700 bg-opacity-10 hover:bg-pink-700 hover:bg-opacity-30 hover:text-white`
-                    )}
-                  >
-                    Add
+                  <div className={tw(`pt-3 pb-1`)}>
+                    <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Add</div>
                   </div>
                 </div>
               </div>

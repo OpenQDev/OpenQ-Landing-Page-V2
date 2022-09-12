@@ -1,6 +1,6 @@
 const Bounties = () => {
   return (
-    <div className='flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 text-primary'>
+    <div className='flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 text-primary animate-fadeIn'>
       <div className='w-3/4'>
         <div className='flex flex-grow flex-row items-center md:space-x-2 sm:pb-0 w-full'>
           <div className='hidden md:block'>

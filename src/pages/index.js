@@ -10,18 +10,31 @@ import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Navigation from '@/components/navigation';
 import Add from '@/components/svg/add';
-import { useState } from 'react';
-//import StreamSection from '@/components/product-section/StreamSection';
-//import AccountingSection from '@/components/product-section/AccountingSection';
+import { useState, useEffect } from 'react';
+import StreamSection from '@/components/product-section/StreamSection';
+import AccountingSection from '@/components/product-section/AccountingSection';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
+  const [scrollY, setScrollY] = useState(0);
   const cardSectionData = [
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    handleScroll();
+
+    window.addEventListener(`scroll`, handleScroll);
+    return () => {
+      window.removeEventListener(`scroll`, handleScroll);
+    };
+  }, []);
   return (
     <div>
       <Head>
@@ -48,15 +61,15 @@ export default function Home() {
 
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl`)}>
-            <CardGroup data={cardSectionData} />
+            <CardGroup fadeIn={scrollY > 600} data={cardSectionData} />
             <ProductSection internalMenu={internalMenu} />
-
+            <div className={tw(`py-16`)}></div>
+            <StreamSection scrollY={scrollY} />
+            <AccountingSection scrollY={scrollY} />
             <FAQ />
           </div>
         </div>
 
-        {/* <StreamSection scrollY={scrollY} /> 
-         <AccountingSection scrollY={scrollY} />*/}
         {/*<ListSection />*/}
         {/*<FeatureSection /> */}
         {/*         <SocialProof /> */}
