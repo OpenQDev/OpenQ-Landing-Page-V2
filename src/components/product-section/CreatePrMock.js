@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { tw } from 'twind';
 import styles from './CreatePrMock.module.css';
 
-const GithubMessage = () => {
+const CreatePrMock = () => {
   return (
     <div className={tw(`w-full pt-4 flex justify-between relative lg:w-80 w-60`)}>
       <div className='w-9 h-9 top-0 right-0 flex-none'>
@@ -58,4 +58,4 @@ const GithubMessage = () => {
   );
 };
 
-export default GithubMessage;
+export default CreatePrMock;
