@@ -9,4 +9,5 @@ module.exports = {
   env: {
     GOOGLE_ANALYTICS_ID: 'G-PMCBFEC10P',
   },
+  images: { domains: ['avatars.githubusercontent.com'] },
 };
