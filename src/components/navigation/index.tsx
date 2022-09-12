@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import { useState } from 'react';
 import Image from 'next/image';
