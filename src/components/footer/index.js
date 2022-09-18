@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Footer = () => (
   <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
-    <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap`)}>
+    <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 xl:px-0 flex flex-wrap`)}>
       <div className={tw(`mb-14 flex items-center w-full`)}>
-        <Image src="/logo.png" alt="OpenQ Logo" width="60%" height="60%" />
+        <Image src='/logo.png' alt='OpenQ Logo' width='60%' height='60%' />
         <p className={tw(`text-4xl text-black font-bold pl-5`)}>OpenQ</p>
       </div>
       <div className={tw(`w-full lg:w-1/2`)}>
@@ -15,17 +15,17 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Socials</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/openqlabs">
+                  <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/openqlabs'>
                     Twitter
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/5HFZj6pUhf">
+                  <a target='_blank' rel='noopener noreferrer' href='https://discord.gg/5HFZj6pUhf'>
                     Discord
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://medium.com/openqdev">
+                  <a target='_blank' rel='noopener noreferrer' href='https://medium.com/openqdev'>
                     Medium
                   </a>
                 </li>
@@ -37,17 +37,17 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Resources</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/OpenQDev/">
+                  <a target='_blank' rel='noopener noreferrer' href='https://github.com/OpenQDev/'>
                     Github
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://docs.openq.dev/welcome/master">
+                  <a target='_blank' rel='noopener noreferrer' href='https://docs.openq.dev/welcome/master'>
                     Docs
                   </a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a target="_blank" rel="noopener noreferrer" href="https://app.openq.dev/">
+                  <a target='_blank' rel='noopener noreferrer' href='https://app.openq.dev/'>
                     Launch App
                   </a>
                 </li>
@@ -59,10 +59,10 @@ const Footer = () => (
               <h4 className={tw(`text-gray-900 pt-5 lg:-pt-1 text-base font-bold mb-1`)}>About Us</h4>
               <ul>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="/terms-of-service">Terms of Service</a>
+                  <a href='/terms-of-service'>Terms of Service</a>
                 </li>
                 <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                  <a href="/privacy">Privacy Policy</a>
+                  <a href='/privacy'>Privacy Policy</a>
                 </li>
               </ul>
             </div>

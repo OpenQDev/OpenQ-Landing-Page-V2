@@ -30,9 +30,9 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
-        strategy="afterInteractive"
+        strategy='afterInteractive'
       />
-      <Script id="google-analytics-script" strategy="afterInteractive">
+      <Script id='google-analytics-script' strategy='afterInteractive'>
         {`
         
         window.dataLayer = window.dataLayer || [];
