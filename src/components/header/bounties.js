@@ -1,15 +1,33 @@
 import { tw } from 'twind';
 import Image from 'next/image';
-const Bounties = ({ bountiesVisible }) => {
+import { useState, useEffect } from 'react';
+const Bounties = () => {
+  const [bountiesVisible, setBountiesVisible] = useState();
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!bountiesVisible && window.scrollY > 50) {
+        setBountiesVisible(true);
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener(`scroll`, handleScroll);
+    return () => {
+      window.removeEventListener(`scroll`, handleScroll);
+    };
+  }, []);
   return (
     <div
       className={tw(
-        `relative -top-36 -mb-32 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10 w-full flex justify-center`
+        `relative px-4 -top-36 -mb-32 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10 w-full flex justify-center`
       )}
     >
       <div
         className={tw(
-          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-3/4 invisible ${bountiesVisible && 'animate-fadeIn visible'}`
+          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-md invisible ${bountiesVisible && 'animate-fadeIn visible'}`
         )}
       >
         <div className={tw(`flex gap-1 py-4`)}>
@@ -21,7 +39,7 @@ const Bounties = ({ bountiesVisible }) => {
           {' '}
           <div
             className={tw(
-              `lg:col-start-2 justify-between text-left justify-self-center space-y-4 w-full pb-8 max-w-screen-md mx-auto`
+              `lg:col-start-2 justify-between text-left justify-self-center space-y-4 w-full pb-8 max-w-screen-xl mx-auto`
             )}
           >
             <div className={tw(`hidden md:flex  flex-wrap gap-4 w-full items-center`)}>

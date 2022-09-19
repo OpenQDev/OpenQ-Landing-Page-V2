@@ -19,6 +19,9 @@ export default {
     minHeight: {
       '20': '80px',
     },
+    maxHeight:{
+     '128': '32rem',
+    },
       colors: {
         transparent: 'transparent',
         'dark-mode': '#121212',

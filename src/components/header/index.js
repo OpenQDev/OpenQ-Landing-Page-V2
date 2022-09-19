@@ -55,7 +55,7 @@ const Header = ({ pageVersionHookInstance }) => {
   const [internalMenu, setInternalMenu] = pageVersionHookInstance;
   const devData = {
     title: 'Join a striving community of developers.',
-    typedText: ['And get practical experience', 'And get practical experience'],
+    typedText: ['And get practical experience', 'While earning money'],
     subTitle: 'Look for new atomic contracts, create PR, get paid after merge',
   };
   const orgData = {

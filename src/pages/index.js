@@ -18,6 +18,37 @@ import Bounties from '@/components/header/bounties';
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
   const [scrollY, setScrollY] = useState(0);
+
+  const prs = [
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/454',
+      title: 'Super fluid #454',
+      description: 'FlacoJones merged 20 commits in from Johnny-V:master',
+      scrollY,
+      fade: '',
+    },
+    {
+      url: 'https://github.com/snapshot-labs/stamp/pull/12',
+      title: 'Fetches ENS Avatar URL from on-chain using ethers.js ENS methods #12',
+      description: 'bonustrack merged 7 commits into snapshot-labs:master from FlacoJones:master',
+      scrollY,
+      fade: '',
+    },
+    {
+      url: 'https://github.com/snapshot-labs/stamp/pull/20',
+      title: 'feat: add Jazzicon resolver #20',
+      description: 'bonustrack merged 5 commits into master from sekhmet/jazzicon',
+      scrollY,
+      fade: '',
+    },
+    {
+      url: 'https://github.com/snapshot-labs/stamp/pull/18',
+      title: 'feat: add SelfID resolver #18',
+      description: 'bonustrack merged 3 commits into master from sekhmet/selfid',
+      scrollY,
+      fade: '',
+    },
+  ];
   const cardSectionData = [
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
@@ -60,9 +91,9 @@ export default function Home() {
         </div>
         <Bounties bountiesVisible={true} />
         <div className={tw(`flex justify-center`)}>
-          <div className={tw(`max-w-8xl`)}>
+          <div className={tw(`max-w-8xl w-full px-4`)}>
             <CardGroup fadeIn={scrollY > 600} data={cardSectionData} />
-            <ProductSection internalMenu={internalMenu} />
+            <ProductSection prs={prs} internalMenu={internalMenu} />
             <div className={tw(`py-16`)}></div>
             <StreamSection scrollY={scrollY} />
             <AccountingSection scrollY={scrollY} />
