@@ -45,7 +45,6 @@ const Bounties = () => {
             <div className={tw(`hidden md:flex  flex-wrap gap-4 w-full items-center`)}>
               <div
                 type='text'
-                disabled='true'
                 className={tw(
                   `flex-1 lg:col-span-3 col-span-4 input-field-big rounded-lg w-full py-2 pl-8 pr-3 text-sm tracking-wider leading-tight h-min text-muted bg-transparent rounded-full outline-none border border-web-gray bg-subtle focus-within:border-blue-400`
                 )}
