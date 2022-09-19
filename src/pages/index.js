@@ -13,6 +13,7 @@ import Add from '@/components/svg/add';
 import { useState, useEffect } from 'react';
 import StreamSection from '@/components/product-section/StreamSection';
 import AccountingSection from '@/components/product-section/AccountingSection';
+import Bounties from '@/components/header/bounties';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
@@ -57,8 +58,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className={tw(`xl:py-44 lg:py-52 md:py-8 py-44`)}></div>
-
+        <Bounties bountiesVisible={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl`)}>
             <CardGroup fadeIn={scrollY > 600} data={cardSectionData} />

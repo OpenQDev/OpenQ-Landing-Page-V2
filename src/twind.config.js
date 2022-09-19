@@ -38,6 +38,7 @@ export default {
         cyan: colors.cyan,
         sky: colors.sky,
         indigo: colors.indigo,
+        "secondary-btn": "#1f6feb",
 				primary: 'rgb(201, 209, 217)',
 				muted: 'rgb(139, 148, 158)',
         githubMessageColor: '#161b22'

@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { tw } from 'twind/css';
+import { tw } from 'twind';
 import TypingAnimation from './TypingAnimation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -162,38 +162,6 @@ const Header = ({ pageVersionHookInstance }) => {
                   <Image className={tw(``)} src='/twitter-2.png' alt='D' width='30%' height='23%' />
                 </a>
               </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={tw(`relative md:-top-56 top-4 lg:-top-64 xl:-top-60 z-10 w-full flex justify-center`)}>
-        <div
-          className={tw(
-            ` sm:px-4 pt-6 bg-app-bg rounded-md absolute invisible ${bountiesVisible && 'animate-fadeIn visible'}`
-          )}
-        >
-          <div className={tw(`flex gap-1 sm:p-0 pl-4`)}>
-            <div className={tw(`bg-red-500 h-4 w-4 rounded-full`)}></div>
-            <div className={tw(`bg-yellow-500 h-4 w-4 rounded-full`)}></div>
-            <div className={tw(`bg-green-500 h-4 w-4 rounded-full`)}></div>
-          </div>
-          <div className={tw(`px-24 pt-4 hidden xl:block`)}>
-            <Image src={'/bountiesLarge.png'} className={tw(``)} height={655} width={950} />
-          </div>
-
-          <div className={tw(`px-24 pt-4 hidden lg:block xl:hidden`)}>
-            <Image src={'/bountiesMedium.png'} height={732} width={755} />
-          </div>
-
-          <div className={tw(`px-16 pt-4 pb-8 hidden sm:block lg:hidden`)}>
-            <div className={tw(`px-16 bg-dark-mode`)}>
-              <Image src={'/bountiesSmall.png'} height={313} width={258} />
-            </div>
-          </div>
-          <div className={tw(`block sm:hidden pt-6`)}>
-            <div className={tw(`bg-dark-mode rounded-md`)}>
-              <Image src={'/bountiesMicro.png'} height={300} width={270} />
             </div>
           </div>
         </div>
