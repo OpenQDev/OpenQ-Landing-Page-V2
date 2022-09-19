@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { tw } from 'twind';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -121,7 +123,9 @@ const Navigation = () => {
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <Link href="/">
+              <a>
                 <Image src="/logo.png" alt="OpenQ Logo" width="45%" height="45%" />
+                </a>
               </Link>
             </div>
             <div className={tw(`hidden md:block`)}>
