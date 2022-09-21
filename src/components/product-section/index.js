@@ -23,7 +23,7 @@ const listItems = [
   },
 ];
 */
-const ProductSection = ({ internalMenu, prs }) => {
+const ProductSection = ({ internalMenu, prs, contest }) => {
   const [currentPrs, setCurrentPrs] = useState(prs);
   let observer = useRef();
   const lastElem = useRef();
@@ -70,8 +70,8 @@ const ProductSection = ({ internalMenu, prs }) => {
     <div>
       <section className={tw(`font-montserrat pt-28`)}>
         <div className={tw(`bg-white`)}>
-          <BountySection scrollY={scrollY} internalMenu={internalMenu} />
-          <div className={tw(`flex-col flex items-center content-center`)}>
+          <BountySection scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
+          {!contest && <div className={tw(`flex-col flex items-center content-center`)}>
             <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
               {internalMenu === 'org' && 'Not the right fit?'}{' '}
               <span className={tw(`text-gray-900`)}>OpenQ Contests </span>
@@ -80,7 +80,7 @@ const ProductSection = ({ internalMenu, prs }) => {
 
             <div
               className={tw(
-                `w-5/6 md:w-2/3  rounded-2xl overflow-hidden opacity-0  ${
+                `w-5/6 md:w-2/3 bg-dark-mode  rounded-2xl overflow-hidden opacity-0  ${
                   scrollY > 3000 && 'animate-fadeIn opacity-1'
                 } `
               )}
@@ -110,9 +110,10 @@ const ProductSection = ({ internalMenu, prs }) => {
                 avatarUrl={'https://avatars.githubusercontent.com/u/72904068?s=200&v=4'}
                 days={17}
                 scrollY={scrollY}
+                noBorder={true}
               />
             </div>
-          </div>
+          </div>}
 
           {internalMenu === 'org' && (
             <div className={tw(`flex-col flex items-center content-center`)}>
@@ -123,7 +124,7 @@ const ProductSection = ({ internalMenu, prs }) => {
               <div
                 className={tw(
                   `w-5/6 border border-gray-700 rounded-2xl opacity-0 bg-transparent overflow-hidden ${
-                    scrollY > 3500 && 'animate-fadeIn opacity-1'
+                    scrollY > 3500 ? 'animate-fadeIn opacity-1': scrollY >3050 && contest && 'animate-fadeIn opacity-1'
                   } `
                 )}
               >
@@ -143,7 +144,7 @@ const ProductSection = ({ internalMenu, prs }) => {
               "Under the hood"
             </h2>
 
-            <CardGroup data={cardSectionData} fadeIn={scrollY > 4000} />
+            <CardGroup data={cardSectionData} fadeIn={scrollY > 3800} />
           </div>
           {/* <ProductFooter scrollY={scrollY} /> */}
         </div>

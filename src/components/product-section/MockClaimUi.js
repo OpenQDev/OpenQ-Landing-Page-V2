@@ -1,6 +1,6 @@
 import { tw } from 'twind';
 
-const MockClaimUi = () => {
+const MockClaimUi = ({contest}) => {
   return (
     <div className={tw(`w-full flex gap-5 relative`)}>
       <div className='w-9 h-9 flex-none py-2'>
@@ -18,11 +18,77 @@ const MockClaimUi = () => {
           )}
         ></div>
         <div className={tw(`flex w-full text-3xl  justify-center px-12 py-4 md:border-b border-gray-700 rounded-t-sm`)}>
-          Claim Your Rewards
+         {contest ? "Claim Your Winnings" : "Claim Your Rewards"}
         </div>
         <div className={tw(`flex flex-1 justify-center`)}>
           <div className={tw(`w-5/6 min-w-min`)}>
             <div className={tw(`flex flex-col gap-4 pt-4`)}>
+             {contest ?              
+              <div className={tw(`col-span-3 space-y-2 py-2 max-w-screen-sm`)}>
+                <p>If the contests organizers chose your submission, they will merge it with one of the comments below, and you can claim your winnings <strong className='font-semibold'>immediately</strong>.</p>
+                <div>
+                  <div className={tw(`relative undefined`)}>
+                    <div className={tw(`flex flex-row items-center space-x-4 md:space-x-1 w-fit`)}>
+                      <div className={tw(`relative flex flex-col items-center group`)}>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className={tw(`h-6 w-6`)}
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z'
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className={tw(`px-1`)}>Closes #7870 OpenQ-Tier-3-Winner</div>
+                    </div>
+                    <div className={tw(`flex flex-row items-center space-x-4 md:space-x-1 w-fit`)}>
+                      <div className={tw(`relative flex flex-col items-center group`)}>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className={tw(`h-6 w-6`)}
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z'
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className={tw(`px-1`)}>Closes #7870 OpenQ-Tier-3-Winner</div>
+                    </div>
+                    <div className={tw(`flex flex-row items-center space-x-4 md:space-x-1 w-fit`)}>
+                      <div className={tw(`relative flex flex-col items-center group`)}>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className={tw(`h-6 w-6`)}
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z'
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className={tw(`px-1`)}>Closes #7870 OpenQ-Tier-3-Winner</div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>:
               <div className={tw(`col-span-3 space-y-2 py-2`)}>
                 <p>Don't forget to add a closer comment for this bounty on your pull request :-{')'}.</p>
                 <div>
@@ -49,8 +115,12 @@ const MockClaimUi = () => {
                   </div>
                 </div>
               </div>
+              
+              
+              
+              }
               <div className={tw(`flex flex-col space-y-5`)}>
-                <div className={tw(`bg-github-primary text-white py-1 rounded-lg text-center w-full`)}>Claim</div>
+                <div className={tw(`bg-github-primary text-white py-1 rounded-lg text-center w-full px-8`)}>Claim</div>
               </div>
               <div className={tw(`flex items-center col-span-3`)}>
                 <div className={tw(`w-full justify-center`)}></div>
