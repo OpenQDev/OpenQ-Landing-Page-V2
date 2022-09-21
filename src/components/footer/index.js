@@ -18,7 +18,7 @@ const Footer = () => {
   };
   return (
     <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
-      {showCookieNotice && <div className={tw(`fixed bg-dark-mode text-primary p-2 flex flex-col content-center rounded-lg bottom-0 right-0 border-muted border text-sm m-8 w-60 md:w-72`)}>This website uses cookies to ensure you receive the best possible experience.{" "}
+      {showCookieNotice && <div className={tw(`fixed z-50 bg-dark-mode text-primary p-2 flex flex-col content-center rounded-lg bottom-0 right-0 border-muted border text-sm m-8 w-60 md:w-72`)}>This website uses cookies to ensure you receive the best possible experience.{" "}
         <Link href={"/privacy"}>
           <a onClick={handleCookieNotice} className={tw(`whitespace-nowrap underline`)}>Learn More</a>
         </Link>
