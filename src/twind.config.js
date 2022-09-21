@@ -15,7 +15,9 @@ export default {
       maxWidth: {
         "8xl": "1800px",
       },
-
+      minWidth: {
+        "60": "15rem"
+      },
       minHeight: {
         '20': '80px',
       },
