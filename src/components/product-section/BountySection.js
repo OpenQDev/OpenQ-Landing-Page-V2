@@ -38,7 +38,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
   }, []);
   return (
     <div className={tw(`flex justify-center`)}>
-      <div className={tw(`max-w-8xl`)}>
+      <div className={tw(`max-w-8xl w-full`)}>
         <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
           <div
             className={tw(
