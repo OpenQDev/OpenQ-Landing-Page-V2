@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { tw } from 'twind';
 import BountySection from './BountySection';
 import Add from '../svg/add';
@@ -23,7 +23,28 @@ const listItems = [
   },
 ];
 */
-const ProductSection = ({ internalMenu }) => {
+const ProductSection = ({ internalMenu, prs, contest }) => {
+  const [currentPrs, setCurrentPrs] = useState(prs);
+  let observer = useRef();
+  const lastElem = useRef();
+  useEffect(() => {
+    if (observer.current) {
+      observer.current.disconnect();
+    }
+    if (lastElem.current) {
+      let options = {
+        rootMargin: '200px',
+        threshold: 0,
+      };
+      const callback = (entries) => {
+        if (entries[0].isIntersecting) {
+          setCurrentPrs([...currentPrs, ...prs]);
+        }
+      };
+      observer.current = new IntersectionObserver(callback, options);
+      observer.current.observe(lastElem.current);
+    }
+  }, [currentPrs]);
   const cardSectionData = [
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
@@ -49,8 +70,8 @@ const ProductSection = ({ internalMenu }) => {
     <div>
       <section className={tw(`font-montserrat pt-28`)}>
         <div className={tw(`bg-white`)}>
-          <BountySection scrollY={scrollY} internalMenu={internalMenu} />
-          <div className={tw(`flex-col flex items-center content-center`)}>
+          <BountySection scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
+          {!contest && <div className={tw(`flex-col flex items-center content-center`)}>
             <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
               {internalMenu === 'org' && 'Not the right fit?'}{' '}
               <span className={tw(`text-gray-900`)}>OpenQ Contests </span>
@@ -59,7 +80,7 @@ const ProductSection = ({ internalMenu }) => {
 
             <div
               className={tw(
-                `w-5/6 md:w-2/3  rounded-2xl overflow-hidden opacity-0  ${
+                `w-5/6 md:w-2/3 bg-dark-mode  rounded-2xl overflow-hidden opacity-0  ${
                   scrollY > 3000 && 'animate-fadeIn opacity-1'
                 } `
               )}
@@ -89,9 +110,10 @@ const ProductSection = ({ internalMenu }) => {
                 avatarUrl={'https://avatars.githubusercontent.com/u/72904068?s=200&v=4'}
                 days={17}
                 scrollY={scrollY}
+                noBorder={true}
               />
             </div>
-          </div>
+          </div>}
 
           {internalMenu === 'org' && (
             <div className={tw(`flex-col flex items-center content-center`)}>
@@ -101,47 +123,28 @@ const ProductSection = ({ internalMenu }) => {
 
               <div
                 className={tw(
-                  `w-5/6 border border-gray-700 rounded-2xl opacity-0 ${scrollY > 3500 && 'animate-fadeIn opacity-1'} `
+                  `w-5/6 border border-gray-700 rounded-2xl opacity-0 bg-transparent overflow-hidden ${
+                    scrollY > 3500 ? 'animate-fadeIn opacity-1': scrollY >3050 && contest && 'animate-fadeIn opacity-1'
+                  } `
                 )}
               >
-                <MockPr
-                  url={'https://github.com/OpenQDev/OpenQ-Frontend/pull/454'}
-                  title={'Super fluid #454'}
-                  description={'FlacoJones merged 20 commits in from Johnny-V:master'}
-                  scrollY={scrollY}
-                  fade={''}
-                />
-                <MockPr
-                  url={'https://github.com/snapshot-labs/stamp/pull/12'}
-                  title={'Fetches ENS Avatar URL from on-chain using ethers.js ENS methods #12'}
-                  description={'bonustrack merged 7 commits into snapshot-labs:master from FlacoJones:master'}
-                  scrollY={scrollY}
-                  fade={'animate-fadeIn'}
-                />
-                <MockPr
-                  url={'https://github.com/snapshot-labs/stamp/pull/20'}
-                  title={'feat: add Jazzicon resolver #20'}
-                  description={'bonustrack merged 5 commits into master from sekhmet/jazzicon'}
-                  scrollY={scrollY}
-                  fade={'animate-fadeIn'}
-                />
-                <MockPr
-                  url={'https://github.com/snapshot-labs/stamp/pull/18'}
-                  title={'feat: add SelfID resolver #18'}
-                  description={'bonustrack merged 3 commits into master from sekhmet/selfid'}
-                  styles={'border-none'}
-                  scrollY={scrollY}
-                  fade={'animate-fadeIn'}
-                />
+              <ul className={tw`max-h-128 overflow-y-scroll relative`}>
+                {currentPrs.map((pr, index) => {
+                  return (
+                    <li key={index} ref={index === currentPrs.length - 1 ? lastElem : null}>
+                      <MockPr title={pr.title} description={pr.description} url={pr.url} />
+                    </li>
+                  );
+                })}</ul>
               </div>
             </div>
           )}
-          <div className={tw(`flex-col flex items-center content-center`)}>
+          <div className={tw(`flex-col flex items-center content-center px-4`)}>
             <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-black`)}>
               "Under the hood"
             </h2>
 
-            <CardGroup data={cardSectionData} fadeIn={scrollY > 4000} />
+            <CardGroup data={cardSectionData} fadeIn={scrollY > 3800} />
           </div>
           {/* <ProductFooter scrollY={scrollY} /> */}
         </div>

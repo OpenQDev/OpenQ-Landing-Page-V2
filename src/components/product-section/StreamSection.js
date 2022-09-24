@@ -190,7 +190,7 @@ const StreamSection = () => {
             </span>
             through our invoice system.
           </div>
-          <div className={tw(`pt-8 pl-8 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeftFast' : null}`)}>
+          <div className={tw(`pt-8 pl-8 min-w-60 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeftFast' : null}`)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
@@ -246,7 +246,7 @@ const StreamSection = () => {
                   </div>
                 </div>
                 <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                  <div className={tw(`flex flex-row space-x-3 items-center w-fit`)}>
                     <div style={{ width: `25px`, height: `25px` }}>
                       <Jazzicon address='0xFAc675C310721717Cd4A37F6cbeA1F081b1C2a07' />
                     </div>

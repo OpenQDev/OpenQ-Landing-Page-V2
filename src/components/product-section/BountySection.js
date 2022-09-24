@@ -4,6 +4,7 @@ import { tw } from 'twind';
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import MintBountyMock from './MintBountyMock';
+import MintContestMock from './MintContest';
 import GitHubMessage from './GithubMessage';
 import GithubPr from './GithubPr';
 import FundBountyMock from './FundBountyMock';
@@ -11,7 +12,7 @@ import CreatePrMock from './CreatePrMock.js';
 import MockClaimUi from './MockClaimUi.js';
 import Organizations from './Organizations';
 
-const BountySection = ({ scrollY, internalMenu }) => {
+const BountySection = ({ scrollY, internalMenu, contest }) => {
   const firstParagraph = useRef();
   const secondParagraph = useRef();
   const thirdParagraph = useRef();
@@ -37,7 +38,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
   }, []);
   return (
     <div className={tw(`flex justify-center`)}>
-      <div className={tw(`max-w-8xl`)}>
+      <div className={tw(`max-w-8xl w-full`)}>
         <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
           <div
             className={tw(
@@ -88,7 +89,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
                 for proposing new code. Now you can leverage the same simple processes for bounties.
               </div>
               <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
-                {isOrg ? <MintBountyMock scrollY={scrollY} /> : <Organizations />}
+                {isOrg ? contest? <MintContestMock scrollY={scrollY} /> : <MintBountyMock scrollY={scrollY} /> : <Organizations />}
               </div>
               <div className={tw(`flex flex-row -ml-7 p-0.5 items-center col-span-2`)}>
                 <div className='bg-white '>
@@ -108,9 +109,9 @@ const BountySection = ({ scrollY, internalMenu }) => {
                   fund with any ERC-20 or MATIC
                 </p>
               </div>
-              <div className={tw(`lg: col-span-3 col-start-4`)}>
+              {!contest && <div className={tw(`lg: col-span-3 col-start-4`)}>
                 <GitHubMessage />
-              </div>
+              </div>}
             </div>
           </div>
           <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />
@@ -150,7 +151,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
                 and earn by getting your pull request merged.{' '}
                 <p>Our permissionless bounty system integrates directly with GitHub.</p>
               </div>
-              {isOrg ? <FundBountyMock scrollY={scrollY} /> : <CreatePrMock />}
+              {isOrg ? <FundBountyMock contest={contest} scrollY={scrollY} /> : <CreatePrMock />}
             </div>
           </div>
           <div className={tw(`flex flex-row -ml-2 items-center`)}>
@@ -167,7 +168,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
                 <circle cx='14' cy='11' fill='white' r='5' stroke='#465061' strokeWidth='2' />
               </svg>
             </div>
-            <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>dev creates pull request</p>
+            <p className={tw(`pl-2 text-md font-base font-mono text-left text-gray-500`)}>{contest ? "contestants create pull requests": "dev creates pull request"}</p>
           </div>
           <div className={tw(`border-l ml-1 border-gray-400 pb-9`)} />{' '}
           {isDev && (
@@ -191,7 +192,7 @@ const BountySection = ({ scrollY, internalMenu }) => {
           )}
           <div ref={thirdParagraph} className={tw(` ml-1 pt-8 border-l border-gray-400`)}>
             <div className={tw(`flex flex-row bg-white -ml-2 justify-center items-center space-x-4`)}>
-              {isOrg ? <GithubPr /> : <MockClaimUi />}
+              {isOrg ? <GithubPr /> : <MockClaimUi contest={contest} />}
             </div>
           </div>
         </section>

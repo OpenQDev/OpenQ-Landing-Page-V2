@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { tw } from 'twind';
+import SetTierMock from "./SetTierMock.js"
 
-const MintBountyMock = ({ scrollY }) => {
+const MintContest = ({ scrollY }) => {
   return (
     <div className={tw(`w-full rounded-lg flex flex-col  z-11 space-y-1 lg:w-full md:w-2/3 relative `)}>
       <div
@@ -12,13 +13,16 @@ const MintBountyMock = ({ scrollY }) => {
 
       <div className={tw(`w-full overflow-y-auto`)}>
         <div className={tw(`flex flex-col items-center justify-center p-5 pb-3 rounded-t`)}>
-          <h3 className={tw(`text-3xl text-center font-semibold`)}>Deploy Fixed Price Contract</h3>
-          <h3 className={tw(`text-2xl pt-2 w-5/6 text-center text-gray-600`)}>Create an Fixed Price Contract.</h3>
+          <h3 className={tw(`text-3xl text-center font-semibold`)}>Deploy Contest</h3>
+          <h3 className={tw(`text-2xl pt-2 w-5/6 text-center text-gray-600`)}>Create a Contest Contract to send funds to any GitHub issue</h3>
         </div>
         <div className={tw(`flex flex-col items-start pl-6 pr-6`)}>
           <div className={tw(`flex flex-col w-full  px-2 pt-5 md:w-2/3`)}>Enter GitHub Issue URL</div>
 
-          <div className={tw(`bg-white`)}>{scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</div>
+          <input
+           className={tw(`bg-white border w-60 whitespace-nowrap p-1 mt-1 ml-6 ${scrollY < 1700 && "text-muted"}`)}
+           value= {scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/OpenQContracts/issues/2'}
+           />
         </div>
         <div className={tw(`flex flex-col items-center space-x-1 px-8`)}>
           {scrollY > 1720 ? (
@@ -46,55 +50,14 @@ const MintBountyMock = ({ scrollY }) => {
           ) : null}
         </div>
 
-        <>
-          <div className={tw(`flex flex-col items-start pl-6 pr-6 pb-2 w-full md:w-2/3`)}>
-            <div className={tw(`flex flex-col`)}>
-              <div className={tw(`flex flex-col w-full items-start p-2 py-1 text-base `)}>
-                Is this Contract invoiceable?
-                <div className={tw(`flex-1 w-full mt-2 ml-4`)}>
-                  <div className={tw(`flex text-sm rounded-sm text-primary cursor-default`)}>
-                    <div
-                      disabled={true}
-                      className={tw(
-                        ` w-fit  bg-gray-900 text-white px-4 py-1.5 rounded-l-md border whitespace-nowrap border-web-gray`
-                      )}
-                    >
-                      Yes
-                    </div>
-                    <div
-                      className={tw(
-                        `w-fit px-4 text-white border-l-0 py-1.5 bg-blue-500 border-blue-500 rounded-r-md border whitespace-nowrap bg-secondary-button border-secondary-button`
-                      )}
-                    >
-                      No
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
+     
 
         <div className={tw(`flex flex-col items-start pl-6 pr-6 pb-2`)}>
           <div className={tw(`flex flex-col`)}>
             <div className={tw(`flex flex-col w-full items-start p-2 py-1 gap-4 text-base`)}>
-              <div className={tw(`flex items-center gap-3`)}>
-                Set a Budget
-                <input type='checkbox' className={tw(`checkbox`)}></input>
-              </div>
-              <span className={tw(`text-sm`)}>
-                You don{"'"}t have to deposit now! The budget is just what you intend to pay.
-              </span>
+             <SetTierMock scrollY={scrollY} />
 
-              <div className={tw(`flex flex-row space-x-3 items-center text-md`)}>
-                <div>
-                  Make sure you{' '}
-                  <Link href='https://docs.openq.dev/welcome/master'>
-                    <a className={tw(`text-blue-600 hover:underline`)}>label your Github issue correctly </a>
-                  </Link>
-                  so that users can find it easily.
-                </div>
-              </div>
+              
               <div
                 className={tw(
                   `whitespace-nowrap self-center bg-github-primary sm:w-56 w-min border border-green-600 rounded-lg py-1.5 text-white flex flex-row space-x-3 items-center justify-center leading-tight h-min px-3 `
@@ -115,7 +78,7 @@ const MintBountyMock = ({ scrollY }) => {
                   />
                 </svg>
 
-                {scrollY > 1750 && scrollY <= 2000 ? (
+                {scrollY > 2050 && scrollY <= 2400 ? (
                   <div>
                     <div>
                       <svg
@@ -129,7 +92,7 @@ const MintBountyMock = ({ scrollY }) => {
                     </div>
                   </div>
                 ) : null}
-                {scrollY > 2000 ? (
+                {scrollY > 2400 ? (
                   <div className={tw(`w-6 opacity-90`)}>
                     <svg id='emoji' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'>
                       <g id='color'>
@@ -242,9 +205,9 @@ const MintBountyMock = ({ scrollY }) => {
                     </svg>
                   </div>
                 ) : null}
-                {scrollY < 1750 ? <p>Deploy</p> : null}
-                {scrollY <= 2000 && scrollY > 1749 ? <p>Minting</p> : null}
-                {scrollY > 2000 ? <p>Success</p> : null}
+                {scrollY < 2050 ? <p>Deploy</p> : null}
+                {scrollY <= 2400 && scrollY > 2049 ? <p>Minting</p> : null}
+                {scrollY > 2400 ? <p>Success</p> : null}
               </div>
             </div>
           </div>
@@ -253,4 +216,4 @@ const MintBountyMock = ({ scrollY }) => {
     </div>
   );
 };
-export default MintBountyMock;
+export default MintContest;

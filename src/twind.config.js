@@ -15,10 +15,15 @@ export default {
       maxWidth: {
         "8xl": "1800px",
       },
-      
-    minHeight: {
-      '20': '80px',
-    },
+      minWidth: {
+        "60": "15rem"
+      },
+      minHeight: {
+        '20': '80px',
+      },
+      maxHeight: {
+        '128': '32rem',
+      },
       colors: {
         transparent: 'transparent',
         'dark-mode': '#121212',
@@ -28,8 +33,8 @@ export default {
         'custom-cyan': '#22d3ee',
         fuchsia: colors.fuchsia,
         'github-primary': '#2da44e',
-        'github-prime-hov':'#2c974b',
-        'link-colour':'#39a6ff',
+        'github-prime-hov': '#2c974b',
+        'link-colour': '#39a6ff',
         emerald: colors.emerald,
         lime: colors.lime,
         violet: colors.violet,
@@ -38,8 +43,9 @@ export default {
         cyan: colors.cyan,
         sky: colors.sky,
         indigo: colors.indigo,
-				primary: 'rgb(201, 209, 217)',
-				muted: 'rgb(139, 148, 158)',
+        "secondary-btn": "#1f6feb",
+        primary: 'rgb(201, 209, 217)',
+        muted: 'rgb(139, 148, 158)',
         githubMessageColor: '#161b22'
 
       },
@@ -54,7 +60,9 @@ export default {
         fadeInRight: 'fadeInRight 1s ease-in forwards',
         fadeInTop: 'fadeInTop 1s ease-in forwards',
       },
-
+      space: {
+        "11/12": "91.6%"
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0 },

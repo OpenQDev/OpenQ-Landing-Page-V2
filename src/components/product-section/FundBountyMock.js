@@ -1,7 +1,7 @@
 import { tw } from 'twind';
 import Image from 'next/image';
 
-const FundBountyMock = ({ scrollY }) => {
+const FundBountyMock = ({ scrollY, contest }) => {
   return (
     <div className={tw(`flex flex-col space-y-5 pb-4 relative items-center rounded-lg col-span-2`)}>
       <div
@@ -11,7 +11,7 @@ const FundBountyMock = ({ scrollY }) => {
       ></div>
       <div className={tw(`flex text-3xl text-dark-mode justify-center px-16 py-4  rounded-t-lg`)}>
         <div>
-          <span className='font-semibold'>Escrow</span> {''} <span> Funds in Atomic Contract</span>
+          <span className='font-semibold'>Escrow</span> {''} <span> Funds in {contest ? "Contest" : "Fixed Price Contract"}</span>
         </div>
       </div>
       <div className={tw(`flex flex-col space-y-5 w-5/6 pt-2`)}>
