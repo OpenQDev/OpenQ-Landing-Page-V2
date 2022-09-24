@@ -92,7 +92,7 @@ const Header = ({ pageVersionHookInstance }) => {
     <header className={tw(`w-full font-montserrat bg-dark-mode relative`)}>
       <div className={tw(``)}>
         <div className={tw(`text-white flex justify-center`)}>
-          <div className={tw(`bg-gray-900 gap-2 border border-gray-700 rounded-full p-0.5 xl:my-32 my-8 `)}>
+          <div className={tw(`bg-gray-900 gap-2 border border-gray-700 rounded-full p-0.5 xl:my-12 my-8 `)}>
             <button
               onClick={() => setInternalMenu('dev')}
               className={tw(

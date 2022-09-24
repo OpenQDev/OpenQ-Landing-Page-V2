@@ -73,7 +73,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
               <div
                 ref={firstParagraph}
                 className={tw(
-                  `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-4 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${
+                  `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:col-span-3 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl ${
                     firstIsVisible ? 'animate-fadeInRight' : null
                   }`
                 )}
@@ -88,7 +88,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
                 </span>
                 for proposing new code. Now you can leverage the same simple processes for bounties.
               </div>
-              <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-2 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
+              <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-3 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
                 {isOrg ? contest? <MintContestMock scrollY={scrollY} /> : <MintBountyMock scrollY={scrollY} /> : <Organizations />}
               </div>
               <div className={tw(`flex flex-row -ml-7 p-0.5 items-center col-span-2`)}>
