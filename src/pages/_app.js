@@ -1,6 +1,7 @@
 import '@/styles/global.css';
 import '@fontsource/inter';
 import Script from 'next/script';
+import Head from 'next/head';
 
 import { setup } from 'twind';
 import { useEffect } from 'react';
