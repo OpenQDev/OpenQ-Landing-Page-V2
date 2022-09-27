@@ -12,6 +12,8 @@ import * as ga from '../lib/analytics';
 if (typeof window !== `undefined`) {
   setup(twindConfig);
 }
+export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
 useEffect(()=>{
 
 const hjid = "3177116"
@@ -33,8 +35,6 @@ if (hotjar.initialized()) {
 }
 
 },[])
-export default function MyApp({ Component, pageProps }) {
-  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
