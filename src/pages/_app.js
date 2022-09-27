@@ -26,6 +26,18 @@ export default function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
+const hotjar = ()=>{
+(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3177116,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')
+
+
+}
   return (
     <>
       <Script
@@ -43,21 +55,12 @@ export default function MyApp({ Component, pageProps }) {
         `}
       </Script>
 
+      <Head>
       
-      <Script
-        strategy='beforeInteractive'
-        dangerouslySETInnerHTML={{
-          __html: ` (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3177116,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  `,
-        }}
-      />
+<script>
+    hotjar();
+</script></Head>
+      
       <Component {...pageProps} />
     </>
   );
