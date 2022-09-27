@@ -45,7 +45,7 @@ export default function MyApp({ Component, pageProps }) {
 
       
       <Script
-        strategy='afterInteractive'
+        strategy='beforeInteractive'
         dangerouslySETInnerHTML={{
           __html: ` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
