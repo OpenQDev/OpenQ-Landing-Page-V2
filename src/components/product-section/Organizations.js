@@ -1,9 +1,19 @@
 import { tw } from 'twind';
 import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
 
 const Organizations = () => {
+const [firstIsVisible, setFirstIsVisible] = useState()
+const firstParagraph = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setFirstIsVisible(entry.isIntersecting, {rootMargin: "200px"});
+    });
+    observer.observe(firstParagraph.current);
+  }, []);
   return (
-    <div className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2 `)}>
+    <div ref={firstParagraph} className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2  ${firstIsVisible && "animate-fadeInLeft"}`)}>
       <div className={tw(`border border-gray-900 rounded-xl`)}>
         <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
           <div className={tw(``)}>

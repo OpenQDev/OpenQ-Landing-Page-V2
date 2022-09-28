@@ -1,8 +1,18 @@
 import { tw } from 'twind';
+import { useState, useEffect, useRef } from 'react';
 
 const MockClaimUi = ({contest}) => {
+const [firstIsVisible, setFirstIsVisible] = useState()
+const firstParagraph = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setFirstIsVisible(entry.isIntersecting, {rootMargin: "200px"});
+    });
+    observer.observe(firstParagraph.current);
+  }, []);
   return (
-    <div className={tw(`w-full flex gap-5 relative`)}>
+    <div ref={firstParagraph} className={tw(`w-full flex gap-5 relative  ${firstIsVisible && "animate-fadeInLeft"}`)}>
       <div className='w-9 h-9 flex-none py-2'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'>
           <path

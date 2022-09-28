@@ -2,8 +2,10 @@ import Link from 'next/link';
 import { tw } from 'twind';
 
 const MintBountyMock = ({ scrollY }) => {
+
+
   return (
-    <div className={tw(`w-full rounded-lg flex flex-col z-11 space-y-1 lg:w-full md:w-2/3 relative `)}>
+    <div  className={tw(`w-full rounded-lg flex flex-col z-11 space-y-1 lg:w-full md:w-2/3 relative  `)}>
       <div
         className={tw(
           `pointer-events-none bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 opacity-5 w-full h-max absolute inset-0 rounded-lg`
@@ -18,7 +20,7 @@ const MintBountyMock = ({ scrollY }) => {
         <div className={tw(`flex flex-col items-start pl-6 pr-6`)}>
           <div className={tw(`flex flex-col w-full  px-2 pt-5 md:w-2/3`)}>Enter GitHub Issue URL</div>
 
-          <div className={tw(`bg-white`)}>{scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</div>
+          <div className={tw(`bg-white border w-1/2 rounded-md p-0.5 ml-2`)}>{scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</div>
         </div>
         <div className={tw(`flex flex-col items-center space-x-1 px-8`)}>
           {scrollY > 1720 ? (
@@ -43,7 +45,8 @@ const MintBountyMock = ({ scrollY }) => {
                 <p className={tw(`m-px`)}>This is an example issue</p>
               </div>
             </div>
-          ) : null}
+          ) : 
+            <div className={tw(`px-3 pt-5`)}></div>}
         </div>
 
         <>

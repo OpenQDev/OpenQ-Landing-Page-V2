@@ -4,29 +4,11 @@ import { tw } from 'twind';
 import Image from 'next/image';
 import { Jazzicon } from '@ukstv/jazzicon-react';
 import { useRef, useEffect, useState } from 'react';
+import OnScroll from '../utils/OnScroll';
 
 const StreamSection = () => {
-  const firstParagraph = useRef();
-  const secondParagraph = useRef();
-  const [firstIsVisible, setFirstIsVisible] = useState();
-  const [secondIsVisible, setSecondIsVisible] = useState();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setFirstIsVisible(entry.isIntersecting);
-    });
-    observer.observe(firstParagraph.current);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setSecondIsVisible(entry.isIntersecting);
-    });
-    observer.observe(secondParagraph.current);
-  }, []);
-
+  
   return (
     <div className={tw(`bg-dark-mode pt-10 lg:mx-20 rounded-t-2xl `)}>
       <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
@@ -94,14 +76,15 @@ const StreamSection = () => {
           </div>
         </div>
         <div className={tw(``)}>
+
+        <OnScroll  fade="animate-fadeInRight">
           <div
-            ref={firstParagraph}
             className={tw(
               `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`
             )}
           >
             <div className={tw(`lg:col-span-2 lg:pt-5`)}>
-              <div className={tw(`border border-white rounded-xl ${firstIsVisible ? 'animate-fadeInRight' : null}`)}>
+              <div className={tw(`border border-white rounded-xl`)}>
                 <div className={tw(`px-5 text-center py-8`)}>
                   <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
                   <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-400`)}>
@@ -122,9 +105,7 @@ const StreamSection = () => {
             </div>
             <p
               className={tw(
-                `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4 ${
-                  firstIsVisible ? 'animate-fadeInLeftFast' : null
-                }`
+                `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4`
               )}
             >
               Bounties are good for making initial connections and getting involved in projects. Next step: token
@@ -134,6 +115,7 @@ const StreamSection = () => {
               </span>
             </p>
           </div>
+          </OnScroll>
         </div>
         <div className={tw(`flex flex-row -ml-2 items-center`)}>
           <div>
@@ -175,12 +157,10 @@ const StreamSection = () => {
         <div
           className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}
         >
+        <OnScroll fade="animate-fadeInRight" className=" lg:col-span-4">
           <div
-            ref={secondParagraph}
             className={tw(
-              `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:col-span-4 lg:pt-12 ${
-                secondIsVisible ? 'animate-fadeInRight' : null
-              }`
+              `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:pt-12`
             )}
           >
             We reduce the work of web3 leaders and simplify the on- and offboarding of team members significantly. In
@@ -190,7 +170,9 @@ const StreamSection = () => {
             </span>
             through our invoice system.
           </div>
-          <div className={tw(`pt-8 pl-8 min-w-60 lg:col-span-2 ${secondIsVisible ? 'animate-fadeInLeftFast' : null}`)}>
+          </OnScroll>
+        <OnScroll fade="animate-fadeInRight" className="lg:col-span-2 w-full">
+          <div className={tw(`pt-8 pl-8 min-w-60 `)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
                 <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
@@ -288,6 +270,7 @@ const StreamSection = () => {
               </div>
             </div>
           </div>
+          </OnScroll>
         </div>
         {` `}
         <div className={tw(`flex flex-row -ml-2 items-center`)}>

@@ -10,7 +10,7 @@ const GithubPr = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      setFirstIsVisible(entry.isIntersecting);
+      setFirstIsVisible(entry.isIntersecting, {rootMargin: "200px"});
     });
     observer.observe(firstParagraph.current);
   }, []);

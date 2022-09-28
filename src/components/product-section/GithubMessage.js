@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import { tw } from 'twind';
 import styles from './GithubMessage.module.css';
-
 const GithubMessage = () => {
   return (
-    <div className={tw(`w-full pt-4 flex relative`)}>
+    <div className={tw(`w-full pt-4 flex relative `)}>
       <div className='w-9 h-9 flex-none'>
         <Image className='rounded-full' height={36} width={36} src={'/githubAvatar.jpg'} />
       </div>
