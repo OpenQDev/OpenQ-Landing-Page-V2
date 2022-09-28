@@ -3,7 +3,7 @@ import { tw } from 'twind';
 
 const MintBountyMock = ({ scrollY }) => {
   return (
-    <div className={tw(`w-full rounded-lg flex flex-col  z-11 space-y-1 lg:w-full md:w-2/3 relative `)}>
+    <div className={tw(`w-full rounded-lg flex flex-col z-11 space-y-1 lg:w-full md:w-2/3 relative `)}>
       <div
         className={tw(
           `pointer-events-none bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 opacity-5 w-full h-max absolute inset-0 rounded-lg`
