@@ -3,20 +3,26 @@ import { tw } from "twind";
 
 const OnScroll = ({ children, className, fade }) => {
 	const [isIntersecting, setIsIntersecting] = useState();
-	const paragraph = useRef();
+	const [showFade, setShowFade] = useState();
+	const target = useRef();
 	useEffect(() => {
-		let localIsIntersecting;
-		const observer = new IntersectionObserver((entries) => {
-			const entry = entries[0];
-			if (!isIntersecting && !localIsIntersecting) {
-			//	localIsIntersecting = true;
-				setIsIntersecting(entry.isIntersecting, { rootMargin: "100px" });
-			}
-		});
-		observer.observe(paragraph.current);
-	}, []);
+		if (!isIntersecting) {
+			let observer = new IntersectionObserver((entries) => {
 
-	return (<div className={tw(`${className} ${isIntersecting && fade}`)} ref={paragraph}>
+				const entry = entries[0];
+				setIsIntersecting(entry.isIntersecting, { rootMargin: "100px" });
+			});			
+		observer.observe(target.current);
+		}
+	}, []);
+	useEffect(() => {
+		if (isIntersecting) {
+			setShowFade(true);
+		}
+
+	}, [isIntersecting]);
+
+	return (<div className={tw(` opacity-0 ${className} ${showFade && fade} ${showFade && "opacity-1"}`)} ref={target}>
 		{children}
 	</div>);
 };
