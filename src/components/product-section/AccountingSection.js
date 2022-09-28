@@ -4,7 +4,7 @@ import { tw } from 'twind';
 import { useRef, useEffect, useState } from 'react';
 import OnScroll from '../utils/OnScroll';
 
-const AccountingSection = () => {
+const AccountingSection = ({internalMenu}) => {
 
   return (
     <div className={tw(``)}>
@@ -88,7 +88,7 @@ const AccountingSection = () => {
             <div className={tw(`border-l invisible ml-1 pt-5 pl-8 lg:pl-0 border-gray-400 pb-8 lg:visible`)} />
             <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
           </div>
-          <OnScroll fade='animate-fadeInTop'>
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeInTop'>
             <div
             
               className={tw(

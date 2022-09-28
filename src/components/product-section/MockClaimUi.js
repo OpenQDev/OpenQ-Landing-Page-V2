@@ -1,18 +1,10 @@
 import { tw } from 'twind';
-import { useState, useEffect, useRef } from 'react';
+import OnScroll from '../utils/OnScroll';
 
-const MockClaimUi = ({contest}) => {
-const [firstIsVisible, setFirstIsVisible] = useState()
-const firstParagraph = useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setFirstIsVisible(entry.isIntersecting, {rootMargin: "200px"});
-    });
-    observer.observe(firstParagraph.current);
-  }, []);
+const MockClaimUi = ({contest, internalMenu}) => {
   return (
-    <div ref={firstParagraph} className={tw(`w-full flex gap-5 relative  ${firstIsVisible && "animate-fadeInLeft"}`)}>
+  <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full">
+    <div className={tw(`w-full flex gap-5 relative`)}>
       <div className='w-9 h-9 flex-none py-2'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'>
           <path
@@ -140,6 +132,7 @@ const firstParagraph = useRef();
         </div>
       </div>
     </div>
+    </OnScroll>
   );
 };
 

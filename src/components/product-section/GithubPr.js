@@ -3,10 +3,10 @@ import { tw } from 'twind';
 import OnScroll from '../utils/OnScroll';
 import styles from './GithubMessage.module.css';
 
-const GithubPr = () => {
+const GithubPr = ({internalMenu}) => {
 
   return (
-    <OnScroll fade="animate-fadeInLeft" className="w-full">
+    <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full">
       <div  className={tw(`w-full flex relative`)}>
         <div className='w-9 h-9 flex-none'>
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'>

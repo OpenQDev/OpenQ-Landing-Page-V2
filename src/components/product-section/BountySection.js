@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { tw } from 'twind';
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import MintBountyMock from './MintBountyMock';
 import MintContestMock from './MintContest';
@@ -13,11 +13,8 @@ import MockClaimUi from './MockClaimUi.js';
 import Organizations from './Organizations';
 import OnScroll from "../utils/OnScroll";
 
-const BountySection = ({ scrollY, internalMenu, contest }) => {
-  const firstParagraph = useRef();
-  const secondParagraph = useRef();
+const BountySection = ({ scrollY, contest, internalMenu }) => {
   const thirdParagraph = useRef();
-  const [secondIsVisible, setSecondIsVisible] = useState();
   const isDev = internalMenu === 'dev';
   const isOrg = internalMenu === 'org';
 
@@ -28,7 +25,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
           <div className={tw(`max-w-8xl w-full`)}>
             <div className={tw(`mb-8 mx-10 lg:mx-32 xl:mx-54 2xl:mx-64 mx-auto lg:mb-16`)}>
               
-      <OnScroll fade="animate-fadeIn"><div
+      <OnScroll internalMenu={internalMenu} fade="animate-fadeIn"><div
                 className={tw(
                   `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-400`
                 )}
@@ -60,7 +57,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
               <div className={tw(`pl-1 `)}>
                 <div className={tw(`border-l border-gray-400 xl:grid xl:grid-cols-6 xl:gap-4 px-3 xl:pb-10 xl:pt-10`)}>
 
-                  <OnScroll fade="animate-fadeInRight" className="lg:col-span-3">
+                  <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className="lg:col-span-3">
                     <div
                       className={tw(
                         `pt-10 lg:pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-5 xl:mx-10 2xl:text-3xl`
@@ -77,7 +74,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
                     </div>
                   </OnScroll>
                   <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-3 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
-                    <OnScroll fade="animate-fadeInLeft" className="w-full">
+                    <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full">
                       {isOrg ? contest ?
 
                         <MintContestMock scrollY={scrollY} /> : <MintBountyMock scrollY={scrollY} /> : <Organizations />}
@@ -102,7 +99,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
                     </p>
                   </div>
                   {!contest && <div className={tw(`lg: col-span-3 col-start-4`)}>
-                    <OnScroll fade="animate-fadeInLeft" className="w-full ">
+                    <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full ">
                       <GitHubMessage />
                     </OnScroll>
                   </div>}
@@ -129,11 +126,10 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
               </div>
               <div className={tw(`border-l ml-1 border-gray-400 pb-9`)}>
                 <div className={tw(`pt-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}>
-                  <OnScroll fade="animate-fadeInRight" className="lg:col-span-4 ">
+                  <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className="lg:col-span-4 ">
                     <div
                       className={tw(
-                        `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10${secondIsVisible ? 'animate-fadeInRight' : null
-                        }`
+                        `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10`
                       )}
                     >
                       Find
@@ -146,7 +142,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
                     </div>
                   </OnScroll>
 
-                  <OnScroll fade="animate-fadeInLeft" className="w-full  col-span-2">
+                  <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full  col-span-2">
                     {isOrg ?
 
                       <FundBountyMock contest={contest} scrollY={scrollY} /> : <CreatePrMock />}
@@ -191,7 +187,7 @@ const BountySection = ({ scrollY, internalMenu, contest }) => {
               )}
               <div ref={thirdParagraph} className={tw(` ml-1 pt-8 border-l border-gray-400`)}>
                 <div className={tw(`flex flex-row bg-white -ml-2 justify-center items-center space-x-4`)}>
-                  {isOrg ? <GithubPr /> : <MockClaimUi contest={contest} />}
+                  {isOrg ? <GithubPr  internalMenu={internalMenu} /> : <MockClaimUi contest={contest} />}
                 </div>
               </div>
             </section>

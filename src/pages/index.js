@@ -93,11 +93,11 @@ export default function Home() {
         <MockBountyList bountiesVisible={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
-             <CardGroup data={cardSectionData} />
+             <CardGroup internalMenu={internalMenu} data={cardSectionData} />
             <ProductSection prs={prs} internalMenu={internalMenu} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection scrollY={scrollY} />
-            <AccountingSection scrollY={scrollY} />
+            <StreamSection internalMenu={internalMenu} scrollY={scrollY} />
+            <AccountingSection internalMenu={internalMenu} scrollY={scrollY} />
             <FAQ />
           </div>
         </div>

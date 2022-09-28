@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { tw } from "twind";
 
-const OnScroll = ({ children, className, fade }) => {
+const OnScroll = ({ children, className, fade, internalMenu }) => {
 	const [isIntersecting, setIsIntersecting] = useState();
 	const [showFade, setShowFade] = useState();
 	const target = useRef();
@@ -11,8 +11,8 @@ const OnScroll = ({ children, className, fade }) => {
 
 				const entry = entries[0];
 				setIsIntersecting(entry.isIntersecting, { rootMargin: "100px" });
-			});			
-		observer.observe(target.current);
+			});
+			observer.observe(target.current);
 		}
 	}, []);
 	useEffect(() => {
@@ -21,6 +21,11 @@ const OnScroll = ({ children, className, fade }) => {
 		}
 
 	}, [isIntersecting]);
+	useEffect(() => {
+	
+		setShowFade(false);
+		setIsIntersecting(false);
+	}, [internalMenu]);
 
 	return (<div className={tw(` opacity-0 ${className} ${showFade && fade} ${showFade && "opacity-1"}`)} ref={target}>
 		{children}

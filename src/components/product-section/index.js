@@ -72,7 +72,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
       <section className={tw(`font-montserrat pt-28`)}>
         <div className={tw(`bg-white`)}>
           <BountySection scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
-          <OnScroll fade="animate-fadeIn" className="w-full">
+          <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
             {!contest && <div className={tw(`flex-col flex items-center content-center`)}>
               <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500 `)}>
                 {internalMenu === 'org' && 'Not the right fit?'}{' '}
@@ -113,7 +113,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
           </OnScroll>
 
           {internalMenu === 'org' && (
-            <OnScroll fade="animate-fadeIn" className="w-full">
+            <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
               <div className={tw(`flex-col flex items-center content-center`)}>
                 <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
                   <span className={tw(`text-gray-900`)}>See it for yourself</span> with PRs our community completed.
@@ -136,15 +136,15 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
               </div>
             </OnScroll>
           )}
-          <div className={tw(`flex-col flex items-center content-center px-4  ${scrollY > 3950 && "animate-fadeIn"}`)}>
+          <div className={tw(`flex-col flex items-center content-center px-4 `)}>
 
-            <OnScroll fade="animate-fadeIn" className="w-full">
+            <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center w-full text-xl text-black`)}>
                 "Under the hood"
               </h2>
             </OnScroll>
 
-            <CardGroup data={cardSectionData} />
+            <CardGroup internalMenu={internalMenu} data={cardSectionData} />
           </div>
           {/* <ProductFooter scrollY={scrollY} /> */}
         </div>

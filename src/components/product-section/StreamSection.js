@@ -3,10 +3,9 @@
 import { tw } from 'twind';
 import Image from 'next/image';
 import { Jazzicon } from '@ukstv/jazzicon-react';
-import { useRef, useEffect, useState } from 'react';
 import OnScroll from '../utils/OnScroll';
 
-const StreamSection = () => {
+const StreamSection = ({internalMenu}) => {
 
   
   return (
@@ -77,7 +76,7 @@ const StreamSection = () => {
         </div>
         <div className={tw(``)}>
 
-        <OnScroll  fade="animate-fadeInRight">
+        <OnScroll internalMenu={internalMenu}  fade="animate-fadeInRight">
           <div
             className={tw(
               `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`
@@ -157,7 +156,7 @@ const StreamSection = () => {
         <div
           className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}
         >
-        <OnScroll fade="animate-fadeInRight" className=" lg:col-span-4">
+        <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className=" lg:col-span-4">
           <div
             className={tw(
               `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:pt-12`
@@ -171,7 +170,7 @@ const StreamSection = () => {
             through our invoice system.
           </div>
           </OnScroll>
-        <OnScroll fade="animate-fadeInRight" className="lg:col-span-2 w-full">
+        <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className="lg:col-span-2 w-full">
           <div className={tw(`pt-8 pl-8 min-w-60 `)}>
             <div className={tw(`border border-white rounded-xl`)}>
               <div className={tw(`px-5 text-center py-8`)}>
