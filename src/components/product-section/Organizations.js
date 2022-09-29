@@ -1,9 +1,11 @@
 import { tw } from 'twind';
 import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
+import OnScroll from '../utils/OnScroll';
 
 const Organizations = () => {
   return (
-    <div className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2 `)}>
+    <div className={tw(`pl-8 pt-8 lg:-mt-10 lg:col-span-2`)}>
       <div className={tw(`border border-gray-900 rounded-xl`)}>
         <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
           <div className={tw(``)}>

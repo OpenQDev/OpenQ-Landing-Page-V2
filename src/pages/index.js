@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import StreamSection from '@/components/product-section/StreamSection';
 import AccountingSection from '@/components/product-section/AccountingSection';
 import MockBountyList from '@/components/header/MockBountyList';
+import OnScroll from '@/components/utils/OnScroll';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
@@ -92,11 +93,11 @@ export default function Home() {
         <MockBountyList bountiesVisible={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
-            <CardGroup fadeIn={scrollY > 600} data={cardSectionData} />
+             <CardGroup internalMenu={internalMenu} data={cardSectionData} />
             <ProductSection prs={prs} internalMenu={internalMenu} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection scrollY={scrollY} />
-            <AccountingSection scrollY={scrollY} />
+            <StreamSection internalMenu={internalMenu} scrollY={scrollY} />
+            <AccountingSection internalMenu={internalMenu} scrollY={scrollY} />
             <FAQ />
           </div>
         </div>

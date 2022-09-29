@@ -1,7 +1,9 @@
 import { tw } from 'twind';
+import OnScroll from '../utils/OnScroll';
 
-const MockClaimUi = ({contest}) => {
+const MockClaimUi = ({contest, internalMenu}) => {
   return (
+  <OnScroll internalMenu={internalMenu} fade="animate-fadeInLeft" className="w-full">
     <div className={tw(`w-full flex gap-5 relative`)}>
       <div className='w-9 h-9 flex-none py-2'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'>
@@ -130,6 +132,7 @@ const MockClaimUi = ({contest}) => {
         </div>
       </div>
     </div>
+    </OnScroll>
   );
 };
 

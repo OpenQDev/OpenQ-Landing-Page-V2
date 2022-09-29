@@ -2,19 +2,9 @@
 
 import { tw } from 'twind';
 import { useRef, useEffect, useState } from 'react';
+import OnScroll from '../utils/OnScroll';
 
-const AccountingSection = () => {
-  const firstParagraph = useRef();
-
-  const [firstIsVisible, setFirstIsVisible] = useState();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setFirstIsVisible(entry.isIntersecting);
-    });
-    observer.observe(firstParagraph.current);
-  }, []);
+const AccountingSection = ({internalMenu}) => {
 
   return (
     <div className={tw(``)}>
@@ -98,85 +88,84 @@ const AccountingSection = () => {
             <div className={tw(`border-l invisible ml-1 pt-5 pl-8 lg:pl-0 border-gray-400 pb-8 lg:visible`)} />
             <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
           </div>
-          <div
-            ref={firstParagraph}
-            className={tw(
-              `flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 ${
-                firstIsVisible ? 'animate-fadeInTop' : null
-              }`
-            )}
-          >
-            <div className={tw(`pt-16 lg:w-5/12`)}>
-              <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='white'
-                  strokeWidth='2'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
-                  />
-                </svg>
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeInTop'>
+            <div
+            
+              className={tw(
+                `flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 `
+              )}          >
+              <div className={tw(`pt-16 lg:w-5/12`)}>
+                <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='white'
+                    strokeWidth='2'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+                    />
+                  </svg>
+                </div>
+                <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Simple Dashboard</h2>
+                <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
+                  Track every transaction made with OpenQ in one place{' '}
+                  <span className={tw(`font-bold text-white`)}>or integrate other</span> streams to get an overview of
+                  your earnings.
+                </div>
               </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Simple Dashboard</h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                Track every transaction made with OpenQ in one place{' '}
-                <span className={tw(`font-bold text-white`)}>or integrate other</span> streams to get an overview of
-                your earnings.
+              <div className={tw(`pt-16 lg:w-5/12`)}>
+                <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='white'
+                    strokeWidth='2'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+                    />
+                  </svg>
+                </div>
+                <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Financial Reports</h2>
+                <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
+                  <span className={tw(`font-bold text-white`)}>Make your income taxable</span> and generate invoices as
+                  well as financial reports automatically for bounties or payroll streams.
+                </div>
+              </div>
+              <div className={tw(`pt-16 lg:w-5/12`)}>
+                <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='white'
+                    strokeWidth='2'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4'
+                    />
+                  </svg>
+                </div>
+                <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Analyze at a Glance </h2>
+                <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
+                  Evaluate the progress of your financial operations{' '}
+                  <span className={tw(`font-bold text-white`)}> to identify issues and strategize solutions.</span>
+                </div>
               </div>
             </div>
-            <div className={tw(`pt-16 lg:w-5/12`)}>
-              <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='white'
-                  strokeWidth='2'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
-                  />
-                </svg>
-              </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Financial Reports</h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                <span className={tw(`font-bold text-white`)}>Make your income taxable</span> and generate invoices as
-                well as financial reports automatically for bounties or payroll streams.
-              </div>
-            </div>
-            <div className={tw(`pt-16 lg:w-5/12`)}>
-              <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='white'
-                  strokeWidth='2'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4'
-                  />
-                </svg>
-              </div>
-              <h2 className={tw(`pt-3 text-white font-semibold text-2xl lg:text-3xl`)}>Analyze at a Glance </h2>
-              <div className={tw(`text-gray-400 font-semibold text-xl pt-2`)}>
-                Evaluate the progress of your financial operations{' '}
-                <span className={tw(`font-bold text-white`)}> to identify issues and strategize solutions.</span>
-              </div>
-            </div>
-          </div>
+          </OnScroll>
         </section>
       </div>
     </div>

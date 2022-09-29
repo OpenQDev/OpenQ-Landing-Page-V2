@@ -89,14 +89,14 @@ export default function Home() {
             }}
           />
         </div>
-        <MockBountyList contest={true} />
+        <MockBountyList internalMenu={internalMenu} contest={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
-            <CardGroup fadeIn={scrollY > 600} data={cardSectionData} />
+            <CardGroup internalMenu={internalMenu} data={cardSectionData} />
             <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection scrollY={scrollY} />
-            <AccountingSection scrollY={scrollY} />
+            <StreamSection scrollY={scrollY} internalMenu={internalMenu} />
+            <AccountingSection scrollY={scrollY} internalMenu={internalMenu} />
             <FAQ />
           </div>
         </div>

@@ -2,8 +2,9 @@ import { tw } from 'twind';
 import Image from 'next/image';
 
 const FundBountyMock = ({ scrollY, contest }) => {
+
   return (
-    <div className={tw(`flex flex-col space-y-5 pb-4 relative items-center rounded-lg col-span-2`)}>
+    <div  className={tw(`flex flex-col space-y-5 pb-4 relative items-center rounded-lg `)}>
       <div
         className={tw(
           `pointer-events-none bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 opacity-5 w-full h-max absolute inset-0 rounded-lg`
