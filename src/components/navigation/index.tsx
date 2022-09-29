@@ -137,7 +137,7 @@ const Navigation = () => {
                     key={link.label}
                     href={link.href}
                     className={tw(
-                      `text-gray-200 hover:text-gray-100 hover:border hover:border-white hover:rounded-2xl px-3 py-2 rounded-md font-medium`,
+                      `text-gray-200 hover:text-gray-100 border border-transparent hover:border-white hover:rounded-2xl px-3 py-2 rounded-md font-medium`,
                     )}
                   >
                     {link.label}
