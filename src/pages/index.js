@@ -49,6 +49,48 @@ export default function Home() {
       scrollY,
       fade: '',
     },
+    {
+      url: 'https://github.com/honey-labs/honey-frontend/pull/162',
+      title: 'Add TPS banner #162',
+      description: 'BowTiedHeron merged 2 commits into honey-labs:development from eborrallo:development',
+      scrollY,
+      fade: '',
+    },
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/376',
+      title: 'wallet connect buttons centered #376',
+      description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
+      scrollY,
+      fade: '',
+    },
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/54',
+      title: 'Adds Jazzicon. Close #19 #54',
+      description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
+      scrollY,
+      fade: '',
+    },      
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/67',
+      title: 'First visit #67',
+      description: 'FlacoJones merged 2 commits into OpenQDev:development from Christopher-Stevers:first-visit on Feb 28',
+      scrollY,
+      fade: '',
+    },  
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/691',
+      title: 'Fixed claim text and pagination. #691',
+      description: 'FlacoJones merged 6 commits into OpenQDev:staging from Christopher-Stevers:WIP-categories',
+      scrollY,
+      fade: '',
+    },  
+    {
+      url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/592',
+      title: 'Contest PayoutSchedule, Contract Wizard #592',
+      description: 'Christopher-Stevers merged 23 commits into OpenQDev:staging from ArcAnya:tierVolume',
+      scrollY,
+      fade: '',
+    }
   ];
   const cardSectionData = [
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
