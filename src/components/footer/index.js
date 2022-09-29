@@ -25,7 +25,7 @@ const Footer = () => {
         <button onClick={handleCookieNotice} className={tw(`bg-gray-900 rounded-full border-muted border w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`)}>Got it!</button>
 
       </div>}
-      <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 xl:px-0 flex flex-wrap`)}>
+      <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 xl:px-0 flex flex-wrap md:mx-24`)}>
         <div className={tw(`mb-14 flex items-center w-full`)}>
           <Image src='/logo.png' alt='OpenQ Logo' width='60%' height='60%' />
           <p className={tw(`text-4xl text-black font-bold pl-5`)}>OpenQ</p>
