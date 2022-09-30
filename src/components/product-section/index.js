@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { tw } from 'twind';
-import BountySection from './BountySection';
+import BountySectionOrgs from './BountySectionOrgs';
+import BountySectionDevs from './BountySectionDevs';
 import Add from '../svg/add';
 import CardGroup from '../card-group';
 import MockContest from './MockContest';
@@ -71,59 +72,57 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
     <div>
       <section className={tw(`font-montserrat pt-28`)}>
         <div className={tw(`bg-white`)}>
-          <BountySection scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
-          <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
-            {!contest && <div className={tw(`flex-col flex items-center content-center`)}>
-              <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500 `)}>
-                {internalMenu === 'org' && 'Not the right fit?'}{' '}
-                <span className={tw(`text-gray-900`)}>OpenQ Contests </span>
-                {internalMenu === 'org' && 'help you to engage with your existing developer community.'}
-              </h2>
-              <div
-                className={tw(
-                  `w-5/6 md:w-2/3 bg-dark-mode  rounded-2xl overflow-hidden `
-                )}
-              >
-                <MockContest
-                  repo={'honey-labs/honey-frontend'}
-                  title={'staking public goods as a service'}
-                  budget={'$7000'}
-                  avatarUrl={'https://avatars.githubusercontent.com/u/92924948?s=60&v=4'}
-                  days={10}
-                />
-                <MockContest
-                  repo={'openqdev/openq-frontend'}
-                  title={'🌳 openq [dys/u]topia hackathon'}
-                  budget={'$10,000'}
-                  url={'https://github.com/openqdev/openq-frontend'}
-                  avatarUrl={'https://avatars.githubusercontent.com/u/77402538?s=200&v=4'}
-                  days={4}
-                />
-                <MockContest
-                  repo={'snapshot-labs/snapshot'}
-                  title={'open source interface hacking'}
-                  budget={'$8000'}
-                  url={'https://github.com/snapshot-labs/snapshot'}
-                  avatarUrl={'https://avatars.githubusercontent.com/u/72904068?s=200&v=4'}
-                  days={17}
-                  noBorder={true}
-                />
+          {internalMenu === 'org' ? (
+            <BountySectionOrgs scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
+          ) : (
+            <BountySectionDevs scrollY={scrollY} internalMenu={internalMenu} contest={contest} />
+          )}
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
+            {!contest && (
+              <div className={tw(`flex-col flex items-center content-center`)}>
+                <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500 `)}>
+                  {internalMenu === 'org' && 'Not the right fit?'}{' '}
+                  <span className={tw(`text-gray-900`)}>OpenQ Contests </span>
+                  {internalMenu === 'org' && 'help you to engage with your existing developer community.'}
+                </h2>
+                <div className={tw(`w-5/6 md:w-2/3 bg-dark-mode  rounded-2xl overflow-hidden `)}>
+                  <MockContest
+                    repo={'honey-labs/honey-frontend'}
+                    title={'staking public goods as a service'}
+                    budget={'$7000'}
+                    avatarUrl={'https://avatars.githubusercontent.com/u/92924948?s=60&v=4'}
+                    days={10}
+                  />
+                  <MockContest
+                    repo={'openqdev/openq-frontend'}
+                    title={'🌳 openq [dys/u]topia hackathon'}
+                    budget={'$10,000'}
+                    url={'https://github.com/openqdev/openq-frontend'}
+                    avatarUrl={'https://avatars.githubusercontent.com/u/77402538?s=200&v=4'}
+                    days={4}
+                  />
+                  <MockContest
+                    repo={'snapshot-labs/snapshot'}
+                    title={'open source interface hacking'}
+                    budget={'$8000'}
+                    url={'https://github.com/snapshot-labs/snapshot'}
+                    avatarUrl={'https://avatars.githubusercontent.com/u/72904068?s=200&v=4'}
+                    days={17}
+                    noBorder={true}
+                  />
+                </div>
               </div>
-            </div>}
+            )}
           </OnScroll>
 
           {internalMenu === 'org' && (
-            <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
+            <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <div className={tw(`flex-col flex items-center content-center`)}>
                 <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
                   <span className={tw(`text-gray-900`)}>See it for yourself</span> with PRs our community completed.
                 </h2>
 
-                <div
-                  className={tw(
-                    `w-5/6 border border-gray-700 rounded-2xl bg-transparent overflow-hidden`
-                  )}
-                >
+                <div className={tw(`w-5/6 border border-gray-700 rounded-2xl bg-transparent overflow-hidden`)}>
                   <ul className={tw`max-h-128 overflow-y-scroll relative`}>
                     {currentPrs.map((pr, index) => {
                       return (
@@ -131,14 +130,14 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                           <MockPr title={pr.title} description={pr.description} url={pr.url} />
                         </li>
                       );
-                    })}</ul>
+                    })}
+                  </ul>
                 </div>
               </div>
             </OnScroll>
           )}
           <div className={tw(`flex-col flex items-center content-center px-4 `)}>
-
-            <OnScroll internalMenu={internalMenu} fade="animate-fadeIn" className="w-full">
+            <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center w-full text-xl text-black`)}>
                 "Under the hood"
               </h2>
