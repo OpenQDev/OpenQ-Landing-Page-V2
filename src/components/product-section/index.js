@@ -146,30 +146,29 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
             )}
           </OnScroll>
 
-          {internalMenu === 'org' && (
-            <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
-              <div className={tw(`flex-col flex items-center content-center`)}>
-                <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
-                  <span className={tw(`text-gray-900 text-3xl`)}>Our Story: Explore PRs our community completed.</span>
-                  <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
-                    We have just started building a new developer community and would love you to join us next.
-                  </p>
-                </h2>
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
+            <div className={tw(`flex-col flex items-center content-center`)}>
+              <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
+                <span className={tw(`text-gray-900 text-3xl`)}>Our Story: Explore PRs our community completed.</span>
+                <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
+                  Also visit our Discord to give us feedback and follow our journey.
+                </p>
+              </h2>
 
-                <div className={tw(`w-5/6 border border-gray-700 rounded-2xl bg-transparent overflow-hidden`)}>
-                  <ul className={tw`max-h-128 overflow-y-scroll relative`}>
-                    {currentPrs.map((pr, index) => {
-                      return (
-                        <li key={index} ref={index === currentPrs.length - 1 ? lastElem : null}>
-                          <MockPr title={pr.title} description={pr.description} url={pr.url} />
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
+              <div className={tw(`w-5/6 border border-gray-700 rounded-2xl bg-transparent overflow-hidden`)}>
+                <ul className={tw`max-h-128 overflow-y-scroll relative`}>
+                  {currentPrs.map((pr, index) => {
+                    return (
+                      <li key={index} ref={index === currentPrs.length - 1 ? lastElem : null}>
+                        <MockPr title={pr.title} description={pr.description} url={pr.url} />
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-            </OnScroll>
-          )}
+            </div>
+          </OnScroll>
+
           <div className={tw(`flex-col flex items-center content-center px-4 `)}>
             {/* <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center w-full text-xl text-black`)}>
