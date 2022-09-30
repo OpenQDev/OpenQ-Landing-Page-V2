@@ -159,8 +159,8 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                 <ul className={tw`max-h-128 overflow-y-scroll relative`}>
                   {currentPrs.map((pr, index) => {
                     return (
-                      <li key={index} ref={index === currentPrs.length - 1 ? lastElem : null}>
-                        <MockPr title={pr.title} description={pr.description} url={pr.url} />
+                      <li key={index} price={pr.price} ref={index === currentPrs.length - 1 ? lastElem : null}>
+                        <MockPr title={pr.title} description={pr.description} url={pr.url} price={pr.price} />
                       </li>
                     );
                   })}

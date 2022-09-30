@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { tw } from 'twind';
-import SetTierMock from "./SetTierMock.js"
+import SetTierMock from "./SetTierMock.js";
 
 const MintContest = ({ scrollY }) => {
   return (
@@ -20,9 +20,9 @@ const MintContest = ({ scrollY }) => {
           <div className={tw(`flex flex-col w-full  px-2 pt-5 md:w-2/3`)}>Enter GitHub Issue URL</div>
 
           <input
-           className={tw(`bg-white border w-60 whitespace-nowrap p-1 mt-1 ml-6 ${scrollY < 1700 && "text-muted"}`)}
-           value= {scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/OpenQContracts/issues/2'}
-           />
+            className={tw(`bg-white border overflow-hidden w-full sm:w-3/4 md:w-1/2 rounded-md p-0.5 ml-2 whitespace-nowrap ${scrollY < 1700 && "text-muted"}`)}
+            value={scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/OpenQContracts/issues/2'}
+          />
         </div>
         <div className={tw(`flex flex-col items-center space-x-1 px-8`)}>
           {scrollY > 1720 ? (
@@ -50,14 +50,14 @@ const MintContest = ({ scrollY }) => {
           ) : null}
         </div>
 
-     
+
 
         <div className={tw(`flex flex-col items-start pl-6 pr-6 pb-2`)}>
           <div className={tw(`flex flex-col`)}>
             <div className={tw(`flex flex-col w-full items-start p-2 py-1 gap-4 text-base`)}>
-             <SetTierMock scrollY={scrollY} />
+              <SetTierMock scrollY={scrollY} />
 
-              
+
               <div
                 className={tw(
                   `whitespace-nowrap self-center bg-github-primary sm:w-56 w-min border border-green-600 rounded-lg py-1.5 text-white flex flex-row space-x-3 items-center justify-center leading-tight h-min px-3 `

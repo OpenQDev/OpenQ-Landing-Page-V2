@@ -20,7 +20,7 @@ const MintBountyMock = ({ scrollY }) => {
         <div className={tw(`flex flex-col items-start pl-6 pr-6`)}>
           <div className={tw(`flex flex-col w-full  px-2 pt-5 md:w-2/3`)}>Enter GitHub Issue URL</div>
 
-          <div className={tw(`bg-white border w-1/2 rounded-md p-0.5 ml-2`)}>
+          <div className={tw(`bg-white border overflow-hidden w-full sm:w-3/4 md:w-1/2 rounded-md p-0.5 ml-2  whitespace-nowrap`)}>
             {scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}
           </div>
         </div>
