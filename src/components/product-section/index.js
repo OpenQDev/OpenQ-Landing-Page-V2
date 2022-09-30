@@ -5,6 +5,7 @@ import { tw } from 'twind';
 import BountySectionOrgs from './BountySectionOrgs';
 import BountySectionDevs from './BountySectionDevs';
 import Add from '../svg/add';
+import Link from 'next/link';
 import CardGroup from '../card-group';
 import MockContest from './MockContest';
 import MockPr from './MockPr';
@@ -81,11 +82,41 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
             {!contest && (
               <div className={tw(`flex-col flex items-center content-center`)}>
                 <h2 className={tw(`py-8 lg:py-16 px-8 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500 `)}>
-                  {internalMenu === 'org' && 'Not the right fit?'}{' '}
-                  <span className={tw(`text-gray-900`)}>OpenQ Contests </span>
-                  {internalMenu === 'org' && 'help you to engage with your existing developer community.'}
+                  <div className={tw(`flex flex-col items-center justify-center`)}>
+                    {/* <div
+                      className={tw(
+                        `text-gray-100 text-sm border border-purple-800 bg-purple-400 rounded-md font-semibold p-2 w-max`
+                      )}
+                    >
+                      New feature
+                    </div> */}
+                    <span className={tw(`pt-3 text-gray-900 text-3xl`)}>
+                      {internalMenu === 'org'
+                        ? 'Hackathons: Start your OpenQ Contests Series'
+                        : 'Hackathons: Participate in OpenQ Contests'}
+                    </span>
+                    <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
+                      {internalMenu === 'org'
+                        ? ' Let others test your protocol, library or SDK via recurring contests that encourage developers to engage with your project'
+                        : ' Test new protocols, libraries or SDKs via recurring contests, earn money with you submissions & bootstrap your project'}
+                    </p>
+
+                    <div className={tw(`pt-3`)}>
+                      <Link href='/contests'>
+                        <a>
+                          <button
+                            className={tw(
+                              `text-gray-100 text-sm border border-purple-800 bg-purple-400 rounded-md font-semibold p-2 w-max`
+                            )}
+                          >
+                            Learn more
+                          </button>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </h2>
-                <div className={tw(`w-5/6 md:w-2/3 bg-dark-mode  rounded-2xl overflow-hidden `)}>
+                <div className={tw(`w-5/6 md:w-2/3  rounded-2xl overflow-hidden `)}>
                   <MockContest
                     repo={'honey-labs/honey-frontend'}
                     title={'staking public goods as a service'}
@@ -119,7 +150,10 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
             <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <div className={tw(`flex-col flex items-center content-center`)}>
                 <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
-                  <span className={tw(`text-gray-900`)}>See it for yourself</span> with PRs our community completed.
+                  <span className={tw(`text-gray-900 text-3xl`)}>Our Story: Explore PRs our community completed.</span>
+                  <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
+                    We have just started building a new developer community and would love you to join us next.
+                  </p>
                 </h2>
 
                 <div className={tw(`w-5/6 border border-gray-700 rounded-2xl bg-transparent overflow-hidden`)}>
@@ -137,13 +171,13 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
             </OnScroll>
           )}
           <div className={tw(`flex-col flex items-center content-center px-4 `)}>
-            <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
+            {/* <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center w-full text-xl text-black`)}>
                 "Under the hood"
               </h2>
             </OnScroll>
 
-            <CardGroup internalMenu={internalMenu} data={cardSectionData} />
+            <CardGroup internalMenu={internalMenu} data={cardSectionData} /> */}
           </div>
           {/* <ProductFooter scrollY={scrollY} /> */}
         </div>

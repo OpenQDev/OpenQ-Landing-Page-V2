@@ -150,7 +150,7 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                       secures funds via an escrow{' '}
                     </span>
                     <p className={tw(`text-gray-500`)}>
-                      system that requires you to deposit the pledged money for the requested ticket in advance.
+                      that requires you to deposit the pledged money for the requested ticket in advance.
                     </p>
                   </div>
                 </OnScroll>
@@ -191,7 +191,7 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                     <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900`)}>
                       automatically leads to the developer's payout.
                     </span>
-                    {` `} <p></p>
+                    {` `}
                   </div>
                 </OnScroll>
 

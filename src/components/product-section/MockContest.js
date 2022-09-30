@@ -3,8 +3,8 @@ import { tw } from 'twind';
 
 const MockContest = ({ days, repo, title, avatarUrl, budget, noBorder }) => {
   return (
-    <div className={tw(`flex flex-col px-2 md:px-4 py-4 border-web-gray ${!noBorder ? "border-b" : null } `)}>
-      <div className={tw(`flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 text-primary`)}>
+    <div className={tw(`flex flex-col px-2 md:px-4 py-4 border-web-gray ${!noBorder ? 'border-b' : null} `)}>
+      <div className={tw(`flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 text-gray-900`)}>
         <div className={tw(`w-3/4 sm:w-1/2`)}>
           <div className={tw(`flex flex-grow flex-row items-center md:space-x-2 sm:pb-0 w-full`)}>
             <div className={tw(`hidden md:block`)}>

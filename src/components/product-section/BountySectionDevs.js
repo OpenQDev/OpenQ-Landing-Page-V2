@@ -156,7 +156,7 @@ const BountySectionDevs = ({ scrollY, contest, internalMenu }) => {
                     <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900`)}>
                       After the maintainer has merged the PR, you can claim the money directly.
                     </span>
-                    {` `} <p></p>
+                    {` `}
                   </div>
                 </OnScroll>
 
