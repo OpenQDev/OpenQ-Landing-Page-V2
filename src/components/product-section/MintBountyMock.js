@@ -2,10 +2,8 @@ import Link from 'next/link';
 import { tw } from 'twind';
 
 const MintBountyMock = ({ scrollY }) => {
-
-
   return (
-    <div  className={tw(`w-full rounded-lg flex flex-col z-11 space-y-1 lg:w-full md:w-2/3 relative  `)}>
+    <div className={tw(`w-full rounded-lg flex flex-col z-11 space-y-1 lg:w-full md:w-2/3 relative  `)}>
       <div
         className={tw(
           `pointer-events-none bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 opacity-5 w-full h-max absolute inset-0 rounded-lg`
@@ -15,14 +13,18 @@ const MintBountyMock = ({ scrollY }) => {
       <div className={tw(`w-full overflow-y-auto`)}>
         <div className={tw(`flex flex-col items-center justify-center p-5 pb-3 rounded-t`)}>
           <h3 className={tw(`text-3xl text-center font-semibold`)}>Deploy Fixed Price Contract</h3>
-          <h3 className={tw(`text-2xl pt-2 w-5/6 text-center text-gray-600`)}>Create an Fixed Price Contract.</h3>
+          <h3 className={tw(`text-2xl pt-2 w-5/6 text-center text-gray-600`)}>
+            Connect GitHub Issue with Smart Contract
+          </h3>
         </div>
         <div className={tw(`flex flex-col items-start pl-6 pr-6`)}>
           <div className={tw(`flex flex-col w-full  px-2 pt-5 md:w-2/3`)}>Enter GitHub Issue URL</div>
 
-          <div className={tw(`bg-white border w-1/2 rounded-md p-0.5 ml-2`)}>{scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}</div>
+          <div className={tw(`bg-white border w-1/2 rounded-md p-0.5 ml-2`)}>
+            {scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/...'}
+          </div>
         </div>
-        <div className={tw(`flex flex-col items-center space-x-1 px-8`)}>
+        <div className={tw(`flex flex-col text-left items-center space-x-1 px-8`)}>
           {scrollY > 1720 ? (
             <div className={tw(`px-3 pt-5`)}>
               <div className={tw(`flex flex-row space-x-3 items-center`)}>
@@ -42,11 +44,12 @@ const MintBountyMock = ({ scrollY }) => {
                     />
                   </svg>
                 </div>
-                <p className={tw(`m-px`)}>This is an example issue</p>
+                <p className={tw(`m-px`)}>Fix Connect Wallet Bug</p>
               </div>
             </div>
-          ) : 
-            <div className={tw(`px-3 pt-5`)}></div>}
+          ) : (
+            <div className={tw(`px-3 pt-5`)}></div>
+          )}
         </div>
 
         <>

@@ -7,10 +7,10 @@ const NormalBounties = () => {
 
 	return (<><div>
 		<div className={tw(`w-full`)}>
-			<div className={tw(`flex flex-col md:px-4 py-4 border-web-gray border-b cursor-pointer`)}>
+			<div className={tw(`flex flex-col md:px-4 xl:px-6 py-4 border-web-gray border-b cursor-pointer`)}>
 				<div className={tw(`flex flex-row flex-wrap md:flex-nowrap justify-between md:pt-0 text-primary`)}>
-					<div className={tw(`w-3/4`)}>
-						<div className={tw(`flex flex-grow flex-row items-center md:space-x-2 md:pb-0 w-full`)}>
+					<div className={tw(``)}>
+						<div className={tw(`flex flex-grow flex-rowitems-center md:space-x-2 md:pb-0 w-full`)}>
 							<div className={tw(`hidden md:block`)}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -36,7 +36,7 @@ const NormalBounties = () => {
 						<div className={tw(`flex flex-row items-center space-x-4 w-full`)}>
 							<div className={tw(`font-light text-sm w-full`)}>Deployed: 0 days ago.</div>
 						</div>
-						<div className={tw(`pt-1`)}>
+						<div className={tw(`pt-2`)}>
 							<ul className={tw(`flex flex-wrap w-full flex-row gap-1 py-px`)}>
 								<li
 									className={tw(
@@ -53,7 +53,7 @@ const NormalBounties = () => {
 								</li>
 							</ul>
 						</div>
-						<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold`)}>
+						<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold pt-2`)}>
 							<span>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -71,7 +71,7 @@ const NormalBounties = () => {
 							<span>Assigned to no one.</span>
 						</div>
 					</div>
-					<div className={tw(`flex flex-col justify-between items-end leading-tight `)}>
+					<div className={tw(`flex flex-col justify-between items-end leading-tight`)}>
 						<div className={tw(`md:block hidden`)}>
 							<Image
 								height={51}
@@ -121,9 +121,9 @@ const NormalBounties = () => {
 	</div>
 		<div>
 			<div className={tw(`w-full hidden md:block`)}>
-				<div className={tw(`flex flex-col md:px-4 py-4 border-web-gray cursor-pointer border-b`)}>
+				<div className={tw(`flex flex-col md:px-4 xl:px-6 py-4 border-web-gray cursor-pointer border-b`)}>
 					<div className={tw(`flex flex-row flex-wrap md:flex-nowrap justify-between md:pt-0 text-primary`)}>
-						<div className={tw(`w-3/4`)}>
+						<div className={tw(``)}>
 							<div className={tw(`flex flex-grow flex-row items-center md:space-x-2 md:pb-0 w-full`)}>
 								<div className='hidden md:block'>
 									<svg
@@ -151,7 +151,7 @@ const NormalBounties = () => {
 							<div className={tw(`flex flex-row items-center space-x-4 w-full`)}>
 								<div className={tw(`font-light text-sm w-full`)}>Deployed: 0 days ago.</div>
 							</div>
-							<div className={tw(`pt-1`)}>
+							<div className={tw(`pt-2`)}>
 								<ul className={tw(`flex flex-wrap w-full flex-row gap-1 py-px`)}>
 									<li
 										className={tw(
@@ -194,7 +194,7 @@ const NormalBounties = () => {
 									</li>
 								</ul>
 							</div>
-							<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold`)}>
+							<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold pt-2`)}>
 								<span>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
@@ -268,9 +268,9 @@ const NormalBounties = () => {
 		</div>
 		<div>
 			<div className={tw(`w-full`)}>
-				<div className={tw(`flex flex-col md:px-4 py-4 border-web-gray cursor-pointer`)}>
+				<div className={tw(`flex flex-col md:px-4 xl:px-6 py-4 border-web-gray cursor-pointer`)}>
 					<div className={tw(`flex flex-row flex-wrap md:flex-nowrap justify-between md:pt-0 text-primary`)}>
-						<div className={tw(`w-3/4`)}>
+						<div className={tw(``)}>
 							<div className={tw(`flex flex-grow flex-row items-center md:space-x-2 md:pb-0 w-full`)}>
 								<div className={tw(`hidden md:block`)}>
 									<svg
@@ -297,12 +297,12 @@ const NormalBounties = () => {
 							<div className={tw(`flex flex-row items-center space-x-4 w-full`)}>
 								<div className={tw(`font-light text-sm w-full`)}>Deployed: 0 days ago.</div>
 							</div>
-							<div className={tw(`pt-1`)}>
+							<div className={tw(`pt-2`)}>
 								<ul className={tw(`flex flex-wrap w-full flex-row gap-1 py-px`)}>
 									<div className={tw(`pt-5`)}></div>
 								</ul>
 							</div>
-							<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold`)}>
+							<div className={tw(`flex flex-row items-center gap-4 text-muted font-semibold pt-2`)}>
 								<span>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'

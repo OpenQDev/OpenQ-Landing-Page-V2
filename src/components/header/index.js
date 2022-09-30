@@ -54,14 +54,14 @@ const Header = ({ pageVersionHookInstance }) => {
   const [bountiesVisible, setBountiesVisible] = useState();
   const [internalMenu, setInternalMenu] = pageVersionHookInstance;
   const devData = {
-    title: 'Join a striving community of developers.',
-    typedText: ['And get practical experience', 'While earning money'],
+    title: 'Peer-to-peer freelance marketplace tailored for software developers.',
+    typedText: ['A trustless way to collaborate with new clients', 'Contribute to various hackathon series'],
     subTitle: 'Look for new atomic contracts, create PR, get paid after merge',
   };
   const orgData = {
-    title: 'Hyper Decentralized Community',
-    typedText: ['Offering Pull Requests', 'as a Service'],
-    subTitle: 'Assign tickets to a striving community of developers',
+    title: 'Peer-to-peer freelance marketplace tailored for software developers.',
+    typedText: ['Pull Requests as a Service', 'Launch your Hackathon Series', 'Test your Protocol and get Feedback'],
+    subTitle: 'Assign new developers dynamically to scale faster',
   };
   const [headerData, setHeaderData] = useState(orgData);
 
