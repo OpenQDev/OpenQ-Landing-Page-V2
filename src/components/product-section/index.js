@@ -92,7 +92,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                     </div> */}
                     <span className={tw(`pt-3 text-gray-900 text-3xl`)}>
                       {internalMenu === 'org'
-                        ? 'Hackathons: Start your OpenQ Contests Series'
+                        ? 'Hackathon Launchpad: Start your OpenQ Contest Series'
                         : 'Hackathons: Participate in OpenQ Contests'}
                     </span>
                     <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
@@ -149,7 +149,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
             )}
           </OnScroll>
 
-          {contest ? null : (
+          {/* {contest ? null : (
             <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <div className={tw(`flex-col flex items-center content-center`)}>
                 <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
@@ -172,7 +172,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                 </div>
               </div>
             </OnScroll>
-          )}
+          )} */}
           <div className={tw(`flex-col flex items-center content-center px-4 `)}>
             {/* <OnScroll internalMenu={internalMenu} fade='animate-fadeIn' className='w-full'>
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center w-full text-xl text-black`)}>
