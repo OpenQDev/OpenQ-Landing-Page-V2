@@ -2,9 +2,12 @@ import { tw } from 'twind';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Footer = () => {
   const [showCookieNotice, setShowCookieNotice] = useState(true);
+  const router = useRouter();
+  console.log(router);
   useEffect(() => {
     const cookiesAccepted = localStorage.getItem("cookieNotice") === "accepted";
     if (cookiesAccepted) {
@@ -18,13 +21,20 @@ const Footer = () => {
   };
   return (
     <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
-      {showCookieNotice && <div className={tw(`fixed z-50 bg-dark-mode text-primary p-2 flex flex-col content-center rounded-lg bottom-0 right-0 border-muted border text-sm m-8 w-60 md:w-72`)}>This website uses cookies to ensure you receive the best possible experience.{" "}
+      {showCookieNotice && <div className={tw(`fixed z-50 bg-dark-mode text-primary p-2 flex flex-col content-center rounded-lg bottom-0 left-0 border-muted border text-sm m-8 w-60 md:w-72`)}>This website uses cookies to ensure you receive the best possible experience.{" "}
         <Link href={"/privacy"}>
           <a onClick={handleCookieNotice} className={tw(`whitespace-nowrap underline`)}>Learn More</a>
         </Link>
         <button onClick={handleCookieNotice} className={tw(`bg-gray-900 rounded-full border-muted border w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`)}>Got it!</button>
 
       </div>}
+      {router.asPath !== "/privacy" && <div className={tw(`flex z-50 fixed bottom-4 right-6 bg-gray-900 rounded-full content-center items-center px-6 gap-2`)}>
+        <Link href={"/privacy"}>
+          <a className={tw(`rounded-full w-min whitespace-nowrap py-1.5  my-1.5 self-center text-white`)}>Book a demo</a>
+        </Link>
+        <svg xmlns="http://www.w3.org/2000/svg" className={tw(`w-6 h-6`)} viewBox="0 0 16 16" width="16" height="16" fill="#ffffff"><path fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z"></path></svg>
+      </div>}
+
       <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 xl:px-0 flex flex-wrap md:mx-24`)}>
         <div className={tw(`mb-14 flex items-center w-full`)}>
           <Image src='/logo.png' alt='OpenQ Logo' width='60%' height='60%' />
