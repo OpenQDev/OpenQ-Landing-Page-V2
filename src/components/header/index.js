@@ -49,10 +49,12 @@ import Link from 'next/link';
 
 // this line prevent re rendering
 
-const Header = ({ pageVersionHookInstance }) => {
+const Header = ({ pageVersionHookInstance, contest }) => {
   const [scrollY, setScrollY] = useState(0);
   const [bountiesVisible, setBountiesVisible] = useState();
   const [internalMenu, setInternalMenu] = pageVersionHookInstance;
+  const [contestPage, setContestPage] = useState(contest);
+
   const devData = {
     title: 'The dev community building the future.',
     typedText: 'Pull Requests as a Service',
@@ -63,10 +65,18 @@ const Header = ({ pageVersionHookInstance }) => {
     typedText: 'Pull Requests as a Service',
     subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
+
+  const contestData = {
+    title: 'The dev community building the future.',
+    typedText: 'Virtual Hackathons As A Service',
+    subTitle: 'Peer-to-peer hackathon launchpad tailored for web3.',
+  };
   const [headerData, setHeaderData] = useState(orgData);
 
   useEffect(() => {
-    if (internalMenu === 'org') {
+    if (contest) {
+      setHeaderData(contestData);
+    } else if (internalMenu === 'org') {
       setHeaderData(orgData);
     } else if (internalMenu === 'dev') {
       setHeaderData(devData);
@@ -120,7 +130,9 @@ const Header = ({ pageVersionHookInstance }) => {
             </div>
             <div className={tw(`font-bold text-5xl text-left md:text-center md:text-5xl lg:text-7xl text-white`)}>
               <div className={tw(`pt-5`)}>
-                {internalMenu === 'org' ? (
+                {contestPage ? (
+                  <TypingAnimation text={contestData.typedText} />
+                ) : internalMenu === 'org' ? (
                   <>
                     <> {/*DO NOT REMOVE DIV, DIV IS REQUIRED for react to dif and UNMOUNT TYPING ANIM */}</>
                     <div className={tw(`min-h-8`)}>

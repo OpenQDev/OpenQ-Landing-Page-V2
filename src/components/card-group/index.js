@@ -2,23 +2,40 @@ import Card from './Card';
 import OnScroll from '../utils/OnScroll';
 import { tw } from 'twind';
 
-const CardGroup = ({ data, internalMenu }) => {
+const CardGroup = ({ data, internalMenu, contest }) => {
   return (
     <OnScroll internalMenu={internalMenu} fade='animate-fadeIn'>
-      <div className={tw(`flex justify-center`)}>
-        <div className={tw(`flex flex-col text-center w-1/2`)}>
-          <span className={tw(`pt-12 font-bold text-gray-900 text-3xl`)}>
-            {internalMenu === 'org'
-              ? 'A Freelance Marketplace made by Developers for Developers'
-              : 'A Freelance Marketplace made by Developers for Developers'}
-          </span>
-          <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
-            {internalMenu === 'org'
-              ? ' Create tickets for the OpenQ community with very low administrative effort and management intervention'
-              : ' Solve open tickets that organisations post on our dashboard, learn new skills and earn money without having to worry about anything other than programming'}
-          </p>
+      {contest ? (
+        <div className={tw(`flex justify-center`)}>
+          <div className={tw(`flex flex-col text-center w-1/2`)}>
+            <span className={tw(`pt-12 font-bold text-gray-900 text-3xl`)}>
+              {internalMenu === 'org'
+                ? 'A Hackathon Launchpad that is Defining the Future'
+                : 'A Hackathon Launchpad that is Defining the Future'}
+            </span>
+            <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
+              {internalMenu === 'org'
+                ? ' Launch contests that get discovered by hundreds of developers and engage with your community to test your products.'
+                : ' Earn money while learning new skills, participate in fun contests, engage with new protocols that shape the future.'}
+            </p>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={tw(`flex justify-center`)}>
+          <div className={tw(`flex flex-col text-center w-1/2`)}>
+            <span className={tw(`pt-12 font-bold text-gray-900 text-3xl`)}>
+              {internalMenu === 'org'
+                ? 'A Freelance Marketplace made by Developers for Developers'
+                : 'A Freelance Marketplace made by Developers for Developers'}
+            </span>
+            <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
+              {internalMenu === 'org'
+                ? ' Create tickets for the OpenQ community with very low administrative effort and management intervention'
+                : ' Solve open tickets that organisations post on our dashboard, learn new skills and earn money without having to worry about anything other than programming'}
+            </p>
+          </div>
+        </div>
+      )}
       <div className={tw(`flex justify-center`)}>
         <div
           className={tw(

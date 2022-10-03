@@ -174,7 +174,7 @@ export default function Home() {
 
       <main>
         <Navigation />
-        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={false} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
             fill='#121212'

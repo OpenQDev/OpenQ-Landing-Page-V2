@@ -17,6 +17,7 @@ import MockBountyList from '@/components/header/MockBountyList';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
+  const [contestPage, setContestPage] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
   const prs = [
@@ -49,7 +50,12 @@ export default function Home() {
       fade: '',
     },
   ];
-  const cardSectionData = [
+  const cardSectionDataOrg = [
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+  ];
+  const cardSectionDataDev = [
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
     { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
@@ -76,7 +82,7 @@ export default function Home() {
 
       <main>
         <Navigation />
-        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={contestPage} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
             fill='#121212'
@@ -92,7 +98,11 @@ export default function Home() {
         <MockBountyList internalMenu={internalMenu} contest={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
-            <CardGroup internalMenu={internalMenu} data={cardSectionData} />
+            <CardGroup
+              internalMenu={internalMenu}
+              contest={contestPage}
+              data={internalMenu === 'org' ? cardSectionDataOrg : cardSectionDataDev}
+            />
             <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
             <FAQ />
