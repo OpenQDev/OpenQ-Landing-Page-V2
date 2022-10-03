@@ -158,7 +158,7 @@ const Navigation = () => {
                   Docs
                 </a>
               </Button>
-              <Button modifier='no-click font-montserrat border rounded-full px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600'>
+              <Button modifier='no-click font-montserrat border rounded-lg px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600'>
                 <a href='https://app.openq.dev/'>Launch App</a>
               </Button>
             </div>

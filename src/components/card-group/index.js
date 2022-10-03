@@ -1,6 +1,7 @@
 import Card from './Card';
 import OnScroll from '../utils/OnScroll';
 import { tw } from 'twind';
+import Link from 'next/link';
 
 const CardGroup = ({ data, internalMenu, contest }) => {
   return (
@@ -48,6 +49,24 @@ const CardGroup = ({ data, internalMenu, contest }) => {
           })}
         </div>
       </div>
+      {contest ? (
+        <div className={tw(`flex flex-row justify-center space-x-3 pt-10 -mb-32`)}>
+          <button
+            className={tw(
+              `text-gray-100 text-md border border-purple-800 bg-purple-400 rounded-md font-semibold p-2 w-max`
+            )}
+          >
+            <Link href='https://docs.openq.dev/contest-contracts/mint-a-contest-contract'>
+              <a>How it works</a>
+            </Link>
+          </button>
+          <button className={tw(`text-purple-800 text-md border border-purple-800 rounded-md font-semibold p-2 w-max`)}>
+            <Link href='https://app.openq.dev/contests'>
+              <a>{internalMenu === 'org' ? 'Launch Now' : 'Explore Contests'}</a>
+            </Link>
+          </button>
+        </div>
+      ) : null}
     </OnScroll>
   );
 };

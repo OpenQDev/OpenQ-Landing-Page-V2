@@ -1,10 +1,20 @@
 import Image from 'next/image';
 import { tw } from 'twind';
 
-const MockContest = ({ days, repo, title, avatarUrl, budget, noBorder }) => {
+const MockContest = ({ days, repo, title, avatarUrl, budget, noBorder, isContestPage }) => {
   return (
     <div className={tw(`flex flex-col px-2 md:px-4 py-4 border-web-gray ${!noBorder ? 'border-b' : null} `)}>
+<<<<<<< HEAD
       <div className={tw(`flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 text-gray-500`)}>
+=======
+      <div
+        className={tw(
+          `flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 ${
+            isContestPage ? 'text-gray-200' : 'text-gray-900'
+          }`
+        )}
+      >
+>>>>>>> a516c41d8ce2caab539eb2941346ca7be681e537
         <div className={tw(`w-3/4 sm:w-1/2`)}>
           <div className={tw(`flex flex-grow flex-row items-center md:space-x-2 sm:pb-0 w-full`)}>
             <div className={tw(`hidden md:block`)}>
