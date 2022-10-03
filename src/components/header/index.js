@@ -57,7 +57,7 @@ const Header = ({ pageVersionHookInstance, contest }) => {
 
   const devData = {
     title: 'The dev community building the future.',
-    typedText: 'Pull Requests as a Service',
+    typedText: 'Earn money and build your Portfolio',
     subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
   const orgData = {
