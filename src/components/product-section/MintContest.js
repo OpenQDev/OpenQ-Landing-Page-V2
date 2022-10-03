@@ -21,7 +21,7 @@ const MintContest = ({ scrollY }) => {
 
           <input
             className={tw(`bg-white border overflow-hidden w-full sm:w-3/4 md:w-1/2 rounded-md p-0.5 ml-2 whitespace-nowrap ${scrollY < 1700 && "text-muted"}`)}
-            value={scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/OpenQContracts/issues/2'}
+            defaultValue={scrollY < 1700 ? 'Issue URL' : 'https://github.com/OpenQDev/OpenQContracts/issues/2'}
           />
         </div>
         <div className={tw(`flex flex-col items-center space-x-1 px-8`)}>
