@@ -125,7 +125,7 @@ export default function Home() {
         'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
     },
     {
-      title: 'Perpetual Reptuation',
+      title: 'Portable Reptuation',
       SVG: Add,
       body:
         "Boosting your reputation in the ecosystem with demonstrable on-chain projects history and skill analysis. Our CV's never lie because we can prove it.",
