@@ -4,7 +4,7 @@ import styles from './GithubMessage.module.css';
 const GithubMessage = () => {
   return (
     <div className={tw(`w-full pt-4 flex relative `)}>
-      <div className='w-9 h-9 flex-none'>
+      <div className='w-9 h-9 flex-0'>
         <Image className='rounded-full' height={36} width={36} src={'/githubAvatar.jpg'} />
       </div>
 
@@ -19,7 +19,7 @@ const GithubMessage = () => {
           <span className={tw(`font-semibold`)}>Christopher-Stevers</span>
           <span className={tw(`text-muted`)}> commented 1 day ago.</span>
         </div>
-        <div className={tw(`w-full p-8 p-4 border-web-gray border-t text-gray-800 rounded-b-lg`)}>
+        <div className={tw(`w-full sm:p-8 p-4 border-web-gray border-t text-gray-800 rounded-b-lg`)}>
           Hi, I'm ready to work on this issue, could you escrow the budget for it?
         </div>
       </div>

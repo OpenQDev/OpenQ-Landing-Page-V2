@@ -29,7 +29,7 @@ const MockBountyList = ({contest}) => {
     >
       <div
         className={tw(
-          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-lg invisible ${bountiesVisible && 'animate-fadeIn visible'}`
+          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-2xl justify-center invisible ${bountiesVisible && 'animate-fadeIn visible'}`
         )}
       >
         <div className={tw(`flex gap-1 py-4`)}>
@@ -41,10 +41,10 @@ const MockBountyList = ({contest}) => {
           {' '}
           <div
             className={tw(
-              `lg:col-start-2 justify-between text-left justify-self-center space-y-4 w-full pb-8 max-w-screen-xl mx-auto`
+              `lg:col-start-2 content-center flex flex-col text-left justify-self-center space-y-4 w-full pb-8 max-w-screen-xl mx-auto`
             )}
           >
-            <div className={tw(`hidden md:flex  flex-wrap gap-4 w-full items-center`)}>
+            <div className={tw(`hidden md:flex  flex-wrap gap-4 w-full mx-auto items-center max-w-screen-lg`)}>
               <div
                 type='text'
                 className={tw(
@@ -78,15 +78,15 @@ const MockBountyList = ({contest}) => {
                 <div>New Contract</div>
               </div>
             </div>
-            <div className={tw(`w-full rounded-lg hidden md:block`)}>
+            <div className={tw(`w-full rounded-lg hidden md:block max-w-screen-lg mx-auto`)}>
               <div className={tw(`flex flex-wrap gap-4  border-web-gray rounded-lg bg-githubMessageColor`)}>
                 <div className={tw(`flex text-sm rounded-lg overflow-hidden w-fit text-primary `)}>
-                  <div className={tw(`w-36 py-[5px] px-4 rounded-l-lg border whitespace-nowrap  border-web-gray`)}>
+                  <div className={tw(`w-36 py-2 px-4 rounded-l-lg border whitespace-nowrap  border-web-gray`)}>
                     Ready for work
                   </div>
                   <div
                     className={tw(
-                      `w-fit min-w-[80px] py-[5px] px-4 rounded-r-lg border whitespace-nowrap bg-secondary-btn border-secondary-btn`
+                      `w-fit min-w-[80px] py-2 px-4 rounded-r-lg border whitespace-nowrap bg-secondary-btn border-secondary-btn`
                     )}
                   >
                     All issues
@@ -94,7 +94,7 @@ const MockBountyList = ({contest}) => {
                 </div>
                 <div
                   className={tw(
-                    `inline-flex justify-between w-36 rounded-l-sm border-border-default text-primary text-sm rounded-l-sm leading-2 py-[5px] px-4`
+                    `inline-flex justify-between w-36 rounded-l-sm border-border-default text-primary text-sm rounded-l-sm leading-2 py-2 px-4`
                   )}
                 >
                   Sort Order
@@ -113,7 +113,7 @@ const MockBountyList = ({contest}) => {
                 <details className={tw(`max-h-8 whitespace-nowrap text-sm text-muted cursor-pointer`)}>
                   <summary
                     className={tw(
-                      `inline-flex justify-between w-24 rounded-l-sm border-border-default text-primary rounded-l-sm leading-2 py-[5px] px-4`
+                      `inline-flex justify-between w-24 rounded-l-sm border-border-default text-primary rounded-l-sm leading-2 py-2 px-4`
                     )}
                   >
                     Labels
@@ -133,7 +133,7 @@ const MockBountyList = ({contest}) => {
               </div>
             </div>
 
-            <div className={tw(` md:border border-web-gray rounded-lg `)}>
+            <div className={tw(` md:border border-web-gray rounded-lg max-w-screen-lg w-full mx-auto`)}>
              {contest?
              <ContestBounties />:
              <NormalBounties />

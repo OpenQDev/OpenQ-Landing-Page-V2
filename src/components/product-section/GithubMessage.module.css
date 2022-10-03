@@ -10,7 +10,7 @@ z-index:10;
 display:block;
 content: "";
 left: -5px;
-background-color: #161b22;
+background-color: #ffffff;
 border-color: #30363d;
 }
 .productSectionGithubMessage.light:before{

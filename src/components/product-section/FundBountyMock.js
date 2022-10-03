@@ -4,7 +4,7 @@ import Image from 'next/image';
 const FundBountyMock = ({ scrollY, contest }) => {
 
   return (
-    <div  className={tw(`flex flex-col space-y-5 pb-4 relative items-center rounded-lg `)}>
+    <div className={tw(`flex flex-col space-y-5 pb-4 relative items-center rounded-lg `)}>
       <div
         className={tw(
           `pointer-events-none bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400 opacity-5 w-full h-max absolute inset-0 rounded-lg`
@@ -16,10 +16,10 @@ const FundBountyMock = ({ scrollY, contest }) => {
         </div>
       </div>
       <div className={tw(`flex flex-col space-y-5 w-5/6 pt-2`)}>
-        <div className={tw(`flex space-x-4`)}>
+        <div className={tw(`sm:flex gap-4 justify-between`)}>
           <div
             className={tw(
-              `flex w-full flex-row justify-between items-center px-4 py-[5px] pl-8 pr-3 text-[0.75rem] tracking-wider leading-[20px] h-min placeholder:text-muted rounded-lg outline-none border border-border-gray bg-menu-bg focus-within:border-blue-400`
+              `flex w-full flex-row justify-between items-center px-4  pl-8 pr-3 tracking-wider leading-tight h-min placeholder:text-muted rounded-lg outline-none border border-border-gray bg-menu-bg focus-within:border-blue-400`
             )}
           >
             <div className={tw(``)}>
@@ -27,10 +27,9 @@ const FundBountyMock = ({ scrollY, contest }) => {
               {scrollY < 2640 ? '' : scrollY < 2650 ? '1' : scrollY < 2660 ? '10' : scrollY < 2670 ? '100' : '1000'}
             </div>
           </div>
-          <div className={tw(`flex`)}>
-            <div className={tw(`flex flex-row items-center w-32 p-0.5 px-2`)}>
-              <div className={tw(`flex h-4 w-4 items-center justify-center`)}></div>
-              <div className={tw(`flex border px-1 rounded-full`)}>
+          <div className={tw(`self-end`)}>
+            <div className={tw(`flex flex-row sm:justify-end w-32`)}>
+              <div className={tw(`flex border rounded-full`)}>
                 <div className={tw(`flex pl-2 pr-1 py-1 text-dark-mode`)}>USDC</div>
                 <Image width={16} className=' h-4 w-4 flex-1' height={24} src={'/USDC.svg'} />
                 <div className={tw(`flex`)}>
@@ -60,8 +59,7 @@ const FundBountyMock = ({ scrollY, contest }) => {
         </div>
         <div
           className={tw(
-            `flex flex-row w-full justify-center space-x-5 items-center bg-github-primary text-white rounded-lg h-8 ${
-              scrollY < 3300 && scrollY < 2640 && 'ing'
+            `flex flex-row w-full justify-center space-x-5 items-center bg-github-primary text-white rounded-lg h-8 ${scrollY < 3300 && scrollY < 2640 && 'ing'
             }`
           )}
         >

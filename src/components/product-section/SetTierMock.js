@@ -1,14 +1,14 @@
 import React from "react";
 import { tw } from "twind";
 
-const SetTierMock = ({scrollY}) => {
+const SetTierMock = ({ scrollY }) => {
 
 
 	return (
 		<div className={tw(`flex flex-col items-center pr-6 pb-2`)}><div className={tw(`flex flex-col w-full items-start p-t py-1 text-base pb-4`)}><div className={tw(`flex items-center gap-2`)}>How many Tiers?
 		</div><div className={tw(`flex-1 w-full mt-2 ml-4`)}>
-				<div className={tw(`flex-1  py-1 px-3 text-sm tracking-wider placeholder:text-muted outline-none rounded-sm border border-border-gray bg-menu-bg focus-within:border-blue-400
- w-full h-8`)}>{scrollY>1840 ? "3": ""}
+				<div className={tw(`flex-1  py-1 px-3 text-sm tracking-wider placeholder:text-muted outline-none border border-border-gray rounded-md bg-menu-bg focus-within:border-blue-400
+ w-full h-8`)}>{scrollY > 1840 ? "3" : ""}
 				</div>
 			</div>
 		</div>

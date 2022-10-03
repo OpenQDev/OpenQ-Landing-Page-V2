@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 const CreatePrMock = () => {
   return (
     <div className={tw(`w-full pt-4 flex justify-between relative lg:w-80 xl:w-96 w-full `)}>
-      <div className='w-9 h-9 top-0 right-0 flex-none'>
+      <div className='w-9 h-9 top-0 right-0 flex-0'>
         <Image className='rounded-full' height={36} width={36} src={'/githubAvatar.jpg'} />
       </div>
 
@@ -14,7 +14,7 @@ const CreatePrMock = () => {
         className={
           styles.productSectionGithubMessage +
           ' ' +
-          tw(` text-black rounded-lg  ml-4 border-gray-500 flex-1 border relative border`)
+          tw(`text-black rounded-lg  left-4 border-gray-500 flex-1 border relative border`)
         }
       >
         <div className={tw(` p-2`)}>
@@ -28,7 +28,7 @@ const CreatePrMock = () => {
             <div className={tw(`px-4 py-2 border-x border-t rounded-t border-muted`)}>Preview</div>
           </div>
           <div className={tw(`border-muted p-3 border-t text-sm `)}>
-            <p>
+            <div>
               {' '}
               Closes <span className={tw(`text-link-colour pb-1`)}>#554</span>
               <div className={tw(`pt-2`)}>
@@ -37,7 +37,7 @@ const CreatePrMock = () => {
               <div className={tw(`pt-2 pb-3`)}>
                 <div className={tw(`bg-gray-300 text-gray-300 rounded-lg mr-20`)}>uses ens when on</div>
               </div>
-            </p>
+            </div>
             <div className={tw(`bg-github-primary text-white p-1 w-40 text-center rounded-md float-right my-2`)}>
               {' '}
               Create Pull Request
