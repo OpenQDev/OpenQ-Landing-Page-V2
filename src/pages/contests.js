@@ -9,11 +9,14 @@ import Footer from '@/components/footer';
 import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Navigation from '@/components/navigation';
-import Add from '@/components/svg/add';
 import { useState, useEffect } from 'react';
-import StreamSection from '@/components/product-section/StreamSection';
-import AccountingSection from '@/components/product-section/AccountingSection';
+import Tool from '@/components/svg/tool';
+import Payout from '@/components/svg/payout';
+import Account from '@/components/svg/account';
 import MockBountyList from '@/components/header/MockBountyList';
+import Reputation from '@/components/svg/reputation';
+import Diversity from '@/components/svg/diversity';
+import Boot from '@/components/svg/boot';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
@@ -113,19 +116,19 @@ export default function Home() {
   const cardSectionDataOrg = [
     {
       title: 'Programmable Payouts',
-      SVG: Add,
+      SVG: Payout,
       body:
         "Define the contests according to your requirements. Pay developers directly after you've merged their submission on Github. Define the  ",
     },
     {
       title: 'Hackathon Tooling Services',
-      SVG: Add,
+      SVG: Tool,
       body:
         "We'll keep an eye out for copy paste submissions from older hackathons in our database, and take care of the things you shouldn't bother with.",
     },
     {
       title: 'Accounting Included',
-      SVG: Add,
+      SVG: Account,
       body:
         '(Coming soon) With our accounting system, each disbursement will automatically trigger a developer invoice to resolve your tax issues.',
     },
@@ -133,19 +136,19 @@ export default function Home() {
   const cardSectionDataDev = [
     {
       title: 'Diversity Inspires Challenge',
-      SVG: Add,
+      SVG: Diversity,
       body:
         'We curate contests that meet your requirements or find new exciting tasks that take you to the next as software developer.',
     },
     {
       title: 'Enhance your Reputation',
-      SVG: Add,
+      SVG: Reputation,
       body:
         'Every contest you enter, win or not, expands your profile with on-chain attestations that open up new opportunities.',
     },
     {
       title: 'Boostrap with OpenQ',
-      SVG: Add,
+      SVG: Boot,
       body:
         'We will continuously report on projects that have emerged from our contests and support you through our partner network.',
     },
