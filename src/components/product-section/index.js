@@ -151,7 +151,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
               <h2 className={tw(`py-8 lg:py-16 pl-2 font-bold text-center text-xl lg:w-3/4 xl:w-2/5 text-gray-500`)}>
                 <span className={tw(`text-gray-900 text-3xl`)}>Our Story: Explore PRs our community completed.</span>
                 <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
-                  Also visit our Discord to give us feedback and follow our journey.
+                  We are continously updating the list of recent PRs completed.
                 </p>
               </h2>
 

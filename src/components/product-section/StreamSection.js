@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { Jazzicon } from '@ukstv/jazzicon-react';
 import OnScroll from '../utils/OnScroll';
 
-const StreamSection = ({internalMenu}) => {
-
-  
+const StreamSection = ({ internalMenu }) => {
   return (
     <div className={tw(`bg-dark-mode pt-10 lg:mx-20 rounded-t-2xl `)}>
       <section className={tw(`font-montserrat pt-16 mx-10 mx-auto lg:mx-32 xl:mx-54 2xl:mx-60`)}>
@@ -75,45 +73,46 @@ const StreamSection = ({internalMenu}) => {
           </div>
         </div>
         <div className={tw(``)}>
-
-        <OnScroll internalMenu={internalMenu}  fade="animate-fadeInRight">
-          <div
-            className={tw(
-              `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`
-            )}
-          >
-            <div className={tw(`lg:col-span-2 lg:pt-5`)}>
-              <div className={tw(`border border-white rounded-xl`)}>
-                <div className={tw(`px-5 text-center py-8`)}>
-                  <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
-                  <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-400`)}>
-                    0x90F7...
-                  </div>
-                  <div className={tw(`pt-3 pb-1`)}>
-                    <div
-                      className={tw(`border rounded-lg font-semibold text-center py-1 text-lg text-gray-900 bg-white`)}
-                    >
-                      Add socials
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeInRight'>
+            <div
+              className={tw(
+                `border-l ml-1 pt-5 pl-8 border-gray-400 pb-8 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`
+              )}
+            >
+              <div className={tw(`lg:col-span-2 lg:pt-5`)}>
+                <div className={tw(`border border-white rounded-xl`)}>
+                  <div className={tw(`px-5 text-center py-8`)}>
+                    <div className={tw(`font-bold text-xl text-white pb-3`)}>Create new Stream</div>
+                    <div className={tw(`border rounded-2xl font-semibold text-left py-1 pl-5 text-lg text-gray-400`)}>
+                      0x90F7...
                     </div>
-                  </div>
-                  <div className={tw(`pt-3 pb-1`)}>
-                    <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Create</div>
+                    <div className={tw(`pt-3 pb-1`)}>
+                      <div
+                        className={tw(
+                          `border rounded-lg font-semibold text-center py-1 text-lg text-gray-900 bg-white`
+                        )}
+                      >
+                        Add socials
+                      </div>
+                    </div>
+                    <div className={tw(`pt-3 pb-1`)}>
+                      <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Create</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <p
+                className={tw(
+                  `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4`
+                )}
+              >
+                Fixed-Price contracts are good for making initial connections and getting involved in projects. Next
+                step: token streams -
+                <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
+                  integrating decentralized payroll with automated accounting.{' '}
+                </span>
+              </p>
             </div>
-            <p
-              className={tw(
-                `pt-8 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 lg:text-3xl lg:mx-10 lg:col-span-4`
-              )}
-            >
-              Bounties are good for making initial connections and getting involved in projects. Next step: token
-              streams -
-              <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-                integrating decentralized payroll with automated accounting.{' '}
-              </span>
-            </p>
-          </div>
           </OnScroll>
         </div>
         <div className={tw(`flex flex-row -ml-2 items-center`)}>
@@ -156,119 +155,119 @@ const StreamSection = ({internalMenu}) => {
         <div
           className={tw(`border-l ml-1 border-gray-400 pb-9 lg:grid lg:grid-cols-6 lg:gap-4 px-3 lg:pb-10 lg:pt-10`)}
         >
-        <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className=" lg:col-span-4">
-          <div
-            className={tw(
-              `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:pt-12`
-            )}
-          >
-            We reduce the work of web3 leaders and simplify the on- and offboarding of team members significantly. In
-            addition, monthly payments are
-            <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
-              automatically posted and taxable{' '}
-            </span>
-            through our invoice system.
-          </div>
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeInRight' className=' lg:col-span-4'>
+            <div
+              className={tw(
+                `pt-10 pb-2 pl-6 text-lg font-semibold text-left text-gray-400 pt-2 lg:text-3xl lg:mx-10 lg:pt-12`
+              )}
+            >
+              We reduce the work of web3 leaders and simplify the on- and offboarding of team members significantly. In
+              addition, monthly payments are
+              <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-white pt-2`)}>
+                automatically posted and taxable{' '}
+              </span>
+              through our invoice system.
+            </div>
           </OnScroll>
-        <OnScroll internalMenu={internalMenu} fade="animate-fadeInRight" className="lg:col-span-2 w-full">
-          <div className={tw(`pt-8 pl-8 min-w-60 `)}>
-            <div className={tw(`border border-white rounded-xl`)}>
-              <div className={tw(`px-5 text-center py-8`)}>
-                <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
-                <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center`)}>
-                    <div style={{ width: `25px`, height: `25px` }}>
-                      <Jazzicon address='0xBAc675C310721717Cd4A37F6cbeA1F081b1C2a07' />
+          <OnScroll internalMenu={internalMenu} fade='animate-fadeInRight' className='lg:col-span-2 w-full'>
+            <div className={tw(`pt-8 pl-8 min-w-60 `)}>
+              <div className={tw(`border border-white rounded-xl`)}>
+                <div className={tw(`px-5 text-center py-8`)}>
+                  <div className={tw(`font-bold text-xl text-white pb-3`)}>Monthly Disbursements</div>
+                  <div className={tw(`flex flex-row justify-between text-white`)}>
+                    <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                      <div style={{ width: `25px`, height: `25px` }}>
+                        <Jazzicon address='0xBAc675C310721717Cd4A37F6cbeA1F081b1C2a07' />
+                      </div>
+                      <div>
+                        <p className={tw(``)}>Mike</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className={tw(``)}>Mike</p>
+
+                    <div className={tw(`flex flex-row items-center space-x-3`)}>
+                      <div>
+                        <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
+                      </div>
+                      <div className={tw(``)}>900 DAI</div>
+                    </div>
+                  </div>
+                  <div className={tw(`flex flex-row justify-between text-white`)}>
+                    <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                      <div style={{ width: `25px`, height: `25px` }}>
+                        <Jazzicon address='0xHV2675C314221717Cd4A37F6cbeA1F081b1C2a07' />
+                      </div>
+                      <div>
+                        <p className={tw(``)}>Melany</p>
+                      </div>
+                    </div>
+
+                    <div className={tw(`flex flex-row items-center space-x-3`)}>
+                      <div>
+                        <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
+                      </div>
+                      <div className={tw(``)}>650 DAI</div>
+                    </div>
+                  </div>
+                  <div className={tw(`flex flex-row justify-between text-white`)}>
+                    <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                      <div style={{ width: `25px`, height: `25px` }}>
+                        <Jazzicon address='0xCB1475C310721717Cd4A37F6cbeA1F081b1C2a07' />
+                      </div>
+                      <div>
+                        <p className={tw(``)}>Chris</p>
+                      </div>
+                    </div>
+
+                    <div className={tw(`flex flex-row items-center space-x-3`)}>
+                      <div>
+                        <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
+                      </div>
+                      <div className={tw(``)}>500 DAI</div>
+                    </div>
+                  </div>
+                  <div className={tw(`flex flex-row justify-between text-white`)}>
+                    <div className={tw(`flex flex-row space-x-3 items-center w-fit`)}>
+                      <div style={{ width: `25px`, height: `25px` }}>
+                        <Jazzicon address='0xFAc675C310721717Cd4A37F6cbeA1F081b1C2a07' />
+                      </div>
+                      <div>
+                        <p className={tw(``)}>Stephanie</p>
+                      </div>
+                    </div>
+
+                    <div className={tw(`flex flex-row items-center space-x-3`)}>
+                      <div>
+                        <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
+                      </div>
+                      <div className={tw(``)}>450 DAI</div>
+                    </div>
+                  </div>
+                  <div className={tw(`flex flex-row justify-between text-white`)}>
+                    <div className={tw(`flex flex-row space-x-3 items-center`)}>
+                      <div style={{ width: `25px`, height: `25px` }}>
+                        <Jazzicon address='0x90F79bf2BB2c4f873465E785982E1f101E93b906' />
+                      </div>
+                      <div>
+                        <p className={tw(``)}>Lisa</p>
+                      </div>
+                    </div>
+
+                    <div className={tw(`flex flex-row items-center space-x-3`)}>
+                      <div>
+                        <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
+                      </div>
+                      <div className={tw(``)}>400 DAI</div>
                     </div>
                   </div>
 
-                  <div className={tw(`flex flex-row items-center space-x-3`)}>
-                    <div>
-                      <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
-                    </div>
-                    <div className={tw(``)}>900 DAI</div>
-                  </div>
-                </div>
-                <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center`)}>
-                    <div style={{ width: `25px`, height: `25px` }}>
-                      <Jazzicon address='0xHV2675C314221717Cd4A37F6cbeA1F081b1C2a07' />
-                    </div>
-                    <div>
-                      <p className={tw(``)}>Melany</p>
-                    </div>
-                  </div>
-
-                  <div className={tw(`flex flex-row items-center space-x-3`)}>
-                    <div>
-                      <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
-                    </div>
-                    <div className={tw(``)}>650 DAI</div>
-                  </div>
-                </div>
-                <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center`)}>
-                    <div style={{ width: `25px`, height: `25px` }}>
-                      <Jazzicon address='0xCB1475C310721717Cd4A37F6cbeA1F081b1C2a07' />
-                    </div>
-                    <div>
-                      <p className={tw(``)}>Chris</p>
-                    </div>
-                  </div>
-
-                  <div className={tw(`flex flex-row items-center space-x-3`)}>
-                    <div>
-                      <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
-                    </div>
-                    <div className={tw(``)}>500 DAI</div>
-                  </div>
-                </div>
-                <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center w-fit`)}>
-                    <div style={{ width: `25px`, height: `25px` }}>
-                      <Jazzicon address='0xFAc675C310721717Cd4A37F6cbeA1F081b1C2a07' />
-                    </div>
-                    <div>
-                      <p className={tw(``)}>Stephanie</p>
-                    </div>
-                  </div>
-
-                  <div className={tw(`flex flex-row items-center space-x-3`)}>
-                    <div>
-                      <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
-                    </div>
-                    <div className={tw(``)}>450 DAI</div>
-                  </div>
-                </div>
-                <div className={tw(`flex flex-row justify-between text-white`)}>
-                  <div className={tw(`flex flex-row space-x-3 items-center`)}>
-                    <div style={{ width: `25px`, height: `25px` }}>
-                      <Jazzicon address='0x90F79bf2BB2c4f873465E785982E1f101E93b906' />
-                    </div>
-                    <div>
-                      <p className={tw(``)}>Lisa</p>
-                    </div>
-                  </div>
-
-                  <div className={tw(`flex flex-row items-center space-x-3`)}>
-                    <div>
-                      <Image src='/dai.png' alt='OpenQ Logo' width='30%' height='30%' />
-                    </div>
-                    <div className={tw(``)}>400 DAI</div>
-                  </div>
-                </div>
-
-                <div className={tw(`pt-3 pb-1`)}>
                   <div className={tw(`pt-3 pb-1`)}>
-                    <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Add</div>
+                    <div className={tw(`pt-3 pb-1`)}>
+                      <div className={tw(`bg-github-primary text-white rounded-lg py-1`)}>Add</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </OnScroll>
         </div>
         {` `}
