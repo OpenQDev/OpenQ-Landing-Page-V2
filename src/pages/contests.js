@@ -55,7 +55,7 @@ export default function Home() {
       title: 'Programmable Payouts',
       SVG: Add,
       body:
-        "Define the contests according to your requirements. Pay developers directly after you've merged their submission on Github. Define the  ",
+        "Define the contests according to your requirements. Pay developers directly after you've merged their submission on Github without extra effort. ",
     },
     {
       title: 'Hackathon Tooling Services',
@@ -135,7 +135,7 @@ export default function Home() {
             />
             <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
-            <FAQ />
+            {/* <FAQ /> */}
           </div>
         </div>
 

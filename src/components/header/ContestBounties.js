@@ -14,6 +14,7 @@ const ContestsBounties = () => {
         avatarUrl={'https://avatars.githubusercontent.com/u/92924948?s=60&v=4'}
         days={10}
         scrollY={scrollY}
+        isContestPage={true}
       />
       <MockContest
         repo={'openqdev/openq-frontend'}
@@ -23,6 +24,7 @@ const ContestsBounties = () => {
         avatarUrl={'https://avatars.githubusercontent.com/u/77402538?s=200&v=4'}
         days={4}
         scrollY={scrollY}
+        isContestPage={true}
       />
       <div className={tw(`hidden md:block`)}>
         <MockContest
@@ -34,6 +36,7 @@ const ContestsBounties = () => {
           days={17}
           scrollY={scrollY}
           noBorder={true}
+          isContestPage={true}
         />
       </div>
     </>
