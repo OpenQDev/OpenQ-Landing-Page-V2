@@ -17,6 +17,7 @@ import MockBountyList from '@/components/header/MockBountyList';
 
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
+  const [contestPage, setContestPage] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
   const prs = [
@@ -109,10 +110,45 @@ export default function Home() {
       price: '10'
     }
   ];
-  const cardSectionData = [
-    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
-    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
-    { title: 'Release Payment automatically after merging PR', SVG: Add, body: 'Lorme ipsum' },
+  const cardSectionDataOrg = [
+    {
+      title: 'Programmable Payouts',
+      SVG: Add,
+      body:
+        "Define the contests according to your requirements. Pay developers directly after you've merged their submission on Github. Define the  ",
+    },
+    {
+      title: 'Hackathon Tooling Services',
+      SVG: Add,
+      body:
+        "We'll keep an eye out for copy paste submissions from older hackathons in our database, and take care of the things you shouldn't bother with.",
+    },
+    {
+      title: 'Accounting Included',
+      SVG: Add,
+      body:
+        '(Coming soon) With our accounting system, each disbursement will automatically trigger a developer invoice to resolve your tax issues.',
+    },
+  ];
+  const cardSectionDataDev = [
+    {
+      title: 'Diversity Inspires Challenge',
+      SVG: Add,
+      body:
+        'We curate contests that meet your requirements or find new exciting tasks that take you to the next as software developer.',
+    },
+    {
+      title: 'Enhance your Reputation',
+      SVG: Add,
+      body:
+        'Every contest you enter, win or not, expands your profile with on-chain attestations that open up new opportunities.',
+    },
+    {
+      title: 'Boostrap with OpenQ',
+      SVG: Add,
+      body:
+        'We will continuously report on projects that have emerged from our contests and support you through our partner network.',
+    },
   ];
 
   useEffect(() => {
@@ -136,7 +172,7 @@ export default function Home() {
 
       <main>
         <Navigation />
-        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={contestPage} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
             fill='#121212'
@@ -152,11 +188,13 @@ export default function Home() {
         <MockBountyList internalMenu={internalMenu} contest={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
-            <CardGroup internalMenu={internalMenu} data={cardSectionData} />
+            <CardGroup
+              internalMenu={internalMenu}
+              contest={contestPage}
+              data={internalMenu === 'org' ? cardSectionDataOrg : cardSectionDataDev}
+            />
             <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection scrollY={scrollY} internalMenu={internalMenu} />
-            <AccountingSection scrollY={scrollY} internalMenu={internalMenu} />
             <FAQ />
           </div>
         </div>

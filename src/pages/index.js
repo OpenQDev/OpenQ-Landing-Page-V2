@@ -27,7 +27,7 @@ export default function Home() {
       description: 'FlacoJones merged 20 commits in from Johnny-V:master',
       scrollY,
       fade: '',
-      price: '500'
+      price: '500',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/12',
@@ -35,7 +35,7 @@ export default function Home() {
       description: 'bonustrack merged 7 commits into snapshot-labs:master from FlacoJones:master',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/20',
@@ -43,7 +43,7 @@ export default function Home() {
       description: 'bonustrack merged 5 commits into master from sekhmet/jazzicon',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/18',
@@ -51,7 +51,7 @@ export default function Home() {
       description: 'bonustrack merged 3 commits into master from sekhmet/selfid',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/honey-labs/honey-frontend/pull/162',
@@ -59,7 +59,7 @@ export default function Home() {
       description: 'BowTiedHeron merged 2 commits into honey-labs:development from eborrallo:development',
       scrollY,
       fade: '',
-      price: '200'
+      price: '200',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/376',
@@ -67,7 +67,7 @@ export default function Home() {
       description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
       scrollY,
       fade: '',
-      price: '20'
+      price: '20',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/54',
@@ -75,15 +75,16 @@ export default function Home() {
       description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
       scrollY,
       fade: '',
-      price: '90'
+      price: '90',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/67',
       title: 'First visit #67',
-      description: 'FlacoJones merged 2 commits into OpenQDev:development from Christopher-Stevers:first-visit on Feb 28',
+      description:
+        'FlacoJones merged 2 commits into OpenQDev:development from Christopher-Stevers:first-visit on Feb 28',
       scrollY,
       fade: '',
-      price: '90'
+      price: '90',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/691',
@@ -91,7 +92,7 @@ export default function Home() {
       description: 'FlacoJones merged 6 commits into OpenQDev:staging from Christopher-Stevers:WIP-categories',
       scrollY,
       fade: '',
-      price: '250'
+      price: '250',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/592',
@@ -99,7 +100,7 @@ export default function Home() {
       description: 'Christopher-Stevers merged 23 commits into OpenQDev:staging from ArcAnya:tierVolume',
       scrollY,
       fade: '',
-      price: '250'
+      price: '250',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/779',
@@ -107,26 +108,27 @@ export default function Home() {
       description: 'FlacoJones merged 3 commits into OpenQDev:staging from Vinitvh:production',
       scrollY,
       fade: '',
-      price: '10'
-    }
-
+      price: '10',
+    },
   ];
   const cardSectionDataDev = [
     {
-      title: 'OpenQ secures payment via permissionless escrows.',
+      title: 'Permissionless Escrows',
       SVG: Add,
       body:
         'Every Ticket that has an escrow assigned is insuring payment after the job is completed. Never worry again about not getting paid in time.',
     },
     {
-      title: 'Catalyse your focus and intention towards solving software problems.',
+      title: 'Designed for Devs',
       SVG: Add,
-      body: 'We deal with everything else, never worry again about invoicing, taxation and finding new clients.',
+      body:
+        'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
     },
     {
-      title: "Create an on-chain reputation based on your PRs, our CV's don't lie.",
+      title: 'Perpetual reptuation',
       SVG: Add,
-      body: 'Boosting your reputation in the ecosystem with demonstrable on-chain projects history and skill analysis',
+      body:
+        "Boosting your reputation in the ecosystem with demonstrable on-chain projects history and skill analysis. Our CV's never lie because we can prove it.",
     },
   ];
 
@@ -172,7 +174,7 @@ export default function Home() {
 
       <main>
         <Navigation />
-        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={false} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
             fill='#121212'
