@@ -63,7 +63,7 @@ const MockContest = ({ days, repo, title, avatarUrl, budget, noBorder }) => {
               <div className={tw(`pr-2 pt-1 hidden lg:block`)}>
                 <Image width={16} height={24} src='/ETH.svg' />
               </div>
-              <div className={tw(`font-semibold `)}>Budget</div>
+              <div className={tw(`font-semibold `)}>TVL</div>
               <div className=''>{budget}</div>
             </div>
           </div>
