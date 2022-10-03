@@ -54,14 +54,14 @@ const Header = ({ pageVersionHookInstance }) => {
   const [bountiesVisible, setBountiesVisible] = useState();
   const [internalMenu, setInternalMenu] = pageVersionHookInstance;
   const devData = {
-    title: 'Peer-to-peer freelance marketplace tailored for software developers.',
-    typedText: ['A trustless way to collaborate with new clients', 'Contribute to various hackathon series'],
-    subTitle: 'Look for new atomic contracts, create PR, get paid after merge',
+    title: 'The dev community building the future.',
+    typedText: 'Pull Requests as a Service',
+    subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
   const orgData = {
-    title: 'Peer-to-peer freelance marketplace tailored for software developers.',
-    typedText: ['Pull Requests as a Service', 'Launch your Hackathon Series', 'Test your Protocol and get Feedback'],
-    subTitle: 'Assign new developers dynamically to scale faster',
+    title: 'The dev community building the future.',
+    typedText: 'Pull Requests as a Service',
+    subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
   const [headerData, setHeaderData] = useState(orgData);
 

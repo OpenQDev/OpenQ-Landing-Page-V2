@@ -186,8 +186,8 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                       `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10`
                     )}
                   >
-                    After a few days you will receive a PR from one of our developers, if not directly assigned. After
-                    the code has been reviewed and accepted, it can be directly merged, which
+                    After a few days you will receive a PR from one of our developers. After the code has been reviewed
+                    and accepted, it can be directly merged, which
                     <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900`)}>
                       automatically leads to the developer's payout.
                     </span>

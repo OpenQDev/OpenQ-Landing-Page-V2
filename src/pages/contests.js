@@ -95,8 +95,6 @@ export default function Home() {
             <CardGroup internalMenu={internalMenu} data={cardSectionData} />
             <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection scrollY={scrollY} internalMenu={internalMenu} />
-            <AccountingSection scrollY={scrollY} internalMenu={internalMenu} />
             <FAQ />
           </div>
         </div>

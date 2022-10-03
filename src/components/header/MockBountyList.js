@@ -1,11 +1,10 @@
 import { tw } from 'twind';
 import { useState, useEffect } from 'react';
-import ContestBounties from "./ContestBounties"
-import NormalBounties from "./NormalBounties";
+import ContestBounties from './ContestBounties';
+import NormalBounties from './NormalBounties';
 
-const MockBountyList = ({contest}) => {
+const MockBountyList = ({ contest }) => {
   const [bountiesVisible, setBountiesVisible] = useState();
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +23,14 @@ const MockBountyList = ({contest}) => {
   return (
     <div
       className={tw(
-        `relative px-4 -top-36 -mb-32 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10 w-full flex justify-center`
+        `relative px-4-top-36 -mb-32 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10 w-full flex justify-center`
       )}
     >
       <div
         className={tw(
-          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-2xl justify-center invisible ${bountiesVisible && 'animate-fadeIn visible'}`
+          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-xl pt-3 pb-2 justify-center invisible ${
+            bountiesVisible && 'animate-fadeIn visible'
+          }`
         )}
       >
         <div className={tw(`flex gap-1 py-4`)}>
@@ -134,10 +135,7 @@ const MockBountyList = ({contest}) => {
             </div>
 
             <div className={tw(` md:border border-web-gray rounded-lg max-w-screen-lg w-full mx-auto`)}>
-             {contest?
-             <ContestBounties />:
-             <NormalBounties />
-             }
+              {contest ? <ContestBounties /> : <NormalBounties />}
             </div>
           </div>
         </div>
