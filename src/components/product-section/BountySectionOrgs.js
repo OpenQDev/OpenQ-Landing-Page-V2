@@ -29,7 +29,7 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                   `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-400`
                 )}
               >
-                How it <span className='text-black'>works.</span>
+                How it <span className='text-black'>works:</span>
               </div>
             </OnScroll>
           </div>
@@ -71,7 +71,7 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                     >
                       create a new ticket.{' '}
                     </span>
-                    Our developer community will either apply for them or directly get to work.
+                    Our developer community will either apply for the task, or directly get to work.
                   </div>
                 </OnScroll>
                 <div className={tw(`pt-6 pl-6 pb-10 lg:col-span-3 lg:-mt-10 lg:pt-20 xl:pt-10 2xl:pt-16`)}>
@@ -143,15 +143,12 @@ const BountySectionOrgs = ({ scrollY, contest, internalMenu }) => {
                       `pt-5 pb-2 pl-6 text-lg font-semibold text-left text-gray-500 pt-2 lg:text-3xl lg:mx-10`
                     )}
                   >
-                    To provide payment security for the developer, requires you to deposit the pledged money for the
-                    requested ticket in advance. OpenQ
+                    To reduce counterparty risk for developers, OpenQ offers
                     <span className={tw(`pt-2 pb-2 pl-2 font-semibold text-left text-lg lg:text-3xl text-gray-900`)}>
                       {' '}
-                      secures funds via an escrow{' '}
+                      secure on-chain escrow{' '}
                     </span>
-                    <p className={tw(`text-gray-500`)}>
-                      that requires you to deposit the pledged money for the requested ticket in advance.
-                    </p>
+                    <p className={tw(`text-gray-500`)}>in advance of work.</p>
                   </div>
                 </OnScroll>
 

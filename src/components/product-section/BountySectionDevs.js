@@ -29,7 +29,7 @@ const BountySectionDevs = ({ scrollY, contest, internalMenu }) => {
                   `text-4xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-400`
                 )}
               >
-                How it <span className='text-black'>works.</span>
+                How it <span className='text-black'>works:</span>
               </div>
             </OnScroll>
           </div>
