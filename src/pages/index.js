@@ -10,12 +10,16 @@ import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Navigation from '@/components/navigation';
 import Add from '@/components/svg/add';
+import IssueOpened from '@/components/svg/issueOpened';
+import MarkGithub from '@/components/svg/markGithub';
+import ScaleTeam from '@/components/svg/scaleTeam';
+import DevFirst from '@/components/svg/devFirst';
+import Permissionless from '@/components/svg/permissionless';
+import Reputation from '@/components/svg/reputation';
 import { useState, useEffect } from 'react';
 import StreamSection from '@/components/product-section/StreamSection';
 import AccountingSection from '@/components/product-section/AccountingSection';
 import MockBountyList from '@/components/header/MockBountyList';
-import OnScroll from '@/components/utils/OnScroll';
-
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
   const [scrollY, setScrollY] = useState(0);
@@ -114,13 +118,13 @@ export default function Home() {
   const cardSectionDataDev = [
     {
       title: 'Permissionless Escrows',
-      SVG: Add,
+      SVG: Permissionless,
       body:
         'Every Ticket that has an escrow assigned is insuring payment after the job is completed. Never worry again about not getting paid in time.',
     },
     {
       title: 'Designed for Devs',
-      SVG: Add,
+      SVG: DevFirst,
       body:
         'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
     },
@@ -135,19 +139,19 @@ export default function Home() {
   const cardSectionDataOrg = [
     {
       title: 'Dynamically up and downscale your team',
-      SVG: Add,
+      SVG: ScaleTeam,
       body:
         'Assign tickets to developers without any strings attached, after the job is completed its up to you if you want to continue.',
     },
     {
       title: 'OpenQ works where you work - on GitHub',
-      SVG: Add,
+      SVG: MarkGithub,
       body:
         'Since OpenQ is directly extending Github there is less management intervention required (devs are abstracted away).',
     },
     {
       title: 'Add tickets directly out of your GitHub issues',
-      SVG: Add,
+      SVG: IssueOpened,
       body:
         "Doesn't require speaking with anyone. It sends your task to multiple engineers automatically that match the skill required.",
     },

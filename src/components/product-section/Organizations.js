@@ -19,7 +19,7 @@ const Organizations = () => {
         <div className={tw(`border border-gray-900 rounded-xl `)}>
           <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
             <div className={tw(``)}>
-              <Image src='/sushi.png' alt='OpenQ Logo' width='65%' height='65%' />
+              <Image src='/snapshot.png' alt='OpenQ Logo' width='65%' height='65%' />
               <div className={tw(`font-bold text-2xl`)}>Snapshot</div>
               <div className={tw(`pt-2 font-semibold text-gray-500`)}>4 open tickets</div>
             </div>
@@ -30,7 +30,7 @@ const Organizations = () => {
         <div className={tw(`border border-gray-900 rounded-xl`)}>
           <div className={tw(`flex py-5 justify-center text-center items-center space-x-3`)}>
             <div className={tw(``)}>
-              <Image src='/uniswap-2.png' alt='OpenQ Logo' width='75%' height='75%' />
+              <Image src='/honey.png' alt='OpenQ Logo' width='75%' height='75%' />
               <div className={tw(`font-bold text-2xl`)}>Honey</div>
               <div className={tw(`pt-2 font-semibold text-gray-500`)}>2 open tickets</div>
             </div>

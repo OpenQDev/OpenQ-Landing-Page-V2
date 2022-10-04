@@ -23,13 +23,12 @@ const MockBountyList = ({ contest }) => {
   return (
     <div
       className={tw(
-        `relative px-4-top-36 -mb-32 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10 w-full flex justify-center`
+        `relative -top-36 -mb-32 mx-4 md:-top-96 md:-mb-80 lg:-top-96 lg:-mb-80 xl:-top-96 xl:-mb-80 z-10  flex justify-center`
       )}
     >
       <div
         className={tw(
-          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-xl pt-3 pb-2 justify-center invisible ${
-            bountiesVisible && 'animate-fadeIn visible'
+          ` sm:px-12 px-2 bg-app-bg rounded-md relative w-full max-w-screen-xl pt-3 pb-2 justify-center invisible ${bountiesVisible && 'animate-fadeIn visible'
           }`
         )}
       >
@@ -51,7 +50,6 @@ const MockBountyList = ({ contest }) => {
                 className={tw(
                   `flex-1 lg:col-span-3 col-span-4 input-field-big rounded-lg w-full py-2 pl-8 pr-3 text-sm tracking-wider leading-tight h-min text-muted bg-transparent rounded-full outline-none border border-web-gray bg-subtle focus-within:border-blue-400`
                 )}
-                value='order:newest '
                 aria-label='search text'
                 placeholder='Search Issue...'
               >

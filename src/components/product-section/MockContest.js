@@ -6,8 +6,7 @@ const MockContest = ({ days, repo, title, avatarUrl, budget, noBorder, isContest
     <div className={tw(`flex flex-col px-2 md:px-4 py-4 border-web-gray ${!noBorder ? 'border-b' : null} `)}>
       <div
         className={tw(
-          `flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 ${
-            isContestPage ? 'text-gray-200' : 'text-gray-900'
+          `flex flex-row flex-wrap sm:flex-nowrap justify-between sm:pt-0 ${isContestPage ? 'text-gray-200' : 'text-gray-900'
           }`
         )}
       >
