@@ -138,7 +138,7 @@ export default function Home() {
 
   const cardSectionDataOrg = [
     {
-      title: 'Dynamically up and downscale your team',
+      title: 'Dynamically scale your team too meet your changing needs',
       SVG: ScaleTeam,
       body:
         'Assign tickets to developers without any strings attached, after the job is completed its up to you if you want to continue.',
@@ -146,14 +146,13 @@ export default function Home() {
     {
       title: 'OpenQ works where you work - on GitHub',
       SVG: MarkGithub,
-      body:
-        'Since OpenQ is directly extending Github there is less management intervention required (devs are abstracted away).',
+      body: "OpenQ's seamless Github integrations let you merge your recruiting, payroll and DevOps all into one.",
     },
     {
-      title: 'Add tickets directly out of your GitHub issues',
+      title: 'Developers for everyday problems',
       SVG: IssueOpened,
       body:
-        "Doesn't require speaking with anyone. It sends your task to multiple engineers automatically that match the skill required.",
+        'OpenQ automatically broadcasts your task to multiple engineers with the perfect skillset to get the job done.',
     },
   ];
 
