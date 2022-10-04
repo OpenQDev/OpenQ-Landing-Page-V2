@@ -11,8 +11,8 @@ const CardGroup = ({ data, internalMenu, contest }) => {
           <div className={tw(`flex flex-col text-center w-1/2`)}>
             <span className={tw(`pt-12 font-bold text-gray-900 text-3xl`)}>
               {internalMenu === 'org'
-                ? 'A Hackathon Launchpad that is Defining the Future'
-                : 'A Hackathon Launchpad that is Defining the Future'}
+                ? 'A hackathon launchpad that is defining the future'
+                : 'A hackathon launchpad that is defining the future'}
             </span>
             <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
               {internalMenu === 'org'
@@ -26,8 +26,8 @@ const CardGroup = ({ data, internalMenu, contest }) => {
           <div className={tw(`flex flex-col text-center w-full  sm:w-3/4 md:w-2/3 lg:w-1/2`)}>
             <span className={tw(`pt-12 font-bold text-gray-900 text-3xl`)}>
               {internalMenu === 'org'
-                ? 'A freelance marketplace made by developers for developers'
-                : 'A freelance marketplace made by developers for developers'}
+                ? 'A freelance marketplace made by developers for developers.'
+                : 'A freelance marketplace made by developers for developers.'}
             </span>
             <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
               {internalMenu === 'org'

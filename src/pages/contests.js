@@ -30,7 +30,7 @@ export default function Home() {
       description: 'FlacoJones merged 20 commits in from Johnny-V:master',
       scrollY,
       fade: '',
-      price: '500'
+      price: '500',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/12',
@@ -38,7 +38,7 @@ export default function Home() {
       description: 'bonustrack merged 7 commits into snapshot-labs:master from FlacoJones:master',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/20',
@@ -46,7 +46,7 @@ export default function Home() {
       description: 'bonustrack merged 5 commits into master from sekhmet/jazzicon',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/snapshot-labs/stamp/pull/18',
@@ -54,7 +54,7 @@ export default function Home() {
       description: 'bonustrack merged 3 commits into master from sekhmet/selfid',
       scrollY,
       fade: '',
-      price: '300'
+      price: '300',
     },
     {
       url: 'https://github.com/honey-labs/honey-frontend/pull/162',
@@ -62,7 +62,7 @@ export default function Home() {
       description: 'BowTiedHeron merged 2 commits into honey-labs:development from eborrallo:development',
       scrollY,
       fade: '',
-      price: '200'
+      price: '200',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/376',
@@ -70,7 +70,7 @@ export default function Home() {
       description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
       scrollY,
       fade: '',
-      price: '20'
+      price: '20',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/54',
@@ -78,15 +78,16 @@ export default function Home() {
       description: 'FlacoJones merged 1 commit into OpenQDev:development from ArcAnya:development',
       scrollY,
       fade: '',
-      price: '90'
+      price: '90',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/67',
       title: 'First visit #67',
-      description: 'FlacoJones merged 2 commits into OpenQDev:development from Christopher-Stevers:first-visit on Feb 28',
+      description:
+        'FlacoJones merged 2 commits into OpenQDev:development from Christopher-Stevers:first-visit on Feb 28',
       scrollY,
       fade: '',
-      price: '90'
+      price: '90',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/691',
@@ -94,7 +95,7 @@ export default function Home() {
       description: 'FlacoJones merged 6 commits into OpenQDev:staging from Christopher-Stevers:WIP-categories',
       scrollY,
       fade: '',
-      price: '250'
+      price: '250',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/592',
@@ -102,7 +103,7 @@ export default function Home() {
       description: 'Christopher-Stevers merged 23 commits into OpenQDev:staging from ArcAnya:tierVolume',
       scrollY,
       fade: '',
-      price: '250'
+      price: '250',
     },
     {
       url: 'https://github.com/OpenQDev/OpenQ-Frontend/pull/779',
@@ -110,47 +111,46 @@ export default function Home() {
       description: 'FlacoJones merged 3 commits into OpenQDev:staging from Vinitvh:production',
       scrollY,
       fade: '',
-      price: '10'
-    }
+      price: '10',
+    },
   ];
   const cardSectionDataOrg = [
     {
-      title: 'Programmable Payouts',
+      title: 'Programmable payouts',
       SVG: Payout,
       body:
-        "Define the contests according to your requirements. Pay developers directly after you've merged their submission on Github without extra effort. ",
+        'Customize your contest blueprint and reward structure. Developers get paid automatically once you merge their submission on Github. ',
     },
     {
-      title: 'Hackathon Tooling Services',
+      title: 'Hackathon tooling services',
       SVG: Tool,
       body:
-        "We'll keep an eye out for copy paste submissions from older hackathons in our database, and take care of the things you shouldn't bother with.",
+        "Fair submissions are important to us. We'll keep an eye out for things like plagiarism and version control, so you don't have to ",
     },
     {
-      title: 'Accounting Included',
+      title: 'Accounting included',
       SVG: Account,
       body:
-        '(Coming soon) With our accounting system, each disbursement will automatically trigger a developer invoice to resolve your tax issues.',
+        '(Coming soon) Our accounting system will make and send you an invoice for each disbursement automatically. No need to ask devs for one.',
     },
   ];
   const cardSectionDataDev = [
     {
-      title: 'Diversity Inspires Challenge',
+      title: 'Variety that inspires',
       SVG: Diversity,
       body:
-        'We curate contests that meet your requirements or find new exciting tasks that take you to the next as software developer.',
+        'We curate contests that light up your soul or find new exciting tasks that take you to the next level as a software developer.',
     },
     {
-      title: 'Enhance your Reputation',
+      title: 'Enhance your reputation',
       SVG: Reputation,
       body:
-        'Every contest you enter, win or not, expands your profile with on-chain attestations that open up new opportunities.',
+        'Every contest you enter, win or not, adds on-chain attestations to your profile that open up new opportunities.',
     },
     {
       title: 'Boostrap with OpenQ',
       SVG: Boot,
-      body:
-        'We will continuously report on projects that have emerged from our contests and support you through our partner network.',
+      body: "We'll share your project with our network and will keep our community updated on your progress.",
     },
   ];
 

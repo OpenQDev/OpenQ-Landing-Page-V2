@@ -138,10 +138,10 @@ export default function Home() {
 
   const cardSectionDataOrg = [
     {
-      title: 'Dynamically scale your team too meet your changing needs',
+      title: 'Dynamically scale your team to meet your changing needs',
       SVG: ScaleTeam,
       body:
-        "Assign tickets to developers without any strings attached: after the job is completed its' up to you if you want to continue.",
+        "Assign tickets to developers without any strings attached. After the job is completed, it's up to you if you want to continue.",
     },
     {
       title: 'OpenQ works where you work - on GitHub',
