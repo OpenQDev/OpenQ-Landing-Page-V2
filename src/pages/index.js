@@ -117,22 +117,22 @@ export default function Home() {
   ];
   const cardSectionDataDev = [
     {
-      title: 'Permissionless Escrows',
+      title: 'Permissionless escrows',
       SVG: Permissionless,
       body:
-        'Every Ticket that has an escrow assigned is insuring payment after the job is completed. Never worry again about not getting paid in time.',
+        'Never worry again about not getting paid in time. Every ticket that has an escrow assigned is insuring payment after the job is completed.',
     },
     {
-      title: 'Designed for Devs',
+      title: 'Designed for devs',
       SVG: DevFirst,
       body:
         'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
     },
     {
-      title: 'Portable Reptuation',
+      title: 'Portable reptuation',
       SVG: Add,
       body:
-        "Boosting your reputation in the ecosystem with demonstrable on-chain projects history and skill analysis. Our CV's never lie because we can prove it.",
+        'Boost your reputation in the ecosystem with demonstrable on-chain projects, history and skill analysis. Your CVs will never lie because we can prove it.',
     },
   ];
 
@@ -141,7 +141,7 @@ export default function Home() {
       title: 'Dynamically scale your team too meet your changing needs',
       SVG: ScaleTeam,
       body:
-        'Assign tickets to developers without any strings attached, after the job is completed its up to you if you want to continue.',
+        "Assign tickets to developers without any strings attached: after the job is completed its' up to you if you want to continue.",
     },
     {
       title: 'OpenQ works where you work - on GitHub',

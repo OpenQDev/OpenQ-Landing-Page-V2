@@ -97,8 +97,8 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                     </span>
                     <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
                       {internalMenu === 'org'
-                        ? ' Let others test your protocol, library or SDK via recurring contests that encourage developers to engage with your project'
-                        : ' Test new protocols, libraries or SDKs via recurring contests, earn money with you submissions & bootstrap your project'}
+                        ? ' Let others test your protocol, library or SDK via recurring contests that encourage developers to engage with your project.'
+                        : ' Test new protocols, libraries or SDKs via recurring contests; earn money with you submissions & bootstrap your project.'}
                     </p>
 
                     <div className={tw(`pt-3`)}>

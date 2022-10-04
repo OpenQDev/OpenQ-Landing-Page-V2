@@ -31,8 +31,8 @@ const CardGroup = ({ data, internalMenu, contest }) => {
             </span>
             <p className={tw(`pt-4  text-gray-900 text-lg font-normal`)}>
               {internalMenu === 'org'
-                ? ' Create tickets for the OpenQ community with very low administrative effort and management intervention'
-                : ' Solve open tickets that organisations post on our dashboard, learn new skills and earn money without having to worry about anything other than programming'}
+                ? ' Create tickets for the OpenQ community with very low administrative effort and management intervention.'
+                : ' Solve open tickets that organisations post on our dashboard, learn new skills and earn money without having to worry about anything other than programming.'}
             </p>
           </div>
         </div>
