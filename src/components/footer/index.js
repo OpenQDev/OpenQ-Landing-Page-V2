@@ -23,23 +23,29 @@ const Footer = () => {
       {showCookieNotice && (
         <div
           className={tw(
-            `fixed z-50 bg-dark-mode text-primary p-2 flex flex-col content-center rounded-lg bottom-0 left-0 border-muted border text-sm m-8 w-60 md:w-72`
+            `fixed z-50 bg-dark-mode text-primary p-4 flex flex-col content-center rounded-lg bottom-0 left-0 border-muted border text-sm m-8 w-60 md:w-72`
           )}
         >
           This website uses cookies to ensure you receive the best possible experience.{' '}
           <Link href={'/privacy'}>
-            <a onClick={handleCookieNotice} className={tw(`whitespace-nowrap underline`)}>
+            <a onClick={handleCookieNotice} className={tw(`whitespace-nowrap underline pt-2`)}>
               Learn More
             </a>
           </Link>
-          <button
-            onClick={handleCookieNotice}
-            className={tw(
-              `bg-gray-900 rounded-full border-muted border w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`
-            )}
-          >
-            Got it!
-          </button>
+          <div className={tw(`flex flex-row space-x-3 pt-3`)}>
+            <button
+              onClick={handleCookieNotice}
+              className={tw(`bg-gray-900 rounded-full w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`)}
+            >
+              I accept.
+            </button>
+            <button
+              onClick={handleCookieNotice}
+              className={tw(`bg-gray-900 rounded-full w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`)}
+            >
+              I don't accept.
+            </button>
+          </div>
         </div>
       )}
       {router.asPath !== '/privacy' && (
