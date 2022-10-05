@@ -14,6 +14,9 @@ const Footer = () => {
     if (cookiesAccepted) {
       setShowCookieNotice(false);
     }
+    if (cookiesAccepted) {
+      setShowDemoNotice(true);
+    }
   }, []);
   const handleCookieNotice = () => {
     setShowCookieNotice(false);
