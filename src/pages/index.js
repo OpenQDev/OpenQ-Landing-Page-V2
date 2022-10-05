@@ -129,7 +129,7 @@ export default function Home() {
         'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
     },
     {
-      title: 'Portable reptuation',
+      title: 'Portable reputation',
       SVG: Add,
       body:
         'Boost your reputation in the ecosystem with demonstrable on-chain projects, history and skill analysis. Your CVs will never lie because we can prove it.',
