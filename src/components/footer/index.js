@@ -124,11 +124,9 @@ const Footer = () => {
                       Docs
                     </a>
                   </li>
-                  <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
-                    <a target='_blank' rel='noopener noreferrer' href='https://app.openq.dev/'>
-                      Launch App
-                    </a>
-                  </li>
+                  <Link href='https://app.openq.dev/' passHref>
+                    <button className={tw(`text-gray-800 text-sm font-medium leading-6`)}>Launch App</button>
+                  </Link>
                 </ul>
               </div>
             </li>

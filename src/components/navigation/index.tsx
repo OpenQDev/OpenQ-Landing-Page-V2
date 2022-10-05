@@ -153,14 +153,16 @@ const Navigation = () => {
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               {/* <Button modifier="border-0 mr-2">Contact sales</Button> */}
-              <Button modifier='border-0 hover:border-1 bg-gray-900 bg-opacity-10 hover:bg-dark-mode hover:rounded-2xl text-white mr-5'>
-                <a target='_blank' rel='noopener noreferrer' href='https://docs.openq.dev/'>
+              <a target='_blank' rel='noopener noreferrer' href='https://docs.openq.dev/'>
+                <Button modifier='border-0 hover:border-1 bg-gray-900 bg-opacity-10 hover:bg-dark-mode hover:rounded-2xl text-white mr-5'>
                   Docs
-                </a>
-              </Button>
-              <Button modifier='no-click font-montserrat border rounded-lg px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600'>
-                <a href='https://app.openq.dev/'>Launch App</a>
-              </Button>
+                </Button>
+              </a>
+              <a href='https://app.openq.dev/' target='_blank' rel='noopener noreferrer'>
+                <Button modifier='no-click font-montserrat border rounded-lg px-8 border-purple-500 bg-purple-800 text-purple-100 font-bold hover:bg-purple-600'>
+                  Launch App
+                </Button>
+              </a>
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>
