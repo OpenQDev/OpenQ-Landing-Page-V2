@@ -3,7 +3,7 @@ import { tw } from 'twind';
 const Card = ({ SVG, title, body }) => {
   return (
     <div className={tw(`flex justify-center`)}>
-      <div className={tw(`flex flex-col text-center`)}>
+      <div className={tw(`flex flex-col pt-10 md:pt-0 text-center`)}>
         <div className={tw(`mx-auto p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
           <SVG />
         </div>

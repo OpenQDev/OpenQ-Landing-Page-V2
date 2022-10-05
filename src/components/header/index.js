@@ -68,7 +68,7 @@ const Header = ({ pageVersionHookInstance, contest }) => {
 
   const contestData = {
     title: 'The dev community building the future.',
-    typedText: 'Virtual Hackathons as a Service',
+    typedText: 'Virtual Hackathon as a Service',
     subTitle: 'Peer-to-peer hackathon launchpad tailored for web3.',
   };
   const [headerData, setHeaderData] = useState(orgData);
