@@ -4,8 +4,7 @@ import { tw } from 'twind';
 import { useRef, useEffect, useState } from 'react';
 import OnScroll from '../utils/OnScroll';
 
-const AccountingSection = ({internalMenu}) => {
-
+const AccountingSection = ({ internalMenu }) => {
   return (
     <div className={tw(``)}>
       <div className={tw(`bg-dark-mode -mt-1 pb-10 lg:mx-20 rounded-b-2xl`)}>
@@ -28,7 +27,7 @@ const AccountingSection = ({internalMenu}) => {
             </div>
             <p
               className={tw(
-                `text-4xl lg:text-7xl break-normal pt-3 h-24 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`
+                `text-4xl lg:text-7xl break-normal pt-3 h-24 md:h-40 2xl:h-28 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`
               )}
             >
               Accounting Layer
@@ -89,11 +88,7 @@ const AccountingSection = ({internalMenu}) => {
             <div className={tw(`border-l invisible ml-1 pt-5 pl-8 border-dark-mode pb-8`)} />
           </div>
           <OnScroll internalMenu={internalMenu} fade='animate-fadeInTop'>
-            <div
-            
-              className={tw(
-                `flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 `
-              )}          >
+            <div className={tw(`flex flex-col lg:flex-row lg:space-x-10 justify-center pl-1 pb-16 pt-3 `)}>
               <div className={tw(`pt-16 lg:w-5/12`)}>
                 <div className={tw(`p-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 w-min`)}>
                   <svg

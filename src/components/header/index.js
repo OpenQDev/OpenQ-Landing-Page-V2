@@ -56,18 +56,18 @@ const Header = ({ pageVersionHookInstance, contest }) => {
   const [contestPage, setContestPage] = useState(contest);
 
   const devData = {
-    title: 'Join the dev community redefining how we build.',
+    title: 'The dev community building the future.',
     typedText: 'Earn money while building your portfolio',
     subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
   const orgData = {
-    title: 'Join the dev community redefining how we build.',
+    title: 'The dev community building the future.',
     typedText: 'Pull Requests as a Service',
     subTitle: 'Peer-to-peer freelance marketplace tailored for software development.',
   };
 
   const contestData = {
-    title: 'Join the dev community redefining how we build.',
+    title: 'The dev community building the future.',
     typedText: 'Virtual Hackathons as a Service',
     subTitle: 'Peer-to-peer hackathon launchpad tailored for web3.',
   };

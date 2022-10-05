@@ -98,7 +98,7 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                     <p className={tw(`pt-2 text-gray-900 text-lg font-normal`)}>
                       {internalMenu === 'org'
                         ? ' Let others test your protocol, library or SDK via recurring contests that encourage developers to engage with your project.'
-                        : ' Test new protocols, libraries or SDKs via recurring contests; earn money with you submissions & bootstrap your project.'}
+                        : ' Test new protocols, libraries or SDKs via recurring contests. Earn money with you submissions & bootstrap your project.'}
                     </p>
 
                     <div className={tw(`pt-3`)}>
@@ -118,8 +118,8 @@ const ProductSection = ({ internalMenu, prs, contest }) => {
                 </h2>
                 <div className={tw(`w-5/6 md:w-2/3  rounded-2xl overflow-hidden `)}>
                   <MockContest
-                    repo={'100X Lending Crypto Contest'}
-                    title={'staking public goods as a service'}
+                    repo={'honey-labs/honey-frontend'}
+                    title={'100X Lending Crypto Contest'}
                     budget={'$7000'}
                     avatarUrl={'https://avatars.githubusercontent.com/u/92924948?s=60&v=4'}
                     days={10}

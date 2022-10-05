@@ -37,20 +37,8 @@ const CardGroup = ({ data, internalMenu, contest }) => {
           </div>
         </div>
       )}
-      <div className={tw(`flex justify-center`)}>
-        <div
-          className={tw(
-            `flex flex-col lg:flex-row lg:space-x-10 justify-center pt-16 mx-auto lg:mx-80 text-left max-w-7xl             
-          `
-          )}
-        >
-          {data.map((cardData, index) => {
-            return <Card key={index} title={cardData.title} SVG={cardData.SVG} body={cardData.body} />;
-          })}
-        </div>
-      </div>
       {contest ? (
-        <div className={tw(`flex flex-row justify-center space-x-3 pt-10 -mb-32`)}>
+        <div className={tw(`flex flex-row justify-center pb-32 space-x-3 pt-10 -mb-32`)}>
           <button
             className={tw(
               `text-gray-100 text-md border border-purple-800 bg-purple-400 rounded-md font-semibold p-2 w-max`
@@ -67,6 +55,18 @@ const CardGroup = ({ data, internalMenu, contest }) => {
           </button>
         </div>
       ) : null}
+      <div className={tw(`flex justify-center`)}>
+        <div
+          className={tw(
+            `flex flex-col lg:flex-row lg:space-x-10 justify-center pt-16 mx-auto lg:mx-80 text-left max-w-7xl             
+          `
+          )}
+        >
+          {data.map((cardData, index) => {
+            return <Card key={index} title={cardData.title} SVG={cardData.SVG} body={cardData.body} />;
+          })}
+        </div>
+      </div>
     </OnScroll>
   );
 };

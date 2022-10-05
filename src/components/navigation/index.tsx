@@ -116,7 +116,7 @@ const MobileMenu = () => (
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
-    console.log('toggled!');
+    /*  console.log('toggled!'); */
     setShowMenu(!showMenu);
   };
 
