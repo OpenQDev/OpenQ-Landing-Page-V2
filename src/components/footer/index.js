@@ -35,7 +35,7 @@ const Footer = () => {
                 Learn More
               </a>
             </Link>
-            {/* <div className={tw(`flex flex-row space-x-3 pt-3`)}>
+            <div className={tw(`flex flex-row space-x-3 pt-3`)}>
               <button
                 onClick={handleCookieNotice}
                 className={tw(`bg-gray-900 rounded-full w-min whitespace-nowrap py-1.5 px-6 my-1.5 self-center`)}
@@ -48,7 +48,7 @@ const Footer = () => {
               >
                 Deny.
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       )}
