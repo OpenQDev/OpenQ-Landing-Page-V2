@@ -23,8 +23,8 @@ const links = [
     href: `/`,
   }, */
   {
-    label: `Contests`,
-    href: `/contests`,
+    label: `Hackathon Launchpad`,
+    href: `/hackathon-launchpad`,
   },
   {
     label: `Community`,
