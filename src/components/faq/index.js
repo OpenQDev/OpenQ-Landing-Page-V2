@@ -6,7 +6,7 @@ import { useState } from 'react';
 const listItems = [
   {
     title: `How do I deploy a ticket?`,
-    description: `Head to https://app.openq.dev/ and click on "Mint Bounty." Paste in any GitHub Issue URL of an open repo (we plan to support private repos later on), then click on "Mint Bounty." That's it! Just make sure you're using the Polygon network. `,
+    description: `Head to https://app.openq.dev/ and click on "New Contract." Paste in any GitHub Issue URL of an open repo (we plan to support private repos later on), then click on "Mint Contract" That's it! Just make sure you're using the Polygon network. `,
   },
   {
     title: `How do I claim the money for a ticket?`,

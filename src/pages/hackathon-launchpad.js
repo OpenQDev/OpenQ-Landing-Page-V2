@@ -9,19 +9,18 @@ import Footer from '@/components/footer';
 import FAQ from '@/components/faq';
 import Wave from 'react-wavify';
 import Navigation from '@/components/navigation';
-import Add from '@/components/svg/add';
-import IssueOpened from '@/components/svg/issueOpened';
-import MarkGithub from '@/components/svg/markGithub';
-import ScaleTeam from '@/components/svg/scaleTeam';
-import DevFirst from '@/components/svg/devFirst';
-import Permissionless from '@/components/svg/permissionless';
-import Reputation from '@/components/svg/reputation';
 import { useState, useEffect } from 'react';
-import StreamSection from '@/components/product-section/StreamSection';
-import AccountingSection from '@/components/product-section/AccountingSection';
+import Tool from '@/components/svg/tool';
+import Payout from '@/components/svg/payout';
+import Account from '@/components/svg/account';
 import MockBountyList from '@/components/header/MockBountyList';
+import Reputation from '@/components/svg/reputation';
+import Diversity from '@/components/svg/diversity';
+import Boot from '@/components/svg/boot';
+
 export default function Home() {
   const [internalMenu, setInternalMenu] = useState('org');
+  const [contestPage, setContestPage] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
   const prs = [
@@ -115,44 +114,43 @@ export default function Home() {
       price: '10',
     },
   ];
-  const cardSectionDataDev = [
-    {
-      title: 'Permissionless escrows',
-      SVG: Permissionless,
-      body:
-        'Never worry again about not getting paid in time. Every ticket that has an escrow assigned is insuring payment after the job is completed.',
-    },
-    {
-      title: 'Designed for devs',
-      SVG: DevFirst,
-      body:
-        'Being GitHub integrated, we deal with everything else aside from coding. Never worry again about invoicing, taxation and finding new clients.',
-    },
-    {
-      title: 'Portable reputation',
-      SVG: Add,
-      body:
-        'Boost your reputation in the ecosystem with demonstrable on-chain projects, history and skill analysis. Your CVs will never lie because we can prove it.',
-    },
-  ];
-
   const cardSectionDataOrg = [
     {
-      title: 'Dynamically scale your team to meet your changing needs',
-      SVG: ScaleTeam,
+      title: 'Programmable payouts',
+      SVG: Payout,
       body:
-        "Assign tickets to developers without any strings attached. After the job is completed, it's up to you if you want to continue.",
+        'Customize your contest blueprint and reward structure. Developers get paid automatically once you merge their submission on Github. ',
     },
     {
-      title: 'OpenQ works where you work - on GitHub',
-      SVG: MarkGithub,
-      body: "OpenQ's seamless Github integrations let you merge your recruiting, payroll and DevOps all into one.",
+      title: 'Hackathon tooling services',
+      SVG: Tool,
+      body:
+        "Fair submissions are important to us. We'll keep an eye out for things like plagiarism and version control, so you don't have to ",
     },
     {
-      title: 'Developers for everyday problems',
-      SVG: IssueOpened,
+      title: 'Accounting included',
+      SVG: Account,
       body:
-        'OpenQ automatically broadcasts your task to multiple engineers with the perfect skillset to get the job done.',
+        '(Coming soon) Our accounting system will make and send you an invoice for each disbursement automatically. No need to ask devs for one.',
+    },
+  ];
+  const cardSectionDataDev = [
+    {
+      title: 'Variety that inspires',
+      SVG: Diversity,
+      body:
+        'We curate contests that light up your soul or find new exciting tasks that take you to the next level as a software developer.',
+    },
+    {
+      title: 'Enhance your reputation',
+      SVG: Reputation,
+      body:
+        'Every contest you enter, win or not, adds on-chain attestations to your profile that open up new opportunities.',
+    },
+    {
+      title: 'Boostrap with OpenQ',
+      SVG: Boot,
+      body: "We'll share your project with our network and will keep our community updated on your progress.",
     },
   ];
 
@@ -177,7 +175,7 @@ export default function Home() {
 
       <main>
         <Navigation />
-        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={false} />
+        <Header pageVersionHookInstance={[internalMenu, setInternalMenu]} contest={contestPage} />
         <div className={tw(`w-full rotate-180 -mt-2`)}>
           <Wave
             fill='#121212'
@@ -190,18 +188,17 @@ export default function Home() {
             }}
           />
         </div>
-        <MockBountyList bountiesVisible={true} />
+        <MockBountyList internalMenu={internalMenu} contest={true} />
         <div className={tw(`flex justify-center`)}>
           <div className={tw(`max-w-8xl w-full px-4`)}>
             <CardGroup
               internalMenu={internalMenu}
+              contest={contestPage}
               data={internalMenu === 'org' ? cardSectionDataOrg : cardSectionDataDev}
             />
-            {<ProductSection prs={prs} internalMenu={internalMenu} />}
+            <ProductSection prs={prs} internalMenu={internalMenu} contest={true} />
             <div className={tw(`py-16`)}></div>
-            <StreamSection internalMenu={internalMenu} scrollY={scrollY} />
-            <AccountingSection internalMenu={internalMenu} scrollY={scrollY} />
-            <FAQ />
+            {/* <FAQ /> */}
           </div>
         </div>
 

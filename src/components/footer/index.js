@@ -15,6 +15,9 @@ const Footer = () => {
     if (cookiesAccepted) {
       setShowCookieNotice(false);
     }
+    if (cookiesAccepted) {
+      setShowDemoNotice(true);
+    }
   }, []);
   const handleCookieNotice = () => {
     setShowCookieNotice(false);
@@ -113,6 +116,11 @@ const Footer = () => {
                 <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Resources</h4>
                 <ul>
                   <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
+                    <a rel='noopener noreferrer' href='https://openq.dev/'>
+                      Home
+                    </a>
+                  </li>
+                  <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
                     <a target='_blank' rel='noopener noreferrer' href='https://github.com/OpenQDev/'>
                       Github
                     </a>
@@ -122,9 +130,14 @@ const Footer = () => {
                       Docs
                     </a>
                   </li>
-                  <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
+                  <li>
                     <a target='_blank' rel='noopener noreferrer' href='https://app.openq.dev/'>
-                      Launch App
+                      <button className={tw(`text-gray-800 text-sm font-medium leading-6`)}>Launch App</button>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel='noopener noreferrer' href='https://app.openq.dev/hackathon-launchpad'>
+                      <button className={tw(`text-gray-800 text-sm font-medium leading-6`)}>Hackathon Launchpad</button>
                     </a>
                   </li>
                 </ul>

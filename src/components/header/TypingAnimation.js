@@ -6,7 +6,7 @@ const TypingAnimation = ({ text }) => {
   return (
     <div
       className={tw(
-        `w-60 md:w-full text-transparent h-34 min-h-20 md:h-40 lg:h-48 xl:h-48 2xl:h-28 bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`
+        `w-72 md:w-full text-transparent h-34 min-h-20 md:h-40 lg:h-48 xl:h-48 2xl:h-28 bg-clip-text bg-gradient-to-br from-cyan-300 via-purple-500 to-purple-400`
       )}
     >
       {/*  <Typical
