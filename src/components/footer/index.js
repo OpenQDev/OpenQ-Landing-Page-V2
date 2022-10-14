@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Subscibe from './subscribe';
 
 const Footer = () => {
   const [showCookieNotice, setShowCookieNotice] = useState(true);
@@ -86,9 +87,9 @@ const Footer = () => {
           <Image src='/logo.png' alt='OpenQ Logo' width='60%' height='60%' />
           <p className={tw(`text-4xl text-black font-bold pl-5`)}>OpenQ</p>
         </div>
-        <div className={tw(`w-full lg:w-1/2`)}>
+        <div className={tw(`w-full flex lg:w-5/6 flex-wrap xl:flex-nowrap`)}>
           <ul className={tw(`text-lg font-light flex flex-wrap w-full`)}>
-            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3`)}>
+            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3 pb-5`)}>
               <div>
                 <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Socials</h4>
                 <ul>
@@ -110,7 +111,7 @@ const Footer = () => {
                 </ul>
               </div>
             </li>
-            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3`)}>
+            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3 pb-5`)}>
               <div>
                 <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Resources</h4>
                 <ul>
@@ -136,15 +137,15 @@ const Footer = () => {
                   </li>
                   <li>
                     <a rel='noopener noreferrer' href='https://app.openq.dev/hackathon-launchpad'>
-                      <button className={tw(`text-gray-800 text-sm font-medium leading-6`)}>Hackathon Launchpad</button>
+                      <button className={tw(`text-gray-800 text-left text-sm font-medium leading-6`)}>Hackathon Launchpad</button>
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3`)}>
+            <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3 pb-5`)}>
               <div>
-                <h4 className={tw(`text-gray-900 pt-5 lg:-pt-1 text-base font-bold mb-1`)}>About Us</h4>
+                <h4 className={tw(`text-gray-900   text-base font-bold mb-1`)}>About Us</h4>
                 <ul>
                   <li className={tw(`text-gray-800 text-sm font-medium leading-6`)}>
                     <a href='/terms-of-service'>Terms of Service</a>
@@ -156,6 +157,7 @@ const Footer = () => {
               </div>
             </li>
           </ul>
+          <Subscibe />
         </div>
         {/*  <div className={tw(`w-full lg:w-1/2 mt-12 lg:mt-0`)}>
         <div className={tw(`border border-gray-400 rounded py-5 px-4`)}>
