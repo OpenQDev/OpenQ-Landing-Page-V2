@@ -137,7 +137,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a rel='noopener noreferrer' href='https://app.openq.dev/hackathon-launchpad'>
-                      <button className={tw(`text-gray-800 text-sm font-medium leading-6`)}>Hackathon Launchpad</button>
+                      <button className={tw(`text-gray-800 text-left text-sm font-medium leading-6`)}>Hackathon Launchpad</button>
                     </a>
                   </li>
                 </ul>
