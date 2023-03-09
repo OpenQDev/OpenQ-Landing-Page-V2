@@ -23,7 +23,7 @@
   "dependencies": {
     "@fontsource/inter": "4.2.1",
     "@react-three/drei": "7.6.1",
-    "@react-three/fiber": "7.0.6",
+    "@react-three/fiber": "7.0.29",
     "@svgr/webpack": "5.5.0",
     "@types/tailwindcss": "3.0.10",
     "@ukstv/jazzicon-react": "1.0.0",
