@@ -40,7 +40,7 @@
     "twind": "0.15.4"
   },
   "devDependencies": {
-    "@types/node": "14.14.28",
+    "@types/node": "14.18.63",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1",
     "@typescript-eslint/eslint-plugin": "5.38.1",
